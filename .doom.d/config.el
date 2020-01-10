@@ -91,6 +91,8 @@
           (switch-to-buffer . ivy-posframe-display-at-point)
           (counsel-M-x     . ivy-posframe-display-at-window-center)
           (counsel-find-file . ivy-posframe-display-at-window-center)
+          (counsel-projectile-switch-to-buffer . ivy-posframe-display-at-point)
+          (persp-switch-to-buffer . ivy-posframe-display-at-point)
           (t               . ivy-posframe-display-at-frame-top-center)))
   (ivy-posframe-mode 1))
 
