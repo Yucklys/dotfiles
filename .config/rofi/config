@@ -1,0 +1,16 @@
+rofi.theme:           nord
+rofi.font:            CascadiaCode 13
+rofi.modi:            drun,window,ssh
+rofi.sidebar-mode:    true
+rofi.lines:           7
+rofi.line-padding:    10
+rofi.matching:        fuzzy
+rofi.bw:              0
+rofi.padding:         0
+rofi.separator-style: none
+rofi.hide-scrollbar:  true
+rofi.line-margin:     0
+rofi.dpi:             192
+rofi.display-drun:    Run
+rofi.display-window:  Jump
+rofi.display-ssh:     Connect

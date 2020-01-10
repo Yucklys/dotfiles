@@ -1,0 +1,55 @@
+bspwm &
+~/.config/bspwm/bspwmrc
+# keybinding
+sxhkd &
+xbindkeys
+libinput-gestures-setup start
+
+# gtk
+xsetroot -cursor_name left_ptr &
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
+xrdb merge .Xresources &
+
+xset +fp /usr/share/fonts/local &
+xset +fp /usr/share/fonts/misc &
+xset +fp ~/.fonts &
+xset fp rehash &
+fc-cache -fv &
+
+# network
+nm-applet &
+
+# input
+fcitx &
+
+# notify
+dunst &
+
+# polybar
+$HOME/.config/polybar/launch.sh dark &
+
+# wallpaper
+nitrogen --restore &
+
+# SSR
+electron-ssr &
+
+# compton
+compton --daemon
+
+# auto hide cursor
+unclutter &
+
+# zeal
+zeal &
+
+# goldendict
+goldendict &
+
+# aria2c
+aria2c --conf-path=$HOME/.config/aria2c/aria2c.conf -D
+
+# other
+redshift &
+/usr/lib/geoclue-2.0/demos/agent
+

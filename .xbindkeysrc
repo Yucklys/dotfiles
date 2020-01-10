@@ -1,0 +1,13 @@
+# "i3-msg workspace prev"
+# b:8
+# "i3-msg workspace next"
+# b:9
+# "i3-msg focus left"
+# Shift + b:6
+# "i3-msg focus right"
+# Shift + b:7
+	
+"bspc desktop -f prev.occupied"
+b:8
+"bspc desktop -f next.occupied"
+b:9
