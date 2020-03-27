@@ -3,11 +3,10 @@
 #
 
 # terminal emulator
+# super + Return
+# 	alacritty -e bash ~/.config/with_tmux.sh
 super + Return
-	konsole
-
-super + shift + Return
-	konsole -e bash ~/.config/with_tmux.sh
+	alacritty
 
 # program launcher
 super + @space
@@ -53,7 +52,7 @@ super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 #
-# focus/swap
+# focusp
 #
 
 # focus the node in the given direction
@@ -174,10 +173,12 @@ XF86AudioNext
 	mpc next
 
 # screenshot
+#Print
+#	flameshot full -c -p ~/Picture/screenshots
+#super + Print
+#	flameshot gui -r -p ~/Picture/screenshots
 Print
-	flameshot full -c -p ~/Pictures/screenshots
-super + Print
-	flameshot gui -r -p ~/Pictures/screenshots
+	dunstify "hello"
 
 #
 # Application shortcut
@@ -185,14 +186,12 @@ super + Print
 
 # file manager
 Menu
-	konsole -e ranger
-
+	alacritty -e ranger
 super + F3
 	nautilus
 
 # checkup
 super + F1
 	goldendict
-
 super + F2
 	zeal

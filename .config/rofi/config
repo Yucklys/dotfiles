@@ -1,5 +1,5 @@
 rofi.theme:           nord
-rofi.font:            CascadiaCode 13
+rofi.font:            SourceCodePro 13
 rofi.modi:            drun,window,ssh
 rofi.sidebar-mode:    true
 rofi.lines:           7

@@ -1,8 +1,12 @@
 __build_info:
   rime_version: 1.5.3
   timestamps:
-    default: 1526362370
-    default.custom: 1572007182
+    default: 1584190865
+    default.custom: 1580566928
+    key_bindings: 1584190865
+    key_bindings.custom: 0
+    punctuation: 1584190865
+    punctuation.custom: 0
 ascii_composer:
   good_old_caps_lock: true
   switch_key:
@@ -12,7 +16,7 @@ ascii_composer:
     Eisu_toggle: clear
     Shift_L: inline_ascii
     Shift_R: commit_text
-config_version: 0.38
+config_version: 0.40
 key_binder:
   bindings:
     - {accept: bracketleft, send: Page_Up, when: paging}

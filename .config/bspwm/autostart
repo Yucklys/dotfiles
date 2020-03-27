@@ -9,6 +9,7 @@ libinput-gestures-setup start
 xsetroot -cursor_name left_ptr &
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
 xrdb merge .Xresources &
+xmodmap ~/.Xmodmap
 
 xset +fp /usr/share/fonts/local &
 xset +fp /usr/share/fonts/misc &
@@ -40,8 +41,8 @@ compton --daemon
 # auto hide cursor
 unclutter &
 
-# zeal
-zeal &
+# flameshot
+flameshot &
 
 # goldendict
 goldendict &
@@ -52,4 +53,5 @@ aria2c --conf-path=$HOME/.config/aria2c/aria2c.conf -D
 # other
 redshift &
 /usr/lib/geoclue-2.0/demos/agent
+syndaemon -i 0.5 -t -K -R -d
 

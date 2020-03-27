@@ -1,204 +1,45 @@
 sw_volume: 100
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
-state: stop
-current: 62
+state: play
+current: 17
+time: 4.154000
 random: 0
-repeat: 1
+repeat: 0
 single: 0
 consume: 0
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:采茶纪 - 双笙.mp3
-1:春よ、来い - SMOOTH J.mp3
-2:純白P,初音ミク - 你们看不见的我重要的友人们.mp3
-3:當山みれい - 願い~あの頃のキミへ~.mp3
-4:冬子,情桑 - 剑魂（Cover 李炜）.mp3
-5:肥皂菌丨珉珉的猫咪丨 - 将进酒（Cover：佑可猫）.mp3
-6:肥皂菌丨珉珉的猫咪丨 - 聂隐娘（人声本家）.mp3
-7:花粥,王胜娚 - 出山.mp3
-8:锦里 - HOPE-T,接个吻，开一枪.mp3
-9:李炜 - 剑魂.mp3
-10:圈9 - 东方永夜抄.mp3
-11:群星 - 三国恋.mp3
-12:少女时代 - Mr.Taxi.mp3
-13:徐梦圆 - 一个人的歌(Feat.徐梦圆).mp3
-14:徐梦圆,双笙 - 大鱼(徐梦圆Remix).mp3
-15:许嵩,黄龄 - 惊鸿一面.mp3
-16:闫东炜 - 浣花溪.mp3
-17:一个人的歌(Original Mix) - 徐梦圆.mp3
-18:音阙诗听,赵方婧 - 芒种.mp3
-19:源氏(GenJi) - Forwe兰斯.mp3
-20:中二也要弹钢琴 - 徐梦圆.mp3
-21:中华纯白娘 - 星尘,純白P.mp3
-22:朱峰,蔡忻如 - 仙才叹.mp3
-23:Adventures - Alex Skrindo.mp3
-24:After the Afterparty (Alan Walker Remix) - Charli XCX,Alan Walker,Lil Yachty.mp3
-25:All Falls Down - Alan Walker,Noah Cyrus,Digital Farm Animals.mp3
-26:All We Know - The Chainsmokers,Phoebe Ryan.mp3
-27:Allie X - Lifted.mp3
-28:Animals - Martin Garrix.mp3
-29:Anthony Keyrouz,Romy Wave - Something Just Like This.mp3
-30:Ascent - Teminite.mp3
-31:Asher Monroe - Here With You.mp3
-32:Belinda Carlisle - Circle In The Sand.mp3
-33:Between Two Points (feat. Swan) - The Glitch Mob.mp3
-34:Breeze (Original Mix) - Axero.mp3
-35:Calling - Tobu.mp3
-36:Candy - Bila.mp3
-37:China-Change - 徐梦圆.mp3
-38:China-P - 徐梦圆.mp3
-39:China-PiPa - 徐梦圆.mp3
-40:CHVRCHES - Warning Call (Theme from ＂Mirror's Edge Catalyst＂).mp3
-41:City - 羽肿.mp3
-42:Closer - The Chainsmokers,Halsey.mp3
-43:Closer (R3hab Remix) - R3hab,The Chainsmokers,Halsey.mp3
-44:Coldplay - Up&Up (Radio Edit).mp3
-45:color-X - 徐梦圆.mp3
-46:Come Home - Sad Eye.mp3
-47:Conor Maynard - SUBEME LA RADIO.mp3
-48:Cute - 徐梦圆.mp3
-49:Cytus - Title Screen - Rayark.mp3
-50:DAISHI DANCE,Cecile Corbel - Take me hand.mp3
-51:Daniel Powter - Free Loop.mp3
-52:Deep End - LU2VYK,Madison Gold.mp3
-53:Delacey - Dream It Possible.mp3
-54:Delos - 恋雪.mp3
-55:Delta Heavy,Hans Zimmer - S.T.A.Y. (Delta Heavy Tribute).mp3
-56:Disconnected - Pegboard Nerds.mp3
-57:Eastern Horoscope - 凛.mp3
-58:Elektronomia - Vision.mp3
-59:Elixir - SizzleBird.mp3
-60:Elusive - SizzleBird.mp3
-61:Erutan - The Dragonborn Comes - Skyrim.mp3
-62:EVO+ - [A]ddiction.mp3
-63:Faded (Instrumental) - Alan Walker.mp3
-64:False Alarm - The Weeknd.mp3
-65:Five Hours - Deorro.mp3
-66:G.E.M.邓紫棋 - 光年之外.mp3
-67:HANNARI - BPM15Q.mp3
-68:Happy Endings - Faul & Wad Ad.mp3
-69:Heartbeat (Nightcore) [PØRPEL Remix] - PØRPEL,Marcus & Martinus.mp3
-70:Higher - Tobu.mp3
-71:Highscore - Panda Eyes.mp3
-72:HITA - 采薇.mp3
-73:Hoaprox-Ngau Hung／Remix - Ms-TearGas.mp3
-74:How To Love - Cash Cash,Sofia Reyes.mp3
-75:Hustler - Zayde Wølf.mp3
-76:Hymn For The Weekend [Remix] - Alan Walker,Coldplay.mp3
-77:I'm OK - Manila Killa,AObeats,Shaylen.mp3
-78:I’m So Sorry - Imagine Dragons.mp3
-79:Ignite (Instrumental) - Alan Walker,K-391.mp3
-80:illion - AIWAGUMA.mp3
-81:illion - GASSHOW.mp3
-82:Imagine - SizzleBird.mp3
-83:It Ain't Me - Kygo,Selena Gomez.mp3
-84:izkup - dilemma.mp3
-85:James Blunt - When I Find Love Again.mp3
-86:Justin Caruso,James Droll - Caving.mp3
-87:Levitate - FEWZ.mp3
-88:Life - Tobu.mp3
-89:Like I Would (Tom Budin Remix) - Tom Budin,ZAYN.mp3
-90:Ludwig van Beethoven - 致艾丽丝.mp3
-91:March - Alexander Lewis.mp3
-92:Mark Ronson,Bruno Mars - Uptown Funk.mp3
-93:Masked bitcH (TENKOMORI’s REMIX) - さつき が てんこもり.mp3
-94:Masked Heroes - Vexento.mp3
-95:Matteo - Panama.mp3
-96:Melody - SizzleBird.mp3
-97:Midnight - SizzleBird.mp3
-98:Migrate - SizzleBird.mp3
-99:Mine (Illenium Remix) - ILLENIUM,Phoebe Ryan.mp3
-100:Monody - TheFatRat,Laura Brehm.mp3
-101:MoreanP - Virtual Soul.mp3
-102:Nevada - Vicetone,Cozi Zuehlsdorff.mp3
-103:Piercing Light (徐梦圆 Remix) - 徐梦圆,英雄联盟,Mako.mp3
-104:Please Don't Go (Tschax Remix) - TSCHAX,Joel Adams.mp3
-105:Project 46,Olivia - Forgettable.mp3
-106:Rabpit - Saika - 闫东炜.mp3
-107:Remember (Original Mix) - Sensitive,Bogdan Bondarenko.mp3
-108:Reol - mede：mede.mp3
-109:Reol - ラ・タタン.mp3
-110:Ringtone (MetroGnome Remix) - MetroGnome.mp3
-111:Rising High - Shavi,Beatrich.mp3
-112:Routine - Alan Walker.mp3
-113:Run Free - Deep Chills,IVIE.mp3
-114:Sea - Linne.mp3
-115:Seven Nation Army (Remix) - The Glitch Mob,The White Stripes.mp3
-116:Shots (Broiler Remix) - Imagine Dragons,Broiler.mp3
-117:Sign - DEAMN.mp3
-118:Silver Scrapes - Danny McCarthy.mp3
-119:Sing Me to Sleep - Alan Walker,Iselin Solheim.mp3
-120:Sitting Next To You - Mokoa.mp3
-121:Slip - 徐梦圆.mp3
-122:Spectre - Alan Walker.mp3
-123:Stay - Zedd,Alessia Cara.mp3
-124:summer - 徐梦圆.mp3
-125:Sunburst - Tobu,Itro.mp3
-126:Surrender - Lexxmatiq,Mia Vaile.mp3
-127:Sweet - DcAlvis.mp3
-128:The Ocean (Radio Edit) - Mike Perry,Shy Martin.mp3
-129:Toca Toca (Radio Edit) - Fly Project.mp3
-130:Together - SizzleBird.mp3
-131:Tokyo - Luna Shadows.mp3
-132:Trip - Axero.mp3
-133:Unity - TheFatRat.mp3
-134:V.A. - 何かもう手遅れな.mp3
-135:Vitas - Звезда.mp3
-136:Water - 徐梦圆.mp3
-137:Worst In Me - Unlike Pluto.mp3
-138:You - Approaching Nirvana.mp3
-139:Zayde Wølf - King.mp3
-140:Zippo - Chasjam.mp3
-141:ぱなまん - Noise.mp3
-142:はるまきごはん - 人間だった (はるまきごはん歌唱カバー).mp3
-143:まふまふ - 病名は愛だった (Cover 鏡音リン／鏡音レン).mp3
-144:Allie X - Lifted.mp3
-145:Anthony Keyrouz,Romy Wave - Something Just Like This.mp3
-146:Asher Monroe - Here With You.mp3
-147:Belinda Carlisle - Circle In The Sand.mp3
-148:Candy - Bila.mp3
-149:CHVRCHES - Warning Call (Theme from ＂Mirror's Edge Catalyst＂).mp3
-150:Coldplay - Up&Up (Radio Edit).mp3
-151:Conor Maynard - SUBEME LA RADIO.mp3
-152:DAISHI DANCE,Cecile Corbel - Take me hand.mp3
-153:Daniel Powter - Free Loop.mp3
-154:Delacey - Dream It Possible.mp3
-155:Erutan - The Dragonborn Comes - Skyrim.mp3
-156:EVO+ - [A]ddiction.mp3
-157:G.E.M.邓紫棋 - 光年之外.mp3
-158:HITA - 采薇.mp3
-159:How To Love - Cash Cash,Sofia Reyes.mp3
-160:illion - AIWAGUMA.mp3
-161:illion - GASSHOW.mp3
-162:James Blunt - When I Find Love Again.mp3
-163:Justin Caruso,James Droll - Caving.mp3
-164:Mark Ronson,Bruno Mars - Uptown Funk.mp3
-165:Matteo - Panama.mp3
-166:Project 46,Olivia - Forgettable.mp3
-167:Reol - mede：mede.mp3
-168:Reol - ラ・タタン.mp3
-169:V.A. - 何かもう手遅れな.mp3
-170:Vitas - Звезда.mp3
-171:Zayde Wølf - King.mp3
-172:ぱなまん - Noise.mp3
-173:はるまきごはん - 人間だった (はるまきごはん歌唱カバー).mp3
-174:まふまふ - 病名は愛だった (Cover 鏡音リン／鏡音レン).mp3
-175:冬子,情桑 - 剑魂（Cover 李炜）.mp3
-176:圈9 - 东方永夜抄.mp3
-177:少女时代 - Mr.Taxi.mp3
-178:徐梦圆 - 一个人的歌(Feat.徐梦圆).mp3
-179:徐梦圆,双笙 - 大鱼(徐梦圆Remix).mp3
-180:朱峰,蔡忻如 - 仙才叹.mp3
-181:李炜 - 剑魂.mp3
-182:當山みれい - 願い~あの頃のキミへ~.mp3
-183:純白P,初音ミク - 你们看不见的我重要的友人们.mp3
-184:群星 - 三国恋.mp3
-185:肥皂菌丨珉珉的猫咪丨 - 将进酒（Cover：佑可猫）.mp3
-186:肥皂菌丨珉珉的猫咪丨 - 聂隐娘（人声本家）.mp3
-187:花粥,王胜娚 - 出山.mp3
-188:许嵩,黄龄 - 惊鸿一面.mp3
-189:音阙诗听,赵方婧 - 芒种.mp3
+0:初音ミク/39みゅーじっく!-初音ミク-みきとP.flac
+1:初音ミク/Hand in Hand-livetune-初音ミク.flac
+2:初音ミク/twitter-ダルビッシュP.mp3
+3:初音ミク/深海少女-初音ミク-ゆうゆ.mp3
+4:初音ミク/クローバークラブ-ゆうゆ-初音ミク.mp3
+5:初音ミク/VOiCE-ラヴリーP-初音ミク.mp3
+6:初音ミク/マジカルミライ SPECIAL MEGAMIX-初音ミク.flac
+7:初音ミク/ネリの星空-花束P.mp3
+8:初音ミク/雨桜-MAYU.mp3
+9:初音ミク/幻想菩薩女孩-初音ミク-GUMI-zakooon.mp3
+10:初音ミク/電波中毒ガール-初音ミク-GUMI.mp3
+11:初音ミク/宇宙分解-初音ミク-はるまきごはん.mp3
+12:初音ミク/ハイファイレイヴァー-巡音ルカ-GUMI-初音ミク.mp3
+13:初音ミク/SPiCa-とくP-初音ミク.mp3
+14:CloudMusic/EXIT TUNES/EXIT TUNES PRESENTS Vocalolegend feat. Hatsune Miku/VOiCE - ラヴリーP,初音ミク.mp3
+15:初音ミク/Miku-初音ミク-Anamanaguchi.flac
+16:初音ミク/朧月-初音ミク-minato.mp3
+17:初音ミク/world.execute (me) ;-Mili.mp3
+18:初音ミク/ループメモリー(2016 Remix)-雄之助-初音ミク.mp3
+19:初音ミク/ループメモリー-雄之助-初音ミク.mp3
+20:初音ミク/ドリームレス・ドリームス-初音ミク-はるまきごはん.mp3
+21:初音ミク/paranoia-つなまる-初音ミク.mp3
+22:初音ミク/独りんぼエンヴィー-koyori-初音ミク.mp3
+23:初音ミク/うみたがり-初音ミク-MARETU.mp3
+24:初音ミク/マインドブランド-初音ミク-MARETU.mp3
+25:初音ミク/ツギハギスタッカート-初音ミク-とあ.mp3
+26:初音ミク/みくみくにしてあげる♪-IKA.mp3
+27:初音ミク/アカツキアライヴァル-Last Note.-初音ミク-巡音ルカ.mp3
+28:初音ミク/オレンジ-トーマ-初音ミク.flac
+29:初音ミク/飛行機雲-とあ-初音ミク.mp3
 playlist_end

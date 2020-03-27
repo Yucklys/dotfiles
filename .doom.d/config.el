@@ -1,96 +1,95 @@
 (setq calendar-location-name "Beijing, CN")
 (setq calendar-latitude 39.92)
 (setq calendar-longitude 116.46)
-(use-package! circadian
-  :config
-  (setq circadian-themes '(("8:00" . doom-nord-light)
-                           ("19:30" . doom-nord)))
-  (circadian-setup))
+;;(use-package! circadian
+;;  :config
+;;  (setq circadian-themes '(("8:00" . doom-nord-light)
+;;                           ("19:30" . doom-nord)))
+;;  (circadian-setup))
+(setq doom-theme 'doom-nord)
 (setq fancy-splash-image
       (let* ((banners (directory-files "~/.doom.d/banner" 'full (rx ".png" eos)))
              (banner (elt banners (random (length banners)))))
         banner))
-(set-default-font "CascadiaCode-14")
-(global-prettify-symbols-mode t)
+
+(set-default-font "FiraCode-12")
 
 (global-set-key (kbd "<f5>") 'revert-buffer)
 (global-git-gutter-mode +1)
 
-(defun cascadia-code-mode--make-alist (list)
+(defun fira-code-mode--make-alist (list)
   "Generate prettify-symbols alist from LIST."
   (let ((idx -1))
     (mapcar
      (lambda (s)
        (setq idx (1+ idx))
        (let* ((code (+ #Xe100 idx))
-              (width (string-width s))
-              (prefix ())
-              (suffix '(?\s (Br . Br)))
-              (n 1))
-         (while (< n width)
-           (setq prefix (append prefix '(?\s (Br . Bl))))
-           (setq n (1+ n)))
-         (cons s (append prefix suffix (list (decode-char 'ucs code))))))
+          (width (string-width s))
+          (prefix ())
+          (suffix '(?\s (Br . Br)))
+          (n 1))
+     (while (< n width)
+       (setq prefix (append prefix '(?\s (Br . Bl))))
+       (setq n (1+ n)))
+     (cons s (append prefix suffix (list (decode-char 'ucs code))))))
      list)))
 
+(defconst fira-code-mode--ligatures
+  '("www" "**" "***" "**/" "*>" "*/" "\\\\" "\\\\\\"
+    "{-" "[]" "::" ":::" ":=" "!!" "!=" "!==" "-}"
+    "--" "---" "-->" "->" "->>" "-<" "-<<" "-~"
+    "#{" "#[" "##" "###" "####" "#(" "#?" "#_" "#_("
+    ".-" ".=" ".." "..<" "..." "?=" "??" ";;" "/*"
+    "/**" "/=" "/==" "/>" "//" "///" "&&" "||" "||="
+    "|=" "|>" "^=" "$>" "++" "+++" "+>" "=:=" "=="
+    "===" "==>" "=>" "=>>" "<=" "=<<" "=/=" ">-" ">="
+    ">=>" ">>" ">>-" ">>=" ">>>" "<*" "<*>" "<|" "<|>"
+    "<$" "<$>" "<!--" "<-" "<--" "<->" "<+" "<+>" "<="
+    "<==" "<=>" "<=<" "<>" "<<" "<<-" "<<=" "<<<" "<~"
+    "<~~" "</" "</>" "~@" "~-" "~=" "~>" "~~" "~~>" "%%"
+    "x" ":" "+" "+" "*"))
 
-(defconst cascadia-code-mode--ligatures
-  '("x" "www" "*" ":" "-" "--" "---" "-->" "-|" "->"
-    "->>" "--<" "-<<" "-~" "{|" ")#" "[|" "]#" "[|" "]#"
-    "..." "..=" "..<" ".?" ".=" "::" ":::" "::=" ":=" ":>"
-    ":<" ";;" "!!" "!!." "!=" "!==" "?." "?:" "??" "?="
-    "**" "***" "*>" "*/" "#(" "#{" "#[" "#:" "#!" "#?"
-    "##" "###" "####" "#=" "#_" "#_(" "/*" "/=" "/==" "/>"
-    "//" "///" "_|_" "__" "+" "@" "&&" "|-" "|}" "|]"
-    "||" "|||>" "||=" "||>" "|=" "|>" "$>" "++" "+++" "+>"
-    "=:=" "=!=" "==" "===" "==>" "=>" "=>>" "=<<" "=/=" ">-"
-    ">->" ">:" ">=" ">=>" ">>" ">>-" ">>=" ">>>" "<-" "<--"
-    "<->" "<-<" "<:" "<!--" "<*" "<*>" "<|" "<||" "<|||" "<|>"
-    "<$" "<$>" "<+" "<+>" "<=" "<==" "<==>" "<=>" "<=<" "<>"
-    "<<" "<<-" "<<=" "<<<" "<~" "<~>" "<~~" "</" "</>" "~-"
-    "~@" "~=" "~>" "~~" "~~>" "^=" "%%"))
+(defvar fira-code-mode--old-prettify-alist)
 
-(defvar cascadia-code-mode--old-prettify-alist)
-
-(defun cascadia-code-mode--enable ()
-  "Enable Cascadia Code ligatures in current buffer."
-  (setq-local cascadia-code-mode--old-prettify-alist prettify-symbols-alist)
-  (setq-local prettify-symbols-alist (append (cascadia-code-mode--make-alist cascadia-code-mode--ligatures) cascadia-code-mode--old-prettify-alist))
+(defun fira-code-mode--enable ()
+  "Enable Fira Code ligatures in current buffer."
+  (setq-local fira-code-mode--old-prettify-alist prettify-symbols-alist)
+  (setq-local prettify-symbols-alist (append (fira-code-mode--make-alist fira-code-mode--ligatures) fira-code-mode--old-prettify-alist))
   (prettify-symbols-mode t))
 
-(defun cascadia-code-mode--disable ()
-  "Disable Cascadia Code ligatures in current buffer."
-  (setq-local prettify-symbols-alist cascadia-code-mode--old-prettify-alist)
+(defun fira-code-mode--disable ()
+  "Disable Fira Code ligatures in current buffer."
+  (setq-local prettify-symbols-alist fira-code-mode--old-prettify-alist)
   (prettify-symbols-mode -1))
 
-(define-minor-mode cascadia-code-mode
-  "Cascadia Code ligatures minor mode"
-  :lighter " Cascadia Code"
+(define-minor-mode fira-code-mode
+  "Fira Code ligatures minor mode"
+  :lighter " Fira Code"
   (setq-local prettify-symbols-unprettify-at-point 'right-edge)
-  (if cascadia-code-mode
-      (cascadia-code-mode--enable)
-    (cascadia-code-mode--disable)))
+  (if fira-code-mode
+      (fira-code-mode--enable)
+    (fira-code-mode--disable)))
 
-(defun cascadia-code-mode--setup ()
-  "Setup Cascadia Code Symbols"
-  (set-fontset-font t '(#Xe100 . #Xe16f) "Cascadia Code"))
+(defun fira-code-mode--setup ()
+  "Setup Fira Code Symbols"
+  (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol"))
 
-(provide 'cascadia-code-mode)
-(add-hook 'prog-mode-hook 'cascadia-code-mode)
+(provide 'fira-code-mode)
+(add-hook 'prog-mode-hook 'fira-code-mode)
 
-(company-quickhelp-mode)
+;; (company-quickhelp-mode)
 
 (use-package! ivy-posframe
   :after (ivy)
   :config
   (setq ivy-posframe-height-alist '((swiper . 10)
                                     (t      . 20)))
-  (setq ivy-posframe-font "CascadiaCode-13")
+  (setq ivy-posframe-font "FiraCode-12")
   (setq ivy-posframe-display-functions-alist
         '((swiper          . ivy-posframe-display-at-point)
           (switch-to-buffer . ivy-posframe-display-at-point)
-          (counsel-M-x     . ivy-posframe-display-at-window-center)
-          (counsel-find-file . ivy-posframe-display-at-window-center)
+          (counsel-M-x     . ivy-posframe-display-at-frame-center)
+          (counsel-find-file . ivy-posframe-display-at-frame-center)
           (counsel-projectile-switch-to-buffer . ivy-posframe-display-at-point)
           (persp-switch-to-buffer . ivy-posframe-display-at-point)
           (t               . ivy-posframe-display-at-frame-top-center)))
@@ -99,11 +98,10 @@
 (add-hook 'org-mode-hook 'org-indent-mode)
 (setq org-hide-emphasis-markers nil)
 (add-hook 'org-mode-hook (lambda () (display-line-numbers-mode 0)))
-(use-package! darkroom
-  :bind ([f9] . darkroom-mode)
-  :hook
-  (darkroom-mode . org-toggle-narrow-to-subtree)
-  (darkroom-mode . toggle-frame-fullscreen))
+(add-hook 'org-mode-hook (lambda () (auto-fill-mode 0)))
+
+(+global-word-wrap-mode +1)
+
 
 (after! org
   (setq org-agenda-start-with-clockreport-mode t
@@ -184,18 +182,41 @@ See `org-capture-templates' for more information."
                    "%?\n")          ;Place the cursor here finally
                  "\n"))))
 
+(defun transform-square-brackets-to-round-ones(string-to-transform)
+  "Transforms [ into ( and ] into ), other chars left unchanged."
+  (concat
+   (mapcar #'(lambda (c) (if (equal c ?[) ?\( (if (equal c ?]) ?\) c))) string-to-transform))
+  )
+
+(defadvice org-capture
+    (after make-full-window-frame activate)
+  "Advise capture to be the only window when used as a popup"
+  (if (equal "emacs-capture" (frame-parameter nil 'name))
+      (switch-to-buffer (doom-fallback-buffer))
+    (delete-other-windows)))
+
+(defadvice org-capture-finalize
+    (after delete-capture-frame activate)
+  "Advise capture-finalize to close the frame"
+  (if (equal "emacs-capture" (frame-parameter nil 'name))
+      (delete-frame)))
+
 (use-package! org-capture
   :config
   (setq org-capture-templates '(
                                 ("t" "Todo" entry (file+headline "todo.org" "Task")
                                  "** TODO %?\n")
-                                ("d" "日记" entry (file+olp+datetree "diary.org")
+                                ("d" "Diary" entry (file+olp+datetree "diary.org")
                                  "* %?\n")
-                                ("i" "灵感" entry (file+headline "i.org" "Idea")
+                                ("i" "Idea" entry (file+headline "i.org" "Idea")
                                  "** %?\n%U\n")
-                                ("r" "读书笔记" entry (file+headline "books.org" "未分类")
+                                ("p" "Protocol" entry (file+headline "i.org" "Inbox")
+                                 "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+                                ("L" "Protocol Link" entry (file+headline "i.org" "Inbox")
+                                 "* %?\n:PROPERTIES:\n:CREATED: %U\n:END: \%i\n %a")
+                                ("r" "Reading notes" entry (file+headline "books.org" "未分类")
                                  "* %U\n** 摘录\n#+BEGIN_QUOTE\n%?\n#+END_QUOTE\n** 笔记\n")
-                                ("b" "博客" entry (file+olp "blog.org" "Blog posts")
+                                ("b" "Blog" entry (file+olp "blog.org" "Blog posts")
                                  (function org-hugo-new-subtree-post-capture-template)))))
 
 ;; Log when mark as DONE
@@ -224,11 +245,21 @@ and some custom text on a newly created journal file."
   (org-journal-date-format "%A, %d %B %Y")
   (org-journal-enable-agenda-integration t))
 
+(setq org-reveal-root "https://revealjs.com")
+
 (use-package! ox-hugo
   :config
   (setq org-hugo-date-format "%Y-%m-%d")
   (setq org-hugo-suppress-lastmod-period 86400.0)
   (setq org-hugo-auto-set-lastmod t))
+
+;; (add-to-list 'load-path "~/Application/snails")
+;; (require 'snails)
+;; (add-hook 'snails-mode-hook #'(lambda () (evil-emacs-state)))
+
+;; (add-to-list 'load-path "~/Application/fuz.el")
+;; (add-to-list 'load-path "~/Application/fuz.el/target/release")
+;; (require 'fuz)
 
 ;;functions to support syncing .elfeed between machines
 ;;makes sure elfeed reads index from disk before launching
@@ -258,31 +289,22 @@ and some custom text on a newly created journal file."
           )
   )
 
-(use-package! elfeed-goodies
-  :config
-  (elfeed-goodies/setup))
-
 (use-package! elfeed-org
   :config
   (elfeed-org)
   (setq rmh-elfeed-org-files (list "~/Notes/elfeed.org")))
 
 (use-package! company
-  :hook
-  (prog-mode . company-mode)
-  (org-mode . (lambda () (company-mode 0)))
-  (lsp-mode . (lambda () (add-to-list 'company-backends '(company-lsp :with company-yasnippet :separate))))
   :config
-  (setq company-idle-delay 0)
-  (setq company-tooltip-align-annotations t)
-  (setq company-minimum-prefix-length 3))
+  (setq company-show-numbers t)
+  (setq company-tooltip-align-annotations t))
+
+(after! rustic-mode
+  (set-company-backend! 'lsp-mode '(company-lsp :with company-yasnippet company-tabnine)))
 
 ;;(use-package! eglot
 ;;  :hook
 ;;  (rustic-mode . eglot-ensure))
-
-(use-package! company-box
-  :hook (company-mode . company-box-mode))
 
 (use-package! rainbow-delimiters
   :hook
@@ -290,15 +312,22 @@ and some custom text on a newly created journal file."
 
 (use-package! lsp-mode
   :commands lsp
-  :hook
-  (rust-mode . lsp)
+  :init
+  ;(setq lsp-rust-server 'rust-analyzer)
+  ;(setq lsp-rust-analyzer-server-display-inlay-hints t)
   :config
-  (setq lsp-enable-snippet t)
-  (setq lsp-rust-clippy-preference "off")
-  (setq lsp-enable-semantic-highlighting t))
+  ;;(setq lsp-enable-snippet t)
+  (setq lsp-rust-clippy-preference "off"))
+
 (use-package! lsp-ui
   :hook
-  (lsp-mode . lsp-ui-mode))
+  (lsp-mode . lsp-ui-mode)
+  :config
+  (setq lsp-ui-doc-use-webkit t))
+
+(use-package! rustic
+  :config
+  (setq rustic-lsp-client 'lsp-mode))
 
 (use-package! py-autopep8
   :hook
@@ -411,7 +440,7 @@ and some custom text on a newly created journal file."
 ;;  :init
 ;;  (global-emojify-mode))
 
-(setq load-path (cons (file-truename "~/Applications/liberime") load-path))
+(add-to-list 'load-path "~/Application/snippets/liberime")
 (use-package! liberime-config
   :config
   (liberime-start "/usr/share/rime-data/" (file-truename "~/.emacs.d/rime/"))
@@ -436,12 +465,41 @@ and some custom text on a newly created journal file."
                   pyim-probe-org-speed-commands))
   (setq-default pyim-punctuation-half-width-functions
                 '(pyim-probe-punctuation-line-beginning
-                  pyim-probe-punctuation-after-punctuation))
+                  pyim-probe-punctuation-after-punctuation)
+                )
+  (set-face-attribute 'pyim-page nil :background "#d8dee9"
+                    :foreground "#2e3440")
   (pyim-isearch-mode 1)
   (setq pyim-page-tooltip 'posframe)
   (setq pyim-page-length 5)
   (setq pyim-default-scheme 'rime-flypy)
   (setq pyim-page-style 'one-line))
+
+(setq cnfonts--custom-set-fontnames
+      '(("FiraCode" "SourceCodePro" "DejaVu Sans Mono")
+        ("文泉驿等宽微米黑" "Ubuntu Mono" "隶书" "新宋体")))
+
+(setq cnfonts--custom-set-fontsizes
+      '((9    9.0  9.5 )
+        (10   11.0 11.0)
+        (11.5 12.5 12.5)
+        (12.5 13.5 13.5)
+        (14   15.0 15.0)
+        (16   17.0 17.0)
+        (18   18.0 18.0)
+        (20   21.0 21.0)
+        (22   23.0 23.0)
+        (24   25.5 25.5)
+        (26   27.0 27.0)
+        (28   29.0 29.0)
+        (30   32.0 32.0)
+        (32   33.0 33.0)))
+
+(setq cnfonts-profiles
+    '("program" "org-mode"))
+
+(setq cnfonts-use-face-font-rescale t)
+(cnfonts-enable)
 
 (use-package! telega
   :load-path  "~/Applications/telega.el"
@@ -454,11 +512,11 @@ and some custom text on a newly created journal file."
                    :type (:@type "proxyTypeSocks5"))
          )))
 
-(use-package! nyan-mode
-  :config
-  (setq nyan-animate-nyancat t)
-  (setq nyan-wavy-trail t))
-
-(add-hook! 'prog-mode-hook 'nyan-mode)
+;; (use-package! nyan-mode
+;;   :config
+;;   (setq nyan-animate-nyancat t)
+;;   (setq nyan-wavy-trail t))
+;;
+;; (add-hook! 'prog-mode-hook 'nyan-mode)
 
 (load-file "~/.doom.d/keymap.el")

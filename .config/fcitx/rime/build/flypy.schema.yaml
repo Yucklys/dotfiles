@@ -1,10 +1,14 @@
 __build_info:
   rime_version: 1.5.3
   timestamps:
-    default: 1526362370
-    default.custom: 1572007182
+    default: 1584190865
+    default.custom: 1580566928
     flypy.custom: 0
-    flypy.schema: 1573385244
+    flypy.schema: 1580481067
+    key_bindings: 1584190865
+    key_bindings.custom: 0
+    punctuation: 1584190865
+    punctuation.custom: 0
 custom_phraseVD:
   db_class: stabledb
   dictionary: ""

@@ -7,7 +7,12 @@
 # "i3-msg focus right"
 # Shift + b:7
 	
-"bspc desktop -f prev.occupied"
+"qdbus org.kde.KWin /KWin previousDesktop"
 b:8
-"bspc desktop -f next.occupied"
+"qdbus org.kde.KWin /KWin nextDesktop"
 b:9
+
+# "bspc desktop -f prev.occupied"
+# b:8
+# "bspc desktop -f next.occupied"
+# b:9
