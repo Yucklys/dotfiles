@@ -16,88 +16,10 @@
              (banner (elt banners (random (length banners)))))
         banner))
 
-(set-default-font "FiraCode-12")
+(add-to-list 'default-frame-alist '(font . "Iosevka-12"))
 
 (global-set-key (kbd "<f5>") 'revert-buffer)
 (global-git-gutter-mode +1)
-
-(defun fira-code-mode--make-alist (list)
-  "Generate prettify-symbols alist from LIST."
-  (let ((idx -1))
-    (mapcar
-     (lambda (s)
-       (setq idx (1+ idx))
-       (let* ((code (+ #Xe100 idx))
-          (width (string-width s))
-          (prefix ())
-          (suffix '(?\s (Br . Br)))
-          (n 1))
-     (while (< n width)
-       (setq prefix (append prefix '(?\s (Br . Bl))))
-       (setq n (1+ n)))
-     (cons s (append prefix suffix (list (decode-char 'ucs code))))))
-     list)))
-
-(defconst fira-code-mode--ligatures
-  '("www" "**" "***" "**/" "*>" "*/" "\\\\" "\\\\\\"
-    "{-" "[]" "::" ":::" ":=" "!!" "!=" "!==" "-}"
-    "--" "---" "-->" "->" "->>" "-<" "-<<" "-~"
-    "#{" "#[" "##" "###" "####" "#(" "#?" "#_" "#_("
-    ".-" ".=" ".." "..<" "..." "?=" "??" ";;" "/*"
-    "/**" "/=" "/==" "/>" "//" "///" "&&" "||" "||="
-    "|=" "|>" "^=" "$>" "++" "+++" "+>" "=:=" "=="
-    "===" "==>" "=>" "=>>" "<=" "=<<" "=/=" ">-" ">="
-    ">=>" ">>" ">>-" ">>=" ">>>" "<*" "<*>" "<|" "<|>"
-    "<$" "<$>" "<!--" "<-" "<--" "<->" "<+" "<+>" "<="
-    "<==" "<=>" "<=<" "<>" "<<" "<<-" "<<=" "<<<" "<~"
-    "<~~" "</" "</>" "~@" "~-" "~=" "~>" "~~" "~~>" "%%"
-    "x" ":" "+" "+" "*"))
-
-(defvar fira-code-mode--old-prettify-alist)
-
-(defun fira-code-mode--enable ()
-  "Enable Fira Code ligatures in current buffer."
-  (setq-local fira-code-mode--old-prettify-alist prettify-symbols-alist)
-  (setq-local prettify-symbols-alist (append (fira-code-mode--make-alist fira-code-mode--ligatures) fira-code-mode--old-prettify-alist))
-  (prettify-symbols-mode t))
-
-(defun fira-code-mode--disable ()
-  "Disable Fira Code ligatures in current buffer."
-  (setq-local prettify-symbols-alist fira-code-mode--old-prettify-alist)
-  (prettify-symbols-mode -1))
-
-(define-minor-mode fira-code-mode
-  "Fira Code ligatures minor mode"
-  :lighter " Fira Code"
-  (setq-local prettify-symbols-unprettify-at-point 'right-edge)
-  (if fira-code-mode
-      (fira-code-mode--enable)
-    (fira-code-mode--disable)))
-
-(defun fira-code-mode--setup ()
-  "Setup Fira Code Symbols"
-  (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol"))
-
-(provide 'fira-code-mode)
-(add-hook 'prog-mode-hook 'fira-code-mode)
-
-;; (company-quickhelp-mode)
-
-(use-package! ivy-posframe
-  :after (ivy)
-  :config
-  (setq ivy-posframe-height-alist '((swiper . 10)
-                                    (t      . 20)))
-  (setq ivy-posframe-font "FiraCode-12")
-  (setq ivy-posframe-display-functions-alist
-        '((swiper          . ivy-posframe-display-at-point)
-          (switch-to-buffer . ivy-posframe-display-at-point)
-          (counsel-M-x     . ivy-posframe-display-at-frame-center)
-          (counsel-find-file . ivy-posframe-display-at-frame-center)
-          (counsel-projectile-switch-to-buffer . ivy-posframe-display-at-point)
-          (persp-switch-to-buffer . ivy-posframe-display-at-point)
-          (t               . ivy-posframe-display-at-frame-top-center)))
-  (ivy-posframe-mode 1))
 #+END_SRC
 * Org mode
 ** Org interface
@@ -256,6 +178,21 @@ and some custom text on a newly created journal file."
 
 (setq org-reveal-root "https://revealjs.com")
 #+END_SRC
+** Org Roam
+#+BEGIN_SRC elisp
+(use-package! org-roam
+  :hook
+  (after-init . org-roam-mode)
+  :custom
+  (org-roam-directory "~/Notes")
+  :bind (:map org-roam-mode-map
+              (("C-c n l" . org-roam)
+               ("C-c n f" . org-roam-find-file)
+               ("C-c n g" . org-roam-graph-show))
+              :map org-mode-map
+              (("C-c n i" . org-roam-insert))
+              (("C-c n I" . org-roam-insert-immediate))))
+#+END_SRC
 ** Hugo
 #+BEGIN_SRC elisp
 (use-package! ox-hugo
@@ -317,48 +254,22 @@ and some custom text on a newly created journal file."
   (setq company-show-numbers t)
   (setq company-tooltip-align-annotations t))
 
-(after! rustic-mode
-  (set-company-backend! 'lsp-mode '(company-lsp :with company-yasnippet company-tabnine)))
-
-;;(use-package! eglot
-;;  :hook
-;;  (rustic-mode . eglot-ensure))
-
 (use-package! rainbow-delimiters
   :hook
   (prog-mode . rainbow-delimiters-mode))
+
+(setq projectile-indexing-method 'native)
 #+END_SRC
 ** Rust
 #+BEGIN_SRC elisp
 (use-package! lsp-mode
-  :commands lsp
   :init
-  ;(setq lsp-rust-server 'rust-analyzer)
-  ;(setq lsp-rust-analyzer-server-display-inlay-hints t)
+  (setq lsp-rust-server 'rust-analyzer)
   :config
-  ;;(setq lsp-enable-snippet t)
-  (setq lsp-rust-clippy-preference "off"))
-
-(use-package! lsp-ui
-  :hook
-  (lsp-mode . lsp-ui-mode)
-  :config
-  (setq lsp-ui-doc-use-webkit t))
-
+  (setq lsp-rust-analyzer-server-display-inlay-hints t))
 (use-package! rustic
   :config
-  (setq rustic-lsp-client 'lsp-mode))
-#+END_SRC
-** Python
-#+BEGIN_SRC elisp
-(use-package! py-autopep8
-  :hook
-  (python-mode . py-autopep8-enable-on-save))
-
-(use-package! elpy
-  :defer t
-  :init
-  (advice-add 'python-mode :before 'elpy-enable))
+  (setq rustic-lsp-server 'rust-analyzer))
 #+END_SRC
 * Hydra
 #+BEGIN_SRC elisp
@@ -398,6 +309,7 @@ and some custom text on a newly created journal file."
 #+END_SRC
 * Self-defined functions
 #+BEGIN_SRC elisp
+(pdf-tools-install)
 (defun nolinum ()
   (global-linum-mode 0)
   )
@@ -431,6 +343,38 @@ and some custom text on a newly created journal file."
                  (line-end-position)
                  (1+ (line-end-position)))))))
 
+#+END_SRC
+* EAF
+#+BEGIN_SRC elisp
+(add-to-list 'load-path "~/Applications/emacs-application-framework")
+(use-package! eaf
+  :custom
+  (eaf-find-alternate-file-in-dired t))
+(require 'eaf-evil)
+#+END_SRC
+* EXWM
+#+BEGIN_SRC elisp
+;; (require 'exwm)
+;; (require 'exwm-config)
+;; (exwm-config-default)
+;; (require 'exwm-randr)
+;; (setq exwm-randr-workspace-output-plist '(0 "eDP-1"))
+;; (exwm-randr-enable)
+;; (require 'exwm-systemtray)
+;; (exwm-systemtray-enable)
+#+END_SRC
+* Email
+#+BEGIN_SRC elisp
+(setq +mu4e-backend 'offlineimap)
+(setq message-send-mail-function 'smtpmail-send-it)
+(set-email-account! "yucklys687@outlook.com"
+                    '((mu4e-sent-folder . "/Sent")
+                      (mu4e-refile-folder . "/Inbox")
+                      (mu4e-drafts-folder . "/Drafts")
+                      (mu4e-trash-folder . "/Deleted")
+                      (smtpmail-smtp-user . "yucklys687@outlook.com")
+                      (mu4e-compose-signature . "---\nZekun Li"))
+                    t)
 #+END_SRC
 * Music
 #+BEGIN_SRC elisp
@@ -469,6 +413,12 @@ and some custom text on a newly created journal file."
       "/usr/share/languagetool:/usr/share/java/languagetool/*")
 (setq-default ispell-program-name "aspell")
 (ispell-change-dictionary "american" t)
+
+(use-package! wucuo
+  :hook
+(prog-mode-hook . 'wucuo-start)
+(text-mode-hook . 'wucuo-start)
+  )
 #+END_SRC
 ** Emoji
 #+BEGIN_SRC elisp
@@ -477,70 +427,50 @@ and some custom text on a newly created journal file."
 ;;  :init
 ;;  (global-emojify-mode))
 #+END_SRC
-** pyim
+** Rime
 #+BEGIN_SRC elisp
-(add-to-list 'load-path "~/Application/snippets/liberime")
-(use-package! liberime-config
+(use-package! rime
+  :custom
+  (default-input-method "rime")
   :config
-  (liberime-start "/usr/share/rime-data/" (file-truename "~/.emacs.d/rime/"))
-  (liberime-select-schema "flypy"))
-(use-package! pyim
-  :demand t
-  :config
-  (setq default-input-method "pyim")
-  (add-to-list 'pyim-schemes '(rime-flypy
-                               :document "小鹤音形支持。"
-                               :class rime
-                               :first-chars "abcdefghijklmnopqrstuvwxyz"
-                               :rest-chars "abcdefghijklmnopqrstuvwxyz"
-                               :code-split-length 4
-                               :code-maximum-length 4
-                               :prefer-trigger-chars nil))
-  (setq-default pyim-english-input-switch-functions
-                '(pyim-probe-isearch-mode
-                  pyim-probe-dynamic-english
-                  pyim-probe-program-mode
-                  pyim-probe-org-structure-template
-                  pyim-probe-org-speed-commands))
-  (setq-default pyim-punctuation-half-width-functions
-                '(pyim-probe-punctuation-line-beginning
-                  pyim-probe-punctuation-after-punctuation)
-                )
-  (set-face-attribute 'pyim-page nil :background "#d8dee9"
-                    :foreground "#2e3440")
-  (pyim-isearch-mode 1)
-  (setq pyim-page-tooltip 'posframe)
-  (setq pyim-page-length 5)
-  (setq pyim-default-scheme 'rime-flypy)
-  (setq pyim-page-style 'one-line))
+  (setq rime-disable-predicates
+      '(rime-predicate-evil-mode-p
+        rime-predicate-after-alphabet-char-p
+        rime-predicate-space-after-cc-p
+        rime-predicate-space-after-ascii-p
+        rime-predicate-after-ascii-char-p
+        rime-predicate-tex-math-or-command-p
+        rime-predicate-prog-in-code-p))
+  (setq rime-show-candidate 'minibuffer)
+  (define-key rime-mode-map (kbd "M-i") 'rime-force-enable))
 #+END_SRC
 ** cnfonts
 #+BEGIN_SRC elisp
-(setq cnfonts--custom-set-fontnames
-      '(("FiraCode" "SourceCodePro" "DejaVu Sans Mono")
-        ("文泉驿等宽微米黑" "Ubuntu Mono" "隶书" "新宋体")))
-
-(setq cnfonts--custom-set-fontsizes
-      '((9    9.0  9.5 )
-        (10   11.0 11.0)
-        (11.5 12.5 12.5)
-        (12.5 13.5 13.5)
-        (14   15.0 15.0)
-        (16   17.0 17.0)
-        (18   18.0 18.0)
-        (20   21.0 21.0)
-        (22   23.0 23.0)
-        (24   25.5 25.5)
-        (26   27.0 27.0)
-        (28   29.0 29.0)
-        (30   32.0 32.0)
-        (32   33.0 33.0)))
-
-(setq cnfonts-profiles
-    '("program" "org-mode"))
-
-(setq cnfonts-use-face-font-rescale t)
-(cnfonts-enable)
+;; (setq cnfonts--custom-set-fontnames
+;;       '(("Iosevka" "SourceCodePro" "DejaVu Sans Mono")
+;;         ("文泉驿等宽微米黑" "Ubuntu Mono" "隶书" "新宋体")))
+;;
+;; (setq cnfonts--custom-set-fontsizes
+;;       '((9    9.0  9.5 )
+;;         (10   11.0 11.0)
+;;         (11.5 12.5 12.5)
+;;         (12.5 13.5 13.5)
+;;         (14   15.0 15.0)
+;;         (16   17.0 17.0)
+;;         (18   18.0 18.0)
+;;         (20   21.0 21.0)
+;;         (22   23.0 23.0)
+;;         (24   25.5 25.5)
+;;         (26   27.0 27.0)
+;;         (28   29.0 29.0)
+;;         (30   32.0 32.0)
+;;         (32   33.0 33.0)))
+;;
+;; (setq cnfonts-profiles
+;;     '("program" "org-mode"))
+;;
+;; (setq cnfonts-use-face-font-rescale t)
+;; (cnfonts-enable)
 #+END_SRC
 * Telegram
 #+BEGIN_SRC elisp

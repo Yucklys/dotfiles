@@ -1,0 +1,9 @@
+var:
+  last_build_time: 1593314677
+  option:
+    simplification: true
+  previously_selected_schema: cangjie5
+  schema_access_time:
+    cangjie5: 1593314682
+    flypy: 1592663150
+    luna_pinyin_simp: 1592658435

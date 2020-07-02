@@ -1,0 +1,45 @@
+[general]
+accounts = Outlook
+
+[Account Outlook]
+localrepository = Outlook-local
+remoterepository = Outlook-remote
+utf8foldernames = True
+proxy = SOCKS5:127.0.0.1:7891
+
+[Repository Outlook-local]
+type = Maildir
+localfolders = ~/Mails/Outlook
+
+[Repository Outlook-remote]
+type = IMAP
+remotehost = outlook.office365.com
+remoteuser = yucklys687@outlook.com
+remotepass = a1s2d3f4.for.microsoft
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda folder: folder in ['Sent', 'Inbox', 'Drafts', 'Deleted']
+
+[Account Gmail]
+localrepository = Gmail-local
+remoterepository = Gmail-remote
+utf8foldernames = True
+proxy = HTTP:127.0.0.1:7890
+authproxy = SOCKS5:127.0.0.1:7891
+
+[Repository Gmail-local]
+type = Maildir
+localfolders = ~/Mails/Gmail
+
+[Repository Gmail-remote]
+type = Gmail
+auth_mechanisms = XOAUTH2
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remoteuser = yucklys687@gmail.com
+remotepass = yucklys687.for.google
+oauth2_client_id = 881210335546-43c10purmectrc2v31qtigpjftudmed0.apps.googleusercontent.com
+oauth2_client_secret = dgOIidQ5WGCQ7C5FFMNT1POD
+oauth2_refresh_token = 1//0eaCfv69-tWc0CgYIARAAGA4SNwF-L9IrWKq6cER65FwSbOeb6uvviw_bf9uHitO6o075Cvam7Snz3ECC2b6dum77z-zWpDJjQzc
+#oauth2_access_token = ya29.a0AfH6SMBvkwgHEn1k5x_kE2JripSO8Tm5ZTEq02Oe2BsBiPDuc2mEdp6ByujdEEpitSY-PTf0wcFCGpE5jxjTA158CeURLbj-aaJC9Ytk3szEjkC8c2sYiNW99SiA1MN-wQ77RcmzcPE0Cl7HIKv0wZfxby8BBRl3Xd4
+folderfilter = lambda folder: folder in ['INBOX']
+ssl_version = tls1_2

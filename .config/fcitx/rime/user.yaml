@@ -1,9 +1,10 @@
 var:
-  last_build_time: 1585051827
+  last_build_time: 1593328468
   option:
     simplification: true
   previously_selected_schema: flypy
   schema_access_time:
-    double_pinyin_flypy: 1584848502
-    flypy: 1584848574
-    luna_pinyin_simp: 1571392113
+    cangjie5: 1593320059
+    double_pinyin_flypy: 1593323594
+    flypy: 1593323604
+    luna_pinyin_simp: 1592658435

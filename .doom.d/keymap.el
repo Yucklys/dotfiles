@@ -56,7 +56,7 @@
    :desc "mingus"                              "m"   #'mingus
    :desc "elfeed"                              "e"   #'elfeed
    :desc "Org noter"                           "n"   #'org-noter
-   :desc "+eshell/toggle"                      "t"   #'+eshell/toggle))
+   :desc "+vterm/toggle"                      "t"   #'+vterm/toggle))
 
 (global-set-key "\M-s" 'avy-goto-char)
 (global-set-key "\M-i" 'pyim-convert-string-at-point)

@@ -2,9 +2,13 @@ __build_info:
   rime_version: 1.5.3
   timestamps:
     bopomofo_tw.custom: 0
-    bopomofo_tw.schema: 1526362370
-    default: 1526362370
+    bopomofo_tw.schema: 1584206730
+    default: 1584190865
     default.custom: 0
+    key_bindings: 1584190865
+    key_bindings.custom: 0
+    punctuation: 1584190865
+    punctuation.custom: 0
 custom_phrase:
   db_class: stabledb
   dictionary: ""
@@ -68,8 +72,6 @@ key_binder:
     - {accept: "Control+Shift+numbersign", toggle: full_shape, when: always}
     - {accept: "Control+Shift+dollar", toggle: simplification, when: always}
     - {accept: "Control+Shift+percent", toggle: extended_charset, when: always}
-    - {accept: "Shift+space", toggle: full_shape, when: always}
-    - {accept: "Control+period", toggle: ascii_punct, when: always}
     - {accept: comma, send: comma, when: has_menu}
     - {accept: period, send: period, when: has_menu}
     - {accept: minus, send: minus, when: has_menu}
@@ -190,7 +192,7 @@ schema:
     
   name: "注音·臺灣正體"
   schema_id: bopomofo_tw
-  version: 1.6
+  version: 1.7
 simplifier:
   opencc_config: t2tw.json
   option_name: zh_tw
@@ -237,8 +239,6 @@ switches:
     states: ["中文", "西文"]
   - name: full_shape
     states: ["半角", "全角"]
-  - name: ascii_punct
-    states: ["。，", "．，"]
   - name: zh_tw
     reset: 1
 translator:

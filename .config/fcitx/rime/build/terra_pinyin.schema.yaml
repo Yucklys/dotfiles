@@ -1,10 +1,14 @@
 __build_info:
   rime_version: 1.5.3
   timestamps:
-    default: 1526362370
+    default: 1584190865
     default.custom: 0
+    key_bindings: 1584190865
+    key_bindings.custom: 0
+    punctuation: 1584190865
+    punctuation.custom: 0
     terra_pinyin.custom: 0
-    terra_pinyin.schema: 1526362370
+    terra_pinyin.schema: 1584206909
 custom_phrase:
   db_class: stabledb
   dictionary: ""
@@ -68,8 +72,6 @@ key_binder:
     - {accept: "Control+Shift+numbersign", toggle: full_shape, when: always}
     - {accept: "Control+Shift+dollar", toggle: simplification, when: always}
     - {accept: "Control+Shift+percent", toggle: extended_charset, when: always}
-    - {accept: "Shift+space", toggle: full_shape, when: always}
-    - {accept: "Control+period", toggle: ascii_punct, when: always}
     - {accept: minus, send: minus, when: has_menu}
     - {accept: minus, send: Page_Up, when: paging}
   import_preset: default

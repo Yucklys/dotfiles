@@ -2,9 +2,13 @@ __build_info:
   rime_version: 1.5.3
   timestamps:
     bopomofo.custom: 0
-    bopomofo.schema: 1526362370
-    default: 1526362370
+    bopomofo.schema: 1584206730
+    default: 1584190865
     default.custom: 0
+    key_bindings: 1584190865
+    key_bindings.custom: 0
+    punctuation: 1584190865
+    punctuation.custom: 0
 custom_phrase:
   db_class: stabledb
   dictionary: ""
@@ -71,8 +75,6 @@ key_binder:
     - {accept: "Control+Shift+numbersign", toggle: full_shape, when: always}
     - {accept: "Control+Shift+dollar", toggle: simplification, when: always}
     - {accept: "Control+Shift+percent", toggle: extended_charset, when: always}
-    - {accept: "Shift+space", toggle: full_shape, when: always}
-    - {accept: "Control+period", toggle: ascii_punct, when: always}
     - {accept: comma, send: comma, when: has_menu}
     - {accept: period, send: period, when: has_menu}
     - {accept: minus, send: minus, when: has_menu}
@@ -195,7 +197,7 @@ schema:
     
   name: "注音"
   schema_id: bopomofo
-  version: 2.1
+  version: 2.2
 speller:
   algebra:
     - "erase/^xx$/"
@@ -245,8 +247,6 @@ switches:
     states: ["半角", "全角"]
   - name: simplification
     states: ["漢字", "汉字"]
-  - name: ascii_punct
-    states: ["。，", "．，"]
 translator:
   dictionary: terra_pinyin
   preedit_format:

@@ -32,7 +32,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mxw/vim-prolog'
 
 " Extend
-Plug 'jceb/vim-orgmode'
 Plug 'godlygeek/tabular'
 Plug 'sheerun/vim-polyglot'
 Plug 'mboughaba/i3config.vim'

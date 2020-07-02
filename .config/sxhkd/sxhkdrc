@@ -8,6 +8,10 @@
 super + Return
 	alacritty
 
+# scratchpad
+super + shift + Return
+	id=$(cat /tmp/scratchid);bspc node $id --flag hidden;bspc node -f $id
+
 # program launcher
 super + @space
 	rofi -show
@@ -124,6 +128,10 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+# rotate parent node
+super + shift + r
+	bspc node @parent -R 90
+
 #
 # Hide
 #
@@ -153,10 +161,10 @@ XF86AudioMute
 
 # brightness
 XF86MonBrightnessUp
-	$HOME/.i3/scripts/brightnessControl.sh up
+	brightnessctl set 5%+
 
 XF86MonBrightnessDown
-	$HOME/.i3/scripts/brightnessControl.sh down
+	brightnessctl set 5%-
 
 # search
 XF86Search
@@ -173,19 +181,19 @@ XF86AudioNext
 	mpc next
 
 # screenshot
-#Print
-#	flameshot full -c -p ~/Picture/screenshots
-#super + Print
-#	flameshot gui -r -p ~/Picture/screenshots
 Print
-	dunstify "hello"
+	flameshot full -c -p ~/Pictures/screenshots
+super + Print
+	flameshot gui -r -p ~/Pictures/screenshots
+# Print
+# 	dunstify "hello"
 
 #
 # Application shortcut
 #
 
 # file manager
-Menu
+super + r
 	alacritty -e ranger
 super + F3
 	nautilus
@@ -194,4 +202,10 @@ super + F3
 super + F1
 	goldendict
 super + F2
-	zeal
+	dex /usr/share/applications/deepin.com.wechat.desktop
+
+# clipboard
+super + c
+	CM_LAUNCHER=rofi clipmenu
+super + shift + d
+	killall dunst;dunst &;dunstify foo
