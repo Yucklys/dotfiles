@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=clashy
+Comment=clashystartup script
+Exec=/opt/Clashy/clashy
+StartupNotify=false
+Terminal=false
