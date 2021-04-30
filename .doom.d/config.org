@@ -1,6 +1,6 @@
 #+STARTUP: overview
 
-* Interface tweak
+* Setup
 #+BEGIN_SRC elisp
 (setq calendar-location-name "Beijing, CN")
 (setq calendar-latitude 39.92)
@@ -11,15 +11,21 @@
 ;;                           ("19:30" . doom-nord)))
 ;;  (circadian-setup))
 (setq doom-theme 'doom-nord)
+(setq doom-font (font-spec :family "Fira Code" :size 34))
 (setq fancy-splash-image
       (let* ((banners (directory-files "~/.doom.d/banner" 'full (rx ".png" eos)))
              (banner (elt banners (random (length banners)))))
         banner))
 
-(add-to-list 'default-frame-alist '(font . "Iosevka-12"))
+;; (add-to-list 'default-frame-alist '(font . "FiraCode-12"))
 
 (global-set-key (kbd "<f5>") 'revert-buffer)
 (global-git-gutter-mode +1)
+
+(setq url-proxy-services
+      '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")
+        ("http" . "127.0.0.1:7890")
+        ("https" . "127.0.0.1:7890")))
 #+END_SRC
 * Org mode
 ** Org interface
@@ -61,7 +67,7 @@
 #+BEGIN_SRC elisp
 ;; Org mode custom
 (custom-set-variables
- '(org-directory "~/Notes/")
+ '(org-directory "~/OneDrive/org/")
  '(org-default-notes-file (concat org-directory "/notes.org"))
  '(org-export-html-postamble nil)
  '(org-hide-leading-stars t)
@@ -69,18 +75,19 @@
  '(org-startup-indented t)
  )
 
-(setq org-agenda-files (list "~/Notes/i.org"
-                             "~/Notes/todo.org"))
+(setq org-agenda-files (list "~/OneDrive/org/i.org"
+                             "~/OneDrive/org/todo.org"
+                             "~/OneDrive/org/roam/50 Journal/"))
 
 ;; Auto refile
 (add-hook 'org-after-todo-state-change-hook 'dk/refile-todo 'append)
 (defun dk/refile-todo()
   (if (equal org-state "DONE")
-      (dk/refile-to "~/Notes/todo.org" "Done"))
+      (dk/refile-to "~/OneDrive/org/todo.org" "Done"))
   (if (equal org-state "CANCEL")
-      (dk/refile-to "~/Notes/todo.org" "Cancel"))
+      (dk/refile-to "~/OneDrive/org/todo.org" "Cancel"))
   (if (equal org-state "NEXT")
-      (dk/refile-to "~/Notes/todo.org" "Next")))
+      (dk/refile-to "~/OneDrive/org/todo.org" "Next")))
 
 (defun dk/refile-to (file headline)
   "Move current headline to specified location"
@@ -137,61 +144,62 @@ See `org-capture-templates' for more information."
   (setq org-capture-templates '(
                                 ("t" "Todo" entry (file+headline "todo.org" "Task")
                                  "** TODO %?\n")
-                                ("d" "Diary" entry (file+olp+datetree "diary.org")
-                                 "* %?\n")
-                                ("i" "Idea" entry (file+headline "i.org" "Idea")
-                                 "** %?\n%U\n")
-                                ("p" "Protocol" entry (file+headline "i.org" "Inbox")
-                                 "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
-                                ("L" "Protocol Link" entry (file+headline "i.org" "Inbox")
-                                 "* %?\n:PROPERTIES:\n:CREATED: %U\n:END: \%i\n %a")
-                                ("r" "Reading notes" entry (file+headline "books.org" "未分类")
-                                 "* %U\n** 摘录\n#+BEGIN_QUOTE\n%?\n#+END_QUOTE\n** 笔记\n")
                                 ("b" "Blog" entry (file+olp "blog.org" "Blog posts")
                                  (function org-hugo-new-subtree-post-capture-template)))))
 
 ;; Log when mark as DONE
 (setq org-log-done 'time)
 
-;; Org journal
-(defun org-journal-date-format-func (time)
-  "Custom function to insert journal date header,
-and some custom text on a newly created journal file."
-  (when (= (buffer-size) 0)
-    (insert
-     (pcase org-journal-file-type
-       (`daily "#+TITLE: Daily Journal")
-       (`weekly "#+TITLE: Weekly Journal")
-       (`monthly "#+TITLE: Monthly Journal")
-       (`yearly "#+TITLE: Yearly Journal"))))
-  (concat org-journal-date-prefix (format-time-string "%A, %x" time)))
-
-
-(use-package! org-journal
-  :defer t
-  :custom
-  (org-journal-dir "~/Notes/journal/")
-  (org-journal-date-format 'org-journal-date-format-func)
-  (org-journal-file-type 'monthly)
-  (org-journal-date-format "%A, %d %B %Y")
-  (org-journal-enable-agenda-integration t))
-
 (setq org-reveal-root "https://revealjs.com")
 #+END_SRC
 ** Org Roam
 #+BEGIN_SRC elisp
-(use-package! org-roam
-  :hook
-  (after-init . org-roam-mode)
-  :custom
-  (org-roam-directory "~/Notes")
-  :bind (:map org-roam-mode-map
-              (("C-c n l" . org-roam)
-               ("C-c n f" . org-roam-find-file)
-               ("C-c n g" . org-roam-graph-show))
-              :map org-mode-map
-              (("C-c n i" . org-roam-insert))
-              (("C-c n I" . org-roam-insert-immediate))))
+(setq org-roam-directory "~/OneDrive/org/roam")
+(setq org-roam-dailies-directory "50 Journal/")
+
+(setq org-roam-capture-templates '(
+                                   ("n" "Note Group")
+                                   ("nc" "Class Note" plain (function org-roam--capture-get-point)
+                                    "%?"
+                                    :file-name "10 Areas/${slug}"
+                                    :head "#+title: ${title}\n#+roam_alias: \n#+roam_tags: \n\n"
+                                    :unnarrowed t)
+                                   ("np" "Paper Note" plain (function org-roam--capture-get-point)
+                                    "* Related Work\n%?\n* Argument\n\n* Experiment\n\n* Conclusion"
+                                    :file-name "10 Areas/${slug}"
+                                    :head "#+title: ${title}\n#+roam_alias: \n#+roam_tags: \n\n"
+                                    :unnarrowed t)
+                                   ("nb" "Blog Note" plain (function org-roam--capture-get-point)
+                                    "%?"
+                                    :file-name "10 Areas/${slug}"
+                                    :head "#+title: ${title}\n#+roam_alias: \n#+roam_tags: blog\n\n"
+                                    :unnarrowed t)
+                                   ("c" "Card" plain (function org-roam--capture-get-point)
+                                    "* What is this?\n%?"
+                                    :file-name "00 Cards/${slug}"
+                                    :head "#+title: ${title}\n#+roam_alias: \n#+roam_tags: \n\n"
+                                    :unnarrowed t)
+                                   ("p" "Project" plain (function org-roam--capture-get-point)
+                                    "- Field: %^{Field of this project}\n\n%?"
+                                    :file-name "20 Projects/${slug}"
+                                    :head "#+title: ${title}\n#+roam_alias: \n#+roam_tags: \n\n"
+                                    :unnarrowed t)
+                                   ))
+
+(setq org-roam-dailies-capture-templates
+      '(("h" "Homework" entry
+         #'org-roam-capture--get-point
+         "** %?\n- Subject: %^{Which subject?}\n"
+         :file-name "50 Journal/%<%Y-%m-%d>"
+         :head "#+title: %<%Y-%m-%d>\n"
+         :olp ("Homework"))
+        ("i" "Inbox" entry #'org-roam-capture--get-point
+         "** %?\n"
+         :file-name "50 Journal/%<%Y-%m-%d>"
+         :head "#+title: %<%Y-%m-%d>\n"
+         :olp ("Inbox"))))
+(setq org-roam-graph-executable "neato")
+(setq org-roam-graph-viewer "qutebrowser")
 #+END_SRC
 ** Hugo
 #+BEGIN_SRC elisp
@@ -200,16 +208,6 @@ and some custom text on a newly created journal file."
   (setq org-hugo-date-format "%Y-%m-%d")
   (setq org-hugo-suppress-lastmod-period 86400.0)
   (setq org-hugo-auto-set-lastmod t))
-#+END_SRC
-* Snails
-#+BEGIN_SRC elisp
-;; (add-to-list 'load-path "~/Application/snails")
-;; (require 'snails)
-;; (add-hook 'snails-mode-hook #'(lambda () (evil-emacs-state)))
-
-;; (add-to-list 'load-path "~/Application/fuz.el")
-;; (add-to-list 'load-path "~/Application/fuz.el/target/release")
-;; (require 'fuz)
 #+END_SRC
 * Elfeed
 #+BEGIN_SRC elisp
@@ -244,7 +242,7 @@ and some custom text on a newly created journal file."
 (use-package! elfeed-org
   :config
   (elfeed-org)
-  (setq rmh-elfeed-org-files (list "~/Notes/elfeed.org")))
+  (setq rmh-elfeed-org-files (list "~/OneDrive/org/elfeed.org")))
 #+END_SRC
 * Coding
 ** General
@@ -262,14 +260,9 @@ and some custom text on a newly created journal file."
 #+END_SRC
 ** Rust
 #+BEGIN_SRC elisp
-(use-package! lsp-mode
-  :init
-  (setq lsp-rust-server 'rust-analyzer)
-  :config
+(after! rustic
+  (setq rustic-lsp-server 'rust-analyzer)
   (setq lsp-rust-analyzer-server-display-inlay-hints t))
-(use-package! rustic
-  :config
-  (setq rustic-lsp-server 'rust-analyzer))
 #+END_SRC
 * Hydra
 #+BEGIN_SRC elisp
@@ -278,7 +271,7 @@ and some custom text on a newly created journal file."
                                -- ELFEED MENU --
 
 "
-  ("O" (find-file "~/Notes/elfeed.org") "Edit source list" :color blue :column "EDIT")
+  ("O" (find-file "~/OneDrive/org/elfeed.org") "Edit source list" :color blue :column "EDIT")
   ("u" elfeed-update "Update")
   ("e" (elfeed-search-set-filter "@6-months-ago +unread +emacs") "emacs" :column "QUERY")
   ("b" (elfeed-search-set-filter "@6-months-ago +unread +blog") "blog")
@@ -344,37 +337,9 @@ and some custom text on a newly created journal file."
                  (1+ (line-end-position)))))))
 
 #+END_SRC
-* EAF
-#+BEGIN_SRC elisp
-(add-to-list 'load-path "~/Applications/emacs-application-framework")
-(use-package! eaf
-  :custom
-  (eaf-find-alternate-file-in-dired t))
-(require 'eaf-evil)
-#+END_SRC
-* EXWM
-#+BEGIN_SRC elisp
-;; (require 'exwm)
-;; (require 'exwm-config)
-;; (exwm-config-default)
-;; (require 'exwm-randr)
-;; (setq exwm-randr-workspace-output-plist '(0 "eDP-1"))
-;; (exwm-randr-enable)
-;; (require 'exwm-systemtray)
-;; (exwm-systemtray-enable)
-#+END_SRC
 * Email
 #+BEGIN_SRC elisp
-(setq +mu4e-backend 'offlineimap)
-(setq message-send-mail-function 'smtpmail-send-it)
-(set-email-account! "yucklys687@outlook.com"
-                    '((mu4e-sent-folder . "/Sent")
-                      (mu4e-refile-folder . "/Inbox")
-                      (mu4e-drafts-folder . "/Drafts")
-                      (mu4e-trash-folder . "/Deleted")
-                      (smtpmail-smtp-user . "yucklys687@outlook.com")
-                      (mu4e-compose-signature . "---\nZekun Li"))
-                    t)
+;;(setq +notmuch-sync-backend 'mbsync)
 #+END_SRC
 * Music
 #+BEGIN_SRC elisp
@@ -393,7 +358,7 @@ and some custom text on a newly created journal file."
 (use-package! deft
   :config
   (setq deft-extensions '("org"))
-  (setq deft-directory "~/Notes")
+  (setq deft-directory "~/OneDrive/org")
   (setq deft-recursive t)
   (setq deft-strip-summary-regexp
         (concat "\\("
@@ -409,16 +374,16 @@ and some custom text on a newly created journal file."
 #+END_SRC
 ** Langtool
 #+BEGIN_SRC elisp
-(setq langtool-java-classpath
-      "/usr/share/languagetool:/usr/share/java/languagetool/*")
-(setq-default ispell-program-name "aspell")
-(ispell-change-dictionary "american" t)
-
-(use-package! wucuo
-  :hook
-(prog-mode-hook . 'wucuo-start)
-(text-mode-hook . 'wucuo-start)
-  )
+(setf (alist-get 'markdown-mode +spell-excluded-faces-alist)
+      '(markdown-code-face
+        markdown-reference-face
+        markdown-link-face
+        markdown-url-face
+        markdown-markup-face
+        markdown-html-attr-value-face
+        markdown-html-attr-name-face
+        markdown-html-tag-name-face))
+(setq ispell-dictionary "en_US")
 #+END_SRC
 ** Emoji
 #+BEGIN_SRC elisp
@@ -427,22 +392,26 @@ and some custom text on a newly created journal file."
 ;;  :init
 ;;  (global-emojify-mode))
 #+END_SRC
-** Rime
+** Input
 #+BEGIN_SRC elisp
+;; use emacs-rime
 (use-package! rime
   :custom
   (default-input-method "rime")
+  (rime-user-data-dir "~/.local/share/fcitx5/rime")
   :config
   (setq rime-disable-predicates
-      '(rime-predicate-evil-mode-p
-        rime-predicate-after-alphabet-char-p
-        rime-predicate-space-after-cc-p
-        rime-predicate-space-after-ascii-p
-        rime-predicate-after-ascii-char-p
-        rime-predicate-tex-math-or-command-p
-        rime-predicate-prog-in-code-p))
+        '(rime-predicate-evil-mode-p
+          rime-predicate-after-alphabet-char-p
+          rime-predicate-space-after-cc-p
+          rime-predicate-tex-math-or-command-p
+          rime-predicate-prog-in-code-p))
   (setq rime-show-candidate 'minibuffer)
   (define-key rime-mode-map (kbd "M-i") 'rime-force-enable))
+;; use fcitx
+;; (use-package! fcitx
+;;   :config
+;;   (setq fcitx-remote-command "fcitx5-remote"))
 #+END_SRC
 ** cnfonts
 #+BEGIN_SRC elisp
@@ -471,19 +440,6 @@ and some custom text on a newly created journal file."
 ;;
 ;; (setq cnfonts-use-face-font-rescale t)
 ;; (cnfonts-enable)
-#+END_SRC
-* Telegram
-#+BEGIN_SRC elisp
-(use-package! telega
-  :load-path  "~/Applications/telega.el"
-  :commands (telega)
-  :defer t
-  :config
-  (setq telega-proxies
-        (list
-         '(:server "127.0.0.1" :port 1080 :enable t
-                   :type (:@type "proxyTypeSocks5"))
-         )))
 #+END_SRC
 * Funny
 #+BEGIN_SRC elisp
