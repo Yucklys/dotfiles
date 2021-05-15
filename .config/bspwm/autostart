@@ -5,6 +5,8 @@
 xsetroot -cursor_name left_ptr &
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
 xrdb merge .Xresources &
+# Multimonitor setup
+~/.screenlayout/dualmonitor.fish
 ## Wallpaper. Nitrogen just draws wallpaper, 
 sh ~/.fehbg &
 ## compositing. Required for shadows, transparency and stuff. 
@@ -29,21 +31,21 @@ xset s off &
 xset s noblank &
 xset s noexpose &
 xset c on &
-xset -dpms &
+t -dpms &
 xbacklight -set 15 &
 ## Run screenlock when suspending
 xautolock -time 10 -locker '~/.bin/mylock.sh' &
-## Make monitor settings persist between reboots
-eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desktop) &
 ## Notify about package updates
 update-checker 7200 &
 ## Map super keys to trigger when used alone
 xcape -e 'Super_L=Super_L|Shift_L|space;Super_R=Super_R|Shift_R|z' &
+# Swap ctrl and capslock
+setxkbmap -option ctrl:swapcaps
 
 # keybinding
 sxhkd &
-xbindkeys
-libinput-gestures-setup start
+#xbindkeys
+#libinput-gestures-setup start
 
 # power manager
 xfce4-power-manager &
@@ -52,7 +54,7 @@ xfce4-power-manager &
 nm-applet &
 
 # input
-fcitx &
+fcitx5 &
 
 # notify
 dunst &
@@ -66,12 +68,12 @@ unclutter &
 # flameshot
 flameshot & 
 # goldendict
-goldendict &
+#goldendict &
 
 # aria2c
-aria2c --conf-path=$HOME/.config/aria2c/aria2c.conf -D
+#aria2c --conf-path=$HOME/.config/aria2c/aria2c.conf -D
 
 # other
-redshift &
-touchpad-indicator &
-kdeconnect-indicator &
+/usr/lib/geoclue-2.0/demos/agent &
+#touchpad-indicator &
+#kdeconnect-indicator &

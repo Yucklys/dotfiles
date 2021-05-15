@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 #
 # wm independent hotkeys
 #
@@ -12,9 +13,13 @@ super + Return
 super + shift + Return
 	id=$(cat /tmp/scratchid);bspc node $id --flag hidden;bspc node -f $id
 
-# program launcher
+# application launcher
 super + @space
 	rofi -show
+
+# program launcher
+super
+  ~/.config/polybar/scripts/rofi_run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -68,7 +73,7 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node in the current desktop
-alt + {_,shift + }Tab
+alt + {_,shift +}Tab
 	bspc node -f {next,prev}.local
 
 # focus the next/previous desktop in the current monitor
@@ -83,10 +88,10 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+# super + {o,i}
+# 	bspc wm -h off; \
+# 	bspc node {older,newer} -f; \
+# 	bspc wm -h on
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
@@ -182,9 +187,9 @@ XF86AudioNext
 
 # screenshot
 Print
-	flameshot full -c -p ~/Pictures/screenshots
+  maim -s ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png
 super + Print
-	flameshot gui -r -p ~/Pictures/screenshots
+  maim ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png
 # Print
 # 	dunstify "hello"
 
@@ -192,17 +197,12 @@ super + Print
 # Application shortcut
 #
 
-# file manager
-super + r
-	alacritty -e ranger
-super + F3
+super + e
+	alacritty -e ~/.local/share/bin/nnnrun
+super + shift + e
 	nautilus
-
-# checkup
-super + F1
-	goldendict
-super + F2
-	dex /usr/share/applications/deepin.com.wechat.desktop
+super + o; {d, b, p}
+	{goldendict, qutebrowser, bitwarden-desktop}
 
 # clipboard
 super + c

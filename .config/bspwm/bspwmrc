@@ -1,10 +1,10 @@
 #! /bin/sh
-bspc monitor -d 1 2 3 4 5
+workspaces_multimonitor &
 
 bspc config border_width         5
 bspc config window_gap          36
 
-bspc config split_ratio          0.40
+bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      false
 
@@ -18,6 +18,9 @@ bspc config right_padding 0
 bspc config bottom_padding 36
 
 bspc config focus_follows_pointer false
+bspc config pointer_follows_focus true
+bspc config automatic_scheme spiral
+bspc config initial_polarity first_child
 
 ## Rules
 bspc rule -r '*:*'
