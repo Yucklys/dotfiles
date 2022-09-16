@@ -1,0 +1,3 @@
+function ec --wraps='emacsclient -nc' --wraps='GTK_IM_MODULE=emacs XMODIFIERS=@im=emacs emacsclient -nc' --wraps='env GTK_IM_MODULE=emacs XMODIFIERS=@im=emacs emacsclient -nc' --wraps='env GTK_IM_MODULE=emacs XMODIFIERS=@im=emacs emacsclient -nw' --wraps='env GTK_IM_MODULE=emacs XMODIFIERS=@im=emacs emacsclient' --wraps='env GTK_IM_MODULE=emacs XMODIFIERS=@im=emacs emacsclient -n' --wraps='env GTK_IM_MODULE=emacs XMODIFIERS=@im=emacs emacsclient -c' --wraps='env GTK_IM_MODULE=emacs XMODIFIERS=@im=emacs emacsclient -c &' --wraps='env GTK_IM_MODULE=emacs XMODIFIERS=@im=emacs emacsclient -nc &' --description 'alias ec=env GTK_IM_MODULE=emacs XMODIFIERS=@im=emacs emacsclient -nc'
+  env GTK_IM_MODULE=emacs XMODIFIERS=@im=emacs emacsclient -nc $argv; 
+end
