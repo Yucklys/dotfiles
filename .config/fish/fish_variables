@@ -1,6 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR BROWSER:vivaldi\x2dstable
 SETUVAR --export --path PATH:/home/yucklys/\x2ecargo/bin\x1e/home/yucklys/\x2eemacs\x2ed/bin\x1e/home/yucklys/\x2elocal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/bin\x1e/usr/local/sbin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl
+SETUVAR TERM:xterm\x2d256color
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
@@ -30,4 +32,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/yucklys/\x2ecargo/bin\x1e/home/yucklys/\x2eemacs\x2ed/bin\x1e/home/yucklys/\x2elocal/bin
+SETUVAR fish_user_paths:/home/yucklys/anaconda3/bin\x1e/home/yucklys/\x2ecargo/bin\x1e/home/yucklys/\x2eemacs\x2ed/bin\x1e/home/yucklys/\x2elocal/bin

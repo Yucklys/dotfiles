@@ -59,31 +59,31 @@
    '("k" . meow-prev)
    '("l" . meow-right)
    '("h" . meow-left))
-  ;; (meow-leader-define-key
-  ;;  ;; SPC j/k will run the original command in MOTION state.
-  ;;  '("j" . meow-motion-origin-command)
-  ;;  '("k" . meow-motion-origin-command)
-  ;;  '("l" . meow-motion-origin-command)
-  ;;  '("h" . meow-motion-origin-command)
-  ;;  '("[" . centaur-tabs-backward)
-  ;;  '("]" . centaur-tabs-forward)
-  ;;  ;; Use SPC (0-9) for digit arguments.
-  ;;  '("1" . meow-digit-argument)
-  ;;  '("2" . meow-digit-argument)
-  ;;  '("3" . meow-digit-argument)
-  ;;  '("4" . meow-digit-argument)
-  ;;  '("5" . meow-digit-argument)
-  ;;  '("6" . meow-digit-argument)
-  ;;  '("7" . meow-digit-argument)
-  ;;  '("8" . meow-digit-argument)
-  ;;  '("9" . meow-digit-argument)
-  ;;  '("0" . meow-digit-argument)
-  ;;  '("/" . meow-keypad-describe-key)
-  ;;  (cons "p" projectile-command-map)
-  ;;  '("wh" . split-window-horizontally)
-  ;;  '("wv" . split-window-vertically)
-  ;;  '("SPC" . meow-cancel-selection)
-  ;;  '("?" . meow-cheatsheet))
+  (meow-leader-define-key
+   ;; SPC j/k will run the original command in MOTION state.
+   '("j" . meow-motion-origin-command)
+   '("k" . meow-motion-origin-command)
+   '("l" . meow-motion-origin-command)
+   '("h" . meow-motion-origin-command)
+   ;; '("[" . centaur-tabs-backward)
+   ;; '("]" . centaur-tabs-forward)
+   ;; Use SPC (0-9) for digit arguments.
+   '("1" . meow-digit-argument)
+   '("2" . meow-digit-argument)
+   '("3" . meow-digit-argument)
+   '("4" . meow-digit-argument)
+   '("5" . meow-digit-argument)
+   '("6" . meow-digit-argument)
+   '("7" . meow-digit-argument)
+   '("8" . meow-digit-argument)
+   '("9" . meow-digit-argument)
+   '("0" . meow-digit-argument)
+   '("/" . meow-keypad-describe-key)
+   (cons "p" projectile-command-map)
+   '("wh" . split-window-horizontally)
+   '("wv" . split-window-vertically)
+   '("SPC" . meow-cancel-selection)
+   '("?" . meow-cheatsheet))
   (meow-normal-define-key
    '("%" . meow-query-replace-regexp)
    '("&" . meow-query-replace)
@@ -359,6 +359,10 @@ See `org-capture-templates' for more information."
                                       "* Related Work\n%?\n* Argument\n\n* Experiment\n\n* Conclusion"
                                       :if-new (file+head "10 Areas/12 ${slug}.org" "#+title: ${title}\n")
                                       :unnarrowed t)
+                                     ("nr" "Reading" entry
+                                      "** %?"
+                                      :if-new (file+head+olp "10 Areas/11 ${slug}.org" "#+title: ${title}\n* Intro\n\n" ("Highlights"))
+                                      :unnarrowed t)
                                      ("c" "Card Group")
                                      ("cc" "Concept" plain
                                       "* Source\n\n%?\n\n"
@@ -372,12 +376,9 @@ See `org-capture-templates' for more information."
                                       "%?"
                                       :if-new (file+head "00 Cards/00 ${slug}.org" "#+title: ${title}\n")
                                       :unnarrowed t)
-                                     ("cr" "Reading" entry
-                                      "** %?"
-                                      :target (file+head+olp "00 Cards/00 ${slug}.org" "#+title: ${title}\n* Intro\n\n" ("Highlights")))
                                      ("p" "Project" plain
-                                      "* Field: %?\n\n"
-                                      :if-new (file+head "20 Projects/20 {slug}.org" "#+title: ${title}\n")
+                                      "%?"
+                                      :if-new (file+head "20 Projects/20 ${slug}.org" "#+title: ${title}\n#+filetag:\n")
                                       :unnarrowed t)
                                      ))
   (setq org-roam-capture-ref-templates '(
@@ -451,18 +452,18 @@ See `org-capture-templates' for more information."
   (setq company-idle-delay 0.2)
   )
 
-;; (after! lsp-mode
-;;   (setq +lsp-company-backends '(company-files company-capf company-yasnippet
-;;                                               :separate company-tabnine
-;;                                               )))
+(after! lsp-mode
+  (setq +lsp-company-backends '(company-capf company-yasnippet
+                                              ;; :separate company-tabnine
+                                              )))
 
 ;; (use-package! eglot-x
 ;;   :load-path "~/.doom.d/snippets")
 
-(after! rustic
-  (set-company-backend! 'rustic-mode '(company-capf
-                                       :with company-tabnine
-                                       :separate company-yasnippet)))
+;; (after! rustic
+;;   (set-company-backend! 'rustic-mode '(company-capf company-files company-yasnippet
+;;                                        ;; :with company-tabnine
+;;                                        )))
 
 
 (use-package! rainbow-delimiters
@@ -486,6 +487,11 @@ See `org-capture-templates' for more information."
   :config
   (setq lsp-rust-analyzer-proc-macro-enable t))
 #+END_SRC
+** OCaml
+#+begin_src elisp
+(add-to-list 'load-path "/home/yucklys/.opam/4.12.0/share/emacs/site-lisp")
+(require 'ocp-indent)
+#+end_src
 * Hydra
 #+BEGIN_SRC elisp
 ;; (defhydra hydra-elfeed ()
@@ -561,27 +567,28 @@ See `org-capture-templates' for more information."
 #+END_SRC
 * Email
 #+BEGIN_SRC elisp
-;; (use-package! mu4e
-;;   :config
-;;   (setq mu4e-get-mail-command "mbsync -a")
-;;   (setq user-mail-address "yucklys687@gmail.com")
-;;   (setq +mu4e-gmail-accounts '(("yucklys687@gmail.com" . "/work")
-;;                                ("zli12330@terpmail.umd.edu" . "/umd")))
-;;   (set-email-account! "work"
-;;                       '((mu4e-sent-folder    . "/work/Sent Mail")
-;;                         (mu4e-drafts-folder  . "/work/Drafts")
-;;                         (mu4e-trash-folder   . "/work/Trash")
-;;                         (smtpmail-smtp-user  . "yucklys687@gmail.com")))
-;;   (set-email-account! "personal"
-;;                       '((mu4e-sent-folder    . "/personal/Sent Mail")
-;;                         (mu4e-drafts-folder  . "/personal/Drafts")
-;;                         (mu4e-trash-folder   . "/personal/Trash")
-;;                         (smtpmail-smtp-user  . "yucklys687@outlook.com")))
-;;     (set-email-account! "umd"
-;;                       '((mu4e-sent-folder    . "/umd/Sent Mail")
-;;                         (mu4e-drafts-folder  . "/umd/Drafts")
-;;                         (mu4e-trash-folder   . "/umd/Trash")
-;;                         (smtpmail-smtp-user  . "zli12330@terpmail.umd.edu"))))
+(use-package! mu4e
+  :config
+  (setq mu4e-get-mail-command "mbsync -a")
+  (setq mu4e-update-interval 60)
+  (setq user-mail-address "yucklys687@gmail.com")
+  (setq +mu4e-gmail-accounts '(("yucklys687@gmail.com" . "/work")
+                               ("zli12330@terpmail.umd.edu" . "/umd")))
+  (set-email-account! "work"
+                      '((mu4e-sent-folder    . "/work/Sent Mail")
+                        (mu4e-drafts-folder  . "/work/Drafts")
+                        (mu4e-trash-folder   . "/work/Trash")
+                        (smtpmail-smtp-user  . "yucklys687@gmail.com")))
+  (set-email-account! "personal"
+                      '((mu4e-sent-folder    . "/personal/Sent Mail")
+                        (mu4e-drafts-folder  . "/personal/Drafts")
+                        (mu4e-trash-folder   . "/personal/Trash")
+                        (smtpmail-smtp-user  . "yucklys687@outlook.com")))
+    (set-email-account! "umd"
+                      '((mu4e-sent-folder    . "/umd/Sent Mail")
+                        (mu4e-drafts-folder  . "/umd/Drafts")
+                        (mu4e-trash-folder   . "/umd/Trash")
+                        (smtpmail-smtp-user  . "zli12330@terpmail.umd.edu"))))
 #+END_SRC
 * Writing
 ** Deft
@@ -625,14 +632,22 @@ Can be used in `rime-disable-predicates' and `rime-inline-predicates'."
         '(rime-predicate-meow-mode-p
           rime-predicate-after-alphabet-char-p
           rime-predicate-tex-math-or-command-p
+          rime-predicate-punctuation-after-space-cc-p
           rime-predicate-prog-in-code-p
-          rime-predicate-punctuation-line-begin-p
-          rime-predicate-current-uppercase-letter-p))
+          ;; rime-predicate-punctuation-line-begin-p
+          ;; rime-predicate-current-uppercase-letter-p
+          ))
   (setq rime-inline-predicates
         '(rime-predicate-space-after-cc-p))
   (setq rime-inline-ascii-trigger 'shift-l)
   (setq rime-show-candidate 'minibuffer)
   (define-key rime-mode-map (kbd "M-i") 'rime-force-enable))
+
+;; enable pangu-spacing
+(use-package! pangu-spacing
+  :config
+  (global-pangu-spacing-mode 1))
+
 ;; (use-package! pyim
 ;;   :config
 ;;   (setq default-input-method "pyim"))

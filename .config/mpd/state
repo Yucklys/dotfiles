@@ -1,45 +1,18 @@
 sw_volume: 100
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
-state: play
-current: 17
-time: 4.154000
+state: pause
+current: 2
+time: 86.170000
 random: 0
-repeat: 0
+repeat: 1
 single: 0
 consume: 0
-crossfade: 0
+crossfade: 5
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:初音ミク/39みゅーじっく!-初音ミク-みきとP.flac
-1:初音ミク/Hand in Hand-livetune-初音ミク.flac
-2:初音ミク/twitter-ダルビッシュP.mp3
-3:初音ミク/深海少女-初音ミク-ゆうゆ.mp3
-4:初音ミク/クローバークラブ-ゆうゆ-初音ミク.mp3
-5:初音ミク/VOiCE-ラヴリーP-初音ミク.mp3
-6:初音ミク/マジカルミライ SPECIAL MEGAMIX-初音ミク.flac
-7:初音ミク/ネリの星空-花束P.mp3
-8:初音ミク/雨桜-MAYU.mp3
-9:初音ミク/幻想菩薩女孩-初音ミク-GUMI-zakooon.mp3
-10:初音ミク/電波中毒ガール-初音ミク-GUMI.mp3
-11:初音ミク/宇宙分解-初音ミク-はるまきごはん.mp3
-12:初音ミク/ハイファイレイヴァー-巡音ルカ-GUMI-初音ミク.mp3
-13:初音ミク/SPiCa-とくP-初音ミク.mp3
-14:CloudMusic/EXIT TUNES/EXIT TUNES PRESENTS Vocalolegend feat. Hatsune Miku/VOiCE - ラヴリーP,初音ミク.mp3
-15:初音ミク/Miku-初音ミク-Anamanaguchi.flac
-16:初音ミク/朧月-初音ミク-minato.mp3
-17:初音ミク/world.execute (me) ;-Mili.mp3
-18:初音ミク/ループメモリー(2016 Remix)-雄之助-初音ミク.mp3
-19:初音ミク/ループメモリー-雄之助-初音ミク.mp3
-20:初音ミク/ドリームレス・ドリームス-初音ミク-はるまきごはん.mp3
-21:初音ミク/paranoia-つなまる-初音ミク.mp3
-22:初音ミク/独りんぼエンヴィー-koyori-初音ミク.mp3
-23:初音ミク/うみたがり-初音ミク-MARETU.mp3
-24:初音ミク/マインドブランド-初音ミク-MARETU.mp3
-25:初音ミク/ツギハギスタッカート-初音ミク-とあ.mp3
-26:初音ミク/みくみくにしてあげる♪-IKA.mp3
-27:初音ミク/アカツキアライヴァル-Last Note.-初音ミク-巡音ルカ.mp3
-28:初音ミク/オレンジ-トーマ-初音ミク.flac
-29:初音ミク/飛行機雲-とあ-初音ミク.mp3
+0:迈阿密热线.mp3
+1:Dig Deep.mp3
+2:独角.mp3
 playlist_end

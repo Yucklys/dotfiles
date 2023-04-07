@@ -19,9 +19,6 @@
 ;; (package! exwm)
 ;; (package! wucuo)
 ;;(package! org-fancy-priorities)
-(package! rime)
-(package! pinyinlib)
-(package! pyim :disable t)
 (package! tree-sitter)
 (package! tree-sitter-langs)
 (package! company-tabnine)
@@ -36,3 +33,9 @@
 (package! org-download)
 ;; Editor
 (package! meow)
+
+;; Chinese Support
+(package! rime)
+(package! pinyinlib)
+(package! pyim :disable t)
+(package! pangu-spacing)

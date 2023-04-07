@@ -59,8 +59,6 @@ import XMonad.Layout.Spacing
 import XMonad.Layout.SubLayouts
 import XMonad.Layout.WindowArranger (windowArrange, WindowArrangerMsg(..))
 import XMonad.Layout.WindowNavigation
-import XMonad.Layout.PerWorkspace
-import XMonad.Layout.IndependentScreens
 import qualified XMonad.Layout.ToggleLayouts as T (toggleLayouts, ToggleLayout(Toggle))
 import qualified XMonad.Layout.MultiToggle as MT (Toggle(..))
 
@@ -97,7 +95,7 @@ myTerminal :: String
 myTerminal = "kitty"    -- Sets default terminal
 
 myBrowser :: String
-myBrowser = "qutebrowser "  -- Sets qutebrowser as browser
+myBrowser = "qutebrowser"  -- Sets qutebrowser as browser
 
 myEmacs :: String
 myEmacs = "emacsclient -c -a 'emacs' "  -- Makes emacs keybindings easier to type
@@ -118,6 +116,9 @@ myFocusColor  = color15     -- This variable is imported from Colors.THEME
 mySoundPlayer :: String
 mySoundPlayer = "ffplay -nodisp -autoexit " -- The program that will play system sounds
 
+myScreenShot :: String
+myScreenShot = "QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_SCREEN_SCALE_FACTORS=\"\" flameshot"
+
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
 
@@ -134,12 +135,13 @@ myStartupHook = do
   spawnOnce "optimus-manager-qt"
   spawnOnce "volumeicon"
   spawnOnce "fcitx5 -d"
+  spawnOnce "flameshot"
   spawnOnce "playerctld daemon"
-  spawnOnce "birdtray"
+  -- spawnOnce "birdtray"
   spawn "/usr/bin/emacs --daemon" -- emacs daemon for the emacsclient
 
   spawn ("sleep 2 && conky -c $HOME/.config/conky/xmonad/" ++ colorScheme ++ "-01.conkyrc")
-  spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 0 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 40")
+  spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ colorTrayer ++ " --height 40")
   spawn ("sleep 2 && easyeffects --gapplication-service")
 
   -- spawnOnce "~/.fehbg &"  -- set last saved feh wallpaper
@@ -246,6 +248,7 @@ gsInternet =
   , ("Element", "element-desktop")
   , ("Firefox", "firefox")
   , ("LBRY App", "lbry")
+  , ("Vivaldi", "vivaldi-stable")
   , ("Qutebrowser", "qutebrowser")
   , ("Zoom", "zoom")
   ]
@@ -380,8 +383,7 @@ myLayoutHook = avoidStruts
                $ windowArrange
                $ T.toggleLayouts floats
                $ mkToggle (NBFULL ?? NOBORDERS ?? EOT)
-               $ myDefaultLayout
-  where
+               $ myDefaultLayout  where
     myDefaultLayout = withBorder myBorderWidth tall
                                            ||| noBorders tabs
                                            ||| grid
@@ -414,6 +416,7 @@ myManageHook = composeAll
   , className =? "Ocrdesktop"      --> doCenterFloat
   , className =? "kooha"           --> doFloat
   , title =? "Oracle VM VirtualBox Manager"  --> doFloat
+  , title =? "feh [1 of 1] - /home/yucklys/Pictures/xhsp.png" --> doCenterFloat
   , title =? "Mozilla Firefox"     --> doShift ( myWorkspaces !! 1 )
   , className =? "Brave-browser"   --> doShift ( myWorkspaces !! 1 )
   , className =? "mpv"             --> doShift ( myWorkspaces !! 8 )
@@ -422,9 +425,9 @@ myManageHook = composeAll
   , className =? "FreeTube"        --> doShift ( myWorkspaces !! 8 )
   , className =? "Nheko"           --> doShift ( myWorkspaces !! 7 )
   , className =? "Mail"            --> doShift ( myWorkspaces !! 7 )
+  , className =? "Logseq"          --> doShift ( myWorkspaces !! 6 )
   -- , className =? "VirtualBox Manager" --> doShift  ( myWorkspaces !! 4 )
   , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
-  , isFullscreen -->  doFullFloat
   ] <+> namedScratchpadManageHook myScratchPads
 
 soundDir = "/opt/dtos-sounds/" -- The directory that has the sound files
@@ -459,7 +462,7 @@ myKeys c =
   , ("M-S-a", addName "Kill all windows on WS" $ killAll)
   , ("M-d", addName "Application launcher"     $ spawn "rofi -show drun")
   -- , ("M-S-<Return>", addName "Run prompt"      $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
-  , ("M-/", addName "DTOS Help"                $ spawn "~/.local/bin/dtos-help")]
+  , ("M-/", addName "Keymap hints"                $ spawn "~/.local/bin/show-keymap")]
 
   ^++^ subKeys "Switch to workspace"
   [ ("M-1", addName "Switch to workspace 1"                     $ (windows $ W.greedyView $ myWorkspaces !! 0))
@@ -581,10 +584,9 @@ myKeys c =
 
   -- Contrals to spotifyd (SUPER-u followed by a key)
   ^++^ subKeys "Spotify"
-  [ ("M-u p", addName "mocp play"                $ spawn "mocp --play")
-  , ("M-u l", addName "mocp next"                $ spawn "mocp --next")
-  , ("M-u h", addName "mocp prev"                $ spawn "mocp --previous")
-  , ("M-u <Space>", addName "mocp toggle pause"  $ spawn "mocp --toggle-pause")]
+  [ ("M-u p", addName "mpris play"                $ spawn "mpris_player_control -a PlayPause")
+  , ("M-u l", addName "mpris next"                $ spawn "mpris_player_control -a Next") 
+  , ("M-u h", addName "mpris prev"                $ spawn "mpris_player_control -a Previous")]
 
   ^++^ subKeys "GridSelect"
   -- , ("C-g g", addName "Select favorite apps"     $ runSelectedAction' defaultGSConfig gsCategories)
@@ -616,9 +618,9 @@ myKeys c =
 
   -- Multimedia Keys
   ^++^ subKeys "Multimedia keys"
-  [ ("<XF86AudioPlay>", addName "mocp play"           $ spawn "mocp --play")
-  , ("<XF86AudioPrev>", addName "mocp next"           $ spawn "mocp --previous")
-  , ("<XF86AudioNext>", addName "mocp prev"           $ spawn "mocp --next")
+  [ ("<XF86AudioPlay>", addName "mpris play"           $ spawn "mpris_player_control -a PlayPause")
+  , ("<XF86AudioPrev>", addName "mpris next"           $ spawn "mpris_player_control -a Next")
+  , ("<XF86AudioNext>", addName "mpris prev"           $ spawn "mpris_player_control -a Previous")
   , ("<XF86AudioMute>", addName "Toggle audio mute"   $ spawn "amixer set Master toggle")
   , ("<XF86AudioLowerVolume>", addName "Lower vol"    $ spawn "amixer set Master 5%- unmute")
   , ("<XF86AudioRaiseVolume>", addName "Raise vol"    $ spawn "amixer set Master 5%+ unmute")
@@ -627,13 +629,14 @@ myKeys c =
   , ("<XF86Mail>", addName "Email client"             $ runOrRaise "thunderbird" (resource =? "thunderbird"))
   , ("<XF86Calculator>", addName "Calculator"         $ runOrRaise "qalculate-gtk" (resource =? "qalculate-gtk"))
   , ("<XF86Eject>", addName "Eject /dev/cdrom"        $ spawn "eject /dev/cdrom")
-  , ("<Print>", addName "Take screenshot (dmscripts)" $ spawn "shutter -s")
+  , ("<Print>", addName "Take screenshot (dmscripts)" $ spawn (myScreenShot ++ " gui"))
+  , ("M-<Print>", addName "Take screenshot (dmscripts)" $ spawn (myScreenShot ++ " screen"))
   ]
   -- The following lines are needed for named scratchpads.
     where nonNSP          = WSIs (return (\ws -> W.tag ws /= "NSP"))
           nonEmptyNonNSP  = WSIs (return (\ws -> isJust (W.stack ws) && W.tag ws /= "NSP"))
 
-myPP       = filterOutWsPP [scratchpadWorkspaceTag] $ xmobarPP
+myPP1 = filterOutWsPP [scratchpadWorkspaceTag] $ xmobarPP
         { ppCurrent = xmobarColor color06 "" . wrap
                       ("<box type=Bottom width=2 mb=2 color=" ++ color06 ++ ">[") "]</box>"
           -- Visible but not current workspace
@@ -642,7 +645,7 @@ myPP       = filterOutWsPP [scratchpadWorkspaceTag] $ xmobarPP
         , ppHidden = xmobarColor color05 "" . wrap
                      ("<box type=Top width=2 mt=2 color=" ++ color05 ++ ">") "</box>"
           -- Hidden workspaces (no windows)
-        , ppHiddenNoWindows = xmobarColor color05 ""
+        , ppHiddenNoWindows = xmobarColor color09 ""
           -- Title of active window
         , ppTitle = xmobarColor color16 "" . shorten 60
           -- Separator character
@@ -655,8 +658,28 @@ myPP       = filterOutWsPP [scratchpadWorkspaceTag] $ xmobarPP
         , ppOrder  = \(ws:l:t:ex) -> [ws,l]++ex++[t]
         }
 
-xmobarMain = statusBarPropTo "_XMONAD_LOG_1" ("xmobar -x 0 $HOME/.config/xmobar/xmobarrc1") (clickablePP myPP)
-xmobarSub  = statusBarPropTo "_XMONAD_LOG_2" ("xmobar -x 1 $HOME/.config/xmobar/xmobarrc2") (clickablePP myPP)
+myPP2 = filterOutWsPP [scratchpadWorkspaceTag] $ xmobarPP
+        { ppCurrent = xmobarColor color06 "" . wrap
+                      ("<box type=Bottom width=2 mb=2 color=" ++ color06 ++ ">[") "]</box>"
+          -- Visible but not current workspace
+        , ppVisible = xmobarColor color15 ""
+          -- Hidden workspace
+        , ppHidden = xmobarColor color05 "" . wrap
+                     ("<box type=Top width=2 mt=2 color=" ++ color05 ++ ">") "</box>"
+          -- Hidden workspaces (no windows)
+        , ppHiddenNoWindows = xmobarColor color09 ""
+          -- Separator character
+        , ppSep =  "<fc=" ++ color09 ++ "> <fn=1>|</fn> </fc>"
+          -- Urgent workspace
+        , ppUrgent = xmobarColor color02 "" . wrap "!" "!"
+          -- Adding # of windows on current workspace to the bar
+        , ppExtras  = [windowCount]
+          -- order of things in xmobar
+        , ppOrder  = \(ws:l:_:_) -> [ws,l]
+        }
+
+xmobarMain = statusBarPropTo "_XMONAD_LOG_1" ("xmobar -x 0 $HOME/.config/xmobar/xmobarrc1") (clickablePP myPP1)
+xmobarSub  = statusBarPropTo "_XMONAD_LOG_2" ("xmobar -x 1 $HOME/.config/xmobar/xmobarrc2") (clickablePP myPP2)
 
 main :: IO ()
 main = xmonad . withSB (xmobarMain <> xmobarSub). addDescrKeys' ((mod4Mask, xK_F1), showKeybindings) myKeys $ ewmhFullscreen $ ewmh $ docks $ def

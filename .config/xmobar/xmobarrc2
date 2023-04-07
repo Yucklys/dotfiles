@@ -19,12 +19,13 @@ Config { font            = "xft:Sarasa UI SC:weight=bold:size=11:antialias=true:
                            ]
        , bgColor      = "#2E3440"
        , fgColor      = "#D8DEE9"
+       , dpi          = 192
        -- Position TopSize and BottomSize take 3 arguments:
        --   an alignment parameter (L/R/C) for Left, Right or Center.
        --   an integer for the percentage width, so 100 would be 100%.
        --   an integer for the minimum pixel height for xmobar, so 24 would force a height of at least 24 pixels.
        --   NOTE: The height should be the same as the trayer (system tray) height.
-       , position       = TopSize L 100 24
+       , position       = TopSize L 100 48
        , lowerOnStart = True
        , hideOnStart  = False
        , allDesktops  = True
@@ -37,6 +38,8 @@ Config { font            = "xft:Sarasa UI SC:weight=bold:size=11:antialias=true:
                     , Run Com ".local/bin/kernel" [] "kernel" 36000
                         -- Cpu usage in percent
                     , Run Cpu ["-t", "<fn=2>\xf108</fn>  cpu: (<total>%)","-H","50","--high","red"] 20
+                        -- MPRIS status
+                    , Run CommandReader "/usr/bin/playerctl metadata --format '{{artist}} - {{title}}'" "mpris"
                         -- Ram used number and percent
                     , Run Memory ["-t", "<fn=2>\xf233</fn>  mem: <used>M (<usedratio>%)"] 20
                         -- Disk space free
@@ -62,5 +65,5 @@ Config { font            = "xft:Sarasa UI SC:weight=bold:size=11:antialias=true:
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "<icon=haskell_40.xpm/> | %_XMONAD_LOG_2% }{ <box type=Bottom width=2 mb=2 color=#A3BE8C><fc=#A3BE8C><action=`emacsclient -c -a 'emacs' --eval '(doom/window-maximize-buffer(dt/year-calendar))'`>%date%</action></fc></box>"
+       , template = "<icon=haskell_40.xpm/> | %_XMONAD_LOG_2% }{ %mpris% <box type=Bottom width=2 mb=2 color=#A3BE8C><fc=#A3BE8C><action=`emacsclient -c -a 'emacs' --eval '(doom/window-maximize-buffer(dt/year-calendar))'`>%date%</action></fc></box>"
        }

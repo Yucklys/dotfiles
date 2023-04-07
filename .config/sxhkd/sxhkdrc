@@ -7,20 +7,12 @@
 # super + Return
 # 	alacritty -e bash ~/.config/with_tmux.sh
 super + Return
-	alacritty
+	kitty -e zellij
 
-# scratchpad
+# attach to existing session
 super + shift + Return
-	id=$(cat /tmp/scratchid);bspc node $id --flag hidden;bspc node -f $id
-
-# application launcher
-super + @space
-	rofi -show
-
-# program launcher
-super
-  ~/.config/polybar/scripts/rofi_run
-
+	kitty -e zellij attach --index 0 -c
+	
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -68,9 +60,13 @@ super + ctrl + {m,x,y,z}
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
+# move the node to another monitor
+super + {less,greater}
+	bspc node -m {west,east} --follow
+
 # focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+# super + {p,b,comma,period}
+# 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node in the current desktop
 alt + {_,shift +}Tab
@@ -94,8 +90,15 @@ super + {grave,Tab}
 # 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+super + {_,shift + }{1-5,0}
+	bspc {desktop -f,node -d} '^{4-8,10}' --follow
+
+super + {_,shift + }{6-8,10}
+	bspc {desktop -f,node -d} '^{1-3}' --follow
+
+# focus next/previous monitor
+super + {_,shift + } backslash
+	bspc monitor -f {next, prev}
 
 #
 # preselect
@@ -147,7 +150,7 @@ super + v
 
 # unhide window
 super + shift + v
-  bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
+  bspc node (bspc query -N -n .hidden | tail -n1) -g hidden=off
 
 
 # 
@@ -187,9 +190,7 @@ XF86AudioNext
 
 # screenshot
 Print
-  maim -s ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png
-super + Print
-  maim ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png
+	shutter
 # Print
 # 	dunstify "hello"
 
@@ -198,9 +199,9 @@ super + Print
 #
 
 super + e
-	alacritty -e ~/.local/share/bin/nnnrun
+	alacritty -e ranger
 super + shift + e
-	nautilus
+	thunar
 super + o; {d, b, p}
 	{goldendict, qutebrowser, bitwarden-desktop}
 
@@ -209,3 +210,18 @@ super + c
 	CM_LAUNCHER=rofi clipmenu
 super + shift + d
 	killall dunst;dunst &;dunstify foo
+
+#
+# rofi menus
+#
+# application launcher
+super + @space
+	rofi -show
+
+# program launcher
+super + r
+	rofi -show run -theme nord-oneline
+
+# bitwarden
+super + asciitilde
+	bwmenu

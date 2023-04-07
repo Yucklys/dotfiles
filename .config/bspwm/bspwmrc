@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor eDP1 -d home www dev edt play
-bspc monitor DP1 -d ref note chat
+bspc monitor DP3 -d ref note chat
 
 bspc config border_width         8
 bspc config window_gap          12

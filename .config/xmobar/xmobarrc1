@@ -12,19 +12,20 @@
    -- trayer
    -- 'dtos-local-bin' (from dtos-core-repo)
 
-Config { font            = "xft:Sarasa UI SC:weight=bold:pixelsize=28:antialias=true:hinting=true"
+Config { font            = "xft:Sarasa UI SC:weight=bold:pixelsize=11:antialias=true:hinting=true"
        , additionalFonts = [ "xft:Mononoki:size=11:antialias=true:hinting=true"
                            , "xft:Font Awesome 6 Free Solid:size=9"
                            , "xft:Font Awesome 6 Brands:size=9"
                            ]
        , bgColor      = "#2E3440"
        , fgColor      = "#D8DEE9"
+       , dpi          = 192
        -- Position TopSize and BottomSize take 3 arguments:
        --   an alignment parameter (L/R/C) for Left, Right or Center.
        --   an integer for the percentage width, so 100 would be 100%.
        --   an integer for the minimum pixel height for xmobar, so 24 would force a height of at least 24 pixels.
        --   NOTE: The height should be the same as the trayer (system tray) height.
-       , position       = TopSize L 100 24
+       , position       = TopSize L 100 48
        , lowerOnStart = True
        , hideOnStart  = False
        , allDesktops  = True
