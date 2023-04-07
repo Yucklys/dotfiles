@@ -1,0 +1,3702 @@
+ls
+z
+cd ~/.config/
+ls
+ls | table
+cd ./nushell/
+ls
+kak ./config.nu
+ls
+cd ~/.config/nushell/
+ls
+clear
+config path
+config --help
+cd ~/.config/nushell/
+cd ~/.config/alacritty/
+ls
+kak ./alacritty.yml
+kak ./config.nu
+cd ~/.config/nushell/
+ls
+kak ./config.nu
+fzf
+config
+ls ~/.cargo/bin/bin
+ls ~/.cargo/bin/
+ls ~/.cargo
+config
+which config
+ls
+kak ./config.nu
+z 
+zoxide
+zoxide init
+zoxide init --help
+zoxide init nushell
+__zoxide_z
+sudo pacman -Syu
+cd ~/.config/alacritty/
+cd ~/Projects/himalaya-tui/
+ls
+clear
+cargo un
+cargo run
+himalaya
+ls ~/.cargo/bin/in
+ls ~/.cargo/bin
+clear
+ls ~/.cargo/bin
+ls ~/.local/bin/
+path
+env | where name == PATH
+cd ~/.config/nushell/
+ls
+kak ./config.nu
+himalaya
+env | where name == PATH
+kak ./config.nu
+kak ./config.nu
+$env.HOME
+kak ./config.nu
+himalaya
+kak ./config.nu
+himalaya
+cd ~/Projects/himalaya-tui/
+ls
+find * -type f
+find * 
+find --help
+ls | fzf > selected
+ls | fzf
+fzf
+himalaya | fzf
+fzf
+htop
+cd ./Projects/himalaya-tui/
+ls
+cargo run
+broot
+cargo install broot
+br
+broot
+$env.PATH
+cd ~/.config/nushell/
+ls
+kak ./config.nu
+broot
+br
+broot
+broot
+ls
+chsh -h
+chsh -l
+chsh -s /usr/bin/fish
+ls
+cd Projects/
+ls
+cd wuxia-t/
+ls
+z
+chsh -s
+which nu
+chsh -s ~/.cargo/bin/nu
+chsh -l
+sudo kak /etc/shells
+chsh -l
+chsh -s ~/.cargo/bin/nu
+cd ~/.config/nushell/config.nu
+cd ~/.config/nushell/
+kak config.nu
+ec config.nu
+emacsclient config.nu
+ec config.nu
+kak config.nu
+config -h
+config nu
+source $nu.config-path
+echo $nu.config-path
+source ($nu.config-path)
+source config.nu 
+config reset 
+ls
+kak config.nu
+kak env.nu
+config nu
+kak env.nu
+config nu
+t
+ls
+n
+MESA_LOADER_DRIVER_OVERRIDE=crocus alacritty
+alacritty 
+alacritty --version
+z alacritty
+ls
+g alacritty
+config env
+config nu
+$env.EDITOR
+l
+z alacritty
+ls
+kak alacritty.yml
+config nu
+config env
+kak $nu.config
+kak $nu.config-path
+kak $nu.env-path
+emacsclient $nu.env-path
+which emacs
+kak ~/.config/systemd/user/emacs.service
+systemctl enable --user emacs
+systemctl status --user emacs
+systemctl start --user emacs
+emacsclient $nu.env-path
+emacsclient ./alacritty.yml
+systemctl start --user emacs
+emacsclient ./alacritty.yml
+emacsclient $nu.env-path
+config env
+emacsclient $nu.env-path
+config env
+z alacritty
+ls
+kak $nu.env-path
+hx
+helix
+kak $nu.env-path
+helix $nu.config-path
+ls -al
+ls
+ll
+la
+lsa
+config env
+config nu
+lla
+hx
+config nu
+z ala
+hx alacritty.yml
+z ala
+hx alacritty.yml
+cd /tmp
+git clone https://github.com/alvatip/Nordzy-cursors
+cd Nordzy-cursors/
+./install.sh
+h
+z bspwm
+xprop
+hx bspwmrc
+z sxh
+open sxhkdrc
+alacritty --version
+alacritty --help
+alacritty msg
+alacritty -e clear
+alacritty
+alacritty -e clear -hold
+alacritty -e clear --hold
+alacritty --hold -e clear
+alacritty --print-events
+q
+sudo pacman -S wizterm
+sudo pacman -S wezterm
+ls
+wezterm
+sudo pacman -R wezterm
+sudo pacman -S kitty
+bat ./sxhkdrc
+z bspwm
+hx bspwmrc
+sudo pacman -S kitty
+ls
+cd ~/.config/kitty/
+ls
+hx kitty.conf
+z sxh
+hx sxhkdrc
+z ala
+ls
+hx alacritty.yml
+kitty --help
+kitty -1
+kitty -c zellij
+kitty -e zellij
+kitty -e zellij attach
+zellij attach --help
+zellij attach
+kitty -e zellij attach -c
+zellij --help
+zellij attach --help
+zellij attach options
+zellij options
+zellij attach -c
+zellij attach --help
+zellij attach --index 1
+zellij attach --index -1
+zellij attach --index 
+zellij attach --index --help
+zellij attach --index 3
+zellij attach --index 0
+z bspwm
+z polybar
+kak nord-top
+hx nord-top
+cd ..
+rm polybar_bak/
+help rm
+rm -t polybar_bak/
+rm -tr polybar_bak/
+ls ~/
+ls
+cp -r polybar nord-polybar
+cd nord-polybar/
+cd polybar/
+hx nord-config
+git branch --help
+git checkout yucklys
+git checkout -b yucklys
+git status
+gitui
+git status
+git log
+ls
+hx nord-config
+git checkout yucklys
+hx nord-config
+git push
+git push --set-upstream origin/yucklys yucklys
+git push --set-upstream origin yucklys
+cd ..
+cd nord-polybar/
+git pull
+git status
+hx nord-top
+hx nord-top
+ls scripts/
+git pull
+ls scripts/
+curl https://raw.githubusercontent.com/Yucklys/polybar-nord-theme/master/scripts/mullvad.sh > mullvad.sh
+ls
+cd scripts/
+curl https://raw.githubusercontent.com/Yucklys/polybar-nord-theme/master/scripts/mullvad.sh | save mullvad.sh
+ls
+chmod +x mullvad.sh
+ll
+ls
+ls themes/
+git status
+gitui
+git
+ls
+git status
+git log
+git push
+cd ..
+git -c master
+git checkout master
+git status
+git log
+git pull
+hx .gitignore
+hx nord-config
+git status
+./launch.sh dark
+DPI
+echo $env.dpi
+hx nord-config
+hx nord-top
+hx dark-config
+cd ../polybar/
+./launch.sh dark
+hx nord-top
+hx dark-config
+./launch.sh dark
+bspc query -D --names
+ls
+bat nord-top
+bat dark-config
+cp dark-config base-config
+hx launch.sh
+hx base-config
+polybar --version
+ls
+mkdir colors
+mv dark-colors colors
+mv light-colors colors/
+ls
+./launch.sh dark
+ls
+rm base-config
+ls
+./launch.sh dark
+./launch.sh light
+./launch.sh dark
+./launch.sh light
+./launch.sh dark
+ls
+mkdir bars
+mv dark-config bars
+mv light-config bars
+ls
+hx dark-config
+ls
+hx bars/dark-config
+hx launch.sh
+./launch.sh dark
+./launch.sh light
+./launch.sh dark
+hx README.md
+git status
+ls
+hx .gitignore
+ls
+gitui
+git status
+git log
+git push
+git checkout yucklys
+git pull
+hx nord-config
+git pull master
+git branch -d yucklys
+git branch master
+git branch -s master
+git checkout master
+git branch -d yucklys
+git checkout -b yucklys
+ls
+bspc query -D --names
+hx nord-config
+./launch.sh dark
+hx nord-config
+./launch.sh dark
+./launch.sh dark
+hx nord-config
+git status
+hx nord-config
+./launch.sh dark
+gitui
+git push
+git push --set-upstream origin yucklys
+git checkout master
+git checkout yucklys
+git push --set-upstream origin yucklys
+./launch.sh dark
+hx bspwmrc
+z kitty
+hx kitty.conf
+curl -o ~/.config/kitty/nord.conf https://raw.githubusercontent.com/connorholyday/nord-kitty/master/nord.conf
+hx kitty.conf
+z wux
+ls
+cargo run
+sudo pacman -S lapce
+fc-list | find mono
+fc-list | find MonoLisa
+shutdown
+shutdown -c
+z polybar
+./launch.sh dark
+kak nord-top
+hx nord-down
+rofi -show powermenu
+rofi -show power-menu
+hx nord-down
+z polybar
+hx nord-config
+./launch.sh dark
+hx nord-config
+./launch.sh dark
+hx nord-config
+hx nord-top
+hx bars/dark-config
+hx nord-config
+./launch.sh dark
+hx nord-config
+./launch.sh dark
+hx nord-config
+polybar --help
+polybar -c bars/dark-config nord-top -l info
+./launch.sh dark
+ls
+nu nord-top
+hx nord-top
+polybar -c bars/dark-config nord-top -l trace
+./launch.sh dark
+polybar --help
+hx launch.sh
+killall -q polybar
+./launch.sh dark
+ls
+hx launch.sh
+./launch.sh light
+./launch.sh dark
+git checkout master
+hx nord-config
+./launch.sh dark
+hx nord-config
+ls
+hx bars/dark-config
+./launch.sh dark
+hx bars/dark-config
+hx nord-config
+hx bars/dark-config
+./launch.sh dark
+killall -q polybar
+./launch.sh dark
+htop
+./launch.sh dark
+hx nord-config
+./launch.sh dark
+hx nord-config
+./launch.sh dark
+hx nord-config
+./launch.sh dark
+htop
+./launch.sh dark
+hx nord-config
+./launch.sh dark
+hx nord-config
+./launch.sh dark
+ls
+gitui
+git push
+git checkout master
+hx nord-config
+gitui
+git push
+./launch.sh dark
+git checkout yucklys
+xprop
+z polybar
+ls
+hx nord-config
+z bspwm
+man bspc
+which nu
+ls
+cargo run
+hx bspwmrc
+gitui
+z wux
+gitui
+cargo run
+cd ~/.local/share/saves/
+ls
+cd ..
+rm saves
+rm -r saves
+z wux
+cargo run
+cd wuxia/
+ls
+ls saves/
+cd saves/
+ls
+bat autosave-2022-08-19T04:04:56.977339274+00:00
+open autosave-2022-08-19T04:04:56.977339274+00:00
+sudo pacman -Q picom
+paru -S picom
+paru -S picom-jonaburg-git
+z sxh
+hx sxhkdrc
+cd ~/.local/share/wux
+cd ~/.local/share/wuxia/
+ls
+cargo run
+ls saves
+cargo run
+z wux
+ls
+cargo run
+sudo pacman -S minecraft
+paru -S minecraft
+paru -S minecraft-launcher
+xss-lock 
+xplr
+sudo pacman -S \> git \> xorg-server xorg-apps xorg-xinit xorg-xmessage \> libx11 libxft libxinerama libxrandr libxss \> pkgconf
+sudo pacman -S git xorg-server xorg-apps xorg-xinit xorg-xmessage libx11 libxft libxinerama libxrandr libxss pkgconf
+mkdir -p ~/.config/xmonad && cd ~/.config/xmonad
+mkdir ~/.config/xmonad && cd ~/.config/xmonad
+cd ~/.config/xmonad/
+ls
+touch xmonad.hs
+hx xmonad.hs
+sudo pacman -S xmonad
+cd ..
+z wux
+cargo run
+ k
+cargo run
+sudo pacman -S xmonad
+sudo pacman -Syu
+sudo pacman -S xmonad
+xmonad --version
+sudo pacman -R xmonad
+cd ~/.config/xmonad/
+ls
+git clone https://github.com/xmonad/xmonad
+git clone https://github.com/xmonad/xmonad-contrib
+sudo pacman -S stack
+stack upgrade
+ls
+stack init
+ls
+bat stack.yaml
+stack install
+xmonad --version
+which xmonad
+which lightdm
+kak /etc/X11/xinit/xserverrc
+sudo hx /etc/X11/xorg.conf.d/52-resolution-fix.conf
+sudo -E hx /etc/X11/xorg.conf.d/52-resolution-fix.conf
+polybar -M
+sudo -E helix /etc/X11/xorg.conf.d/52-resolution-fix.conf
+sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
+hx .xinitrc
+bat .xinitrc
+hx .xinitrc
+rm .xinitrc
+hx ~/.xsession
+helix /etc/lightdm/Xsession
+sudo helix /usr/share/xsessions/xmonad.desktop
+paru -S lightdm-theme-neon-git
+sudo helix /etc/lightdm/lightdm.conf
+ls /usr/share/xgreeters/
+paru -S lightdm-webkit2-greeter
+sudo helix /etc/lightdm/web-greeter.yml
+sudo helix /usr/share/xgreeters/
+lightdm --test-mode
+sudo pacman -S xorg-server-xephyr
+lightdm --test-mode
+sudo lightdm --test-mode
+sudo helix /etc/lightdm/lightdm.conf
+lightdm --test-mode
+sudo helix /etc/lightdm/lightdm.conf
+lightdm --test-mode
+paru -R lightdm-webkit2-greeter
+paru -S web-greeter
+cd /etc/lightdm
+sudo rm web-greeter.yml
+paru -S web-greeter
+sudo helix ./web-greeter.yml
+lightdm --test-mode
+hx ./lightdm.conf
+hx ./web-greeter.yml
+lightdm --test-mode
+sudo lightdm --test-mode
+sddm -h
+xdm -h
+cd /etc/lightdm
+ls
+hx users.conf
+hx lightdm.conf/
+ls lightdm.conf.d/
+hx lightdm.conf.d/20-optimus-manager.conf
+ls
+hx Xgreeter
+hx Xsession
+dm-tool --help
+dm-tool switch-to-gretter
+dm-tool switch-to-greeter
+ls
+hx lightdm.conf
+web-greeter 
+ls
+hx lightdm.conf
+ls /usr/share/xgreeters/
+dm-tool switch-to-greeter
+hx lightdm.conf
+reboot
+cd /usr/share/xsessions/
+ls
+cd /etc/lightdm
+ls
+hx Xsession
+ls
+hx lightdm.conf
+lightdm --test-mode
+sudo which xmonad
+sudo helix /usr/share/xsessions/xmonad.desktop
+reboot
+ls
+cd ~/.config/xmonad/
+ls
+hx xmonad.hs
+kitty
+nshtniihhlh
+qutebrowser
+ls
+nm-applet
+cd &&
+ls
+cd ..
+ls
+rm &&
+ls cd
+rm cd
+ls
+z bspwm
+ls
+hx bspwmrc
+ls ~/.config/autostart/
+hx bspwmrc
+ls ~/.config/autostart/
+hx bspwmrc
+dunst &
+cd ~/.config/xmonad/
+ls
+rofi 
+rofi -show run
+ls
+source ~/.screenlayout/
+ls ~/.screenlayout/
+source ~/.screenlayout/monitor.sh
+ls
+nm-applet &
+ls
+dex ~/.config/autostart/
+hx ~/.config/bspwm/bspwmrc
+nm-applet --indicator &
+systemctl start --user NetworkManager
+sudo systemctl start NetworkManager
+sudo systemctl status NetworkManager
+dunst &
+pacman -S xmobar
+sudo pacman -S xmobar
+networkctl 
+nmtui 
+nmtui
+nmtui-connect p 
+nmtui-connect 
+nm 
+reboot
+rofi -show run
+qutebrowser 
+rofi -show run
+sudo pacman -S xmobar
+ls
+cd ~/.config/xmonad/
+ls
+hx xmonad.hs
+cd /tmp
+git clone https://github.com/haskell/haskell-language-server
+cd haskell-language-server/
+ls
+stack install
+z xmonad
+ls
+hx xmonad.hs
+xmonad
+rofi -show run
+z xmonad
+ls
+hx xmonad.hs
+which xmonad
+ls
+rofi -show run
+Ols
+z xmonad
+hx xmonad.hs
+cd /tmp
+cd ~/
+git clone https://github.com/ayamir/nord-and-light.git
+cd nord-and-light/
+ls
+ls .config
+ls .config/xmonad
+ls .config/xmobar
+ls .xmonad
+cp .xmonad/ ~/.config
+cp -r .xmonad/ ~/.config
+z xmonad
+ls
+ls xmonad/
+ls
+cd ..
+mv .xmonad/* xmonad/
+rm .xmonad/
+cd xmonad/
+ls
+hx xmonad.hs
+xplr
+thunar
+xplr
+hx xmonad.hs
+fc-list | find Sarasa
+sudo pacman -S sarasa
+sudo pacman -Ss sarasa
+sudo pacman -Ss ttf-sarasa-gothic
+sudo pacman -S ttf-sarasa-gothic
+fc-list | find Sarasa
+fc-list | find Sarasa UI
+fc-list | find "Sarasa UI"
+hx xmonad.hs
+z xmon
+ls
+hx xmonad.hs
+rofi -show run
+hx xmonad.hs
+xmonad --restart
+ls
+hx xmonad.hs
+xmonad --restart
+xmonad --recompile
+hx xmonad.hs
+xmonad --recompile
+xmonad --restart
+ls
+hx ~/.xprofile
+source ~/.xprofile
+ls
+z xmobar
+ls
+hx xmobarrc0
+polybar -M
+hx xmobarrc0
+fc-list | find "FontAwesome<\n>"
+fc-list | find "FontAwesome"
+fc-list | find "Font Awesome"
+hx xmobarrc0
+z xmonad
+ls
+hx xmonad.hs
+z xmonad
+ls
+xmonad --version
+hx xmonad.hs
+z xmobar
+ls
+z xmonad
+ls
+cp ~/nord-and-light/.local/bin/switch ~/.local/bin/switch
+switch --help
+cp ~/nord-and-light/.local/bin/* ~/.local/bin
+switch --help
+switch n xmonad
+cp ~/nord-and-light/Pictures/ ~/Pictures/
+cp -r  ~/nord-and-light/Pictures/ ~/Pictures/
+ls ~/Pictures
+cd ~/Pictures/
+ls
+mv Pictures/* ./
+ls
+rm Pictures/
+1
+2
+..
+z xmonad
+switch n xmonad
+nitrogen --restore
+hx xmonad.hs
+xmonad --restart
+xmonad --recompile
+xmonad --restart
+z xmobar
+hx xmobarrc1
+hx xmobarrc0
+z xmonad
+ls
+xmonad --help
+ls /tmp
+ls /tmp/xm
+ls
+cd ~/.config/xmobar/
+l
+ls
+cd ..
+rm xmobar
+rm -r xmobar
+hx ~/.xmobarrc
+ec ~/.xmobarrc
+hx ~/.xmobarrc
+ls
+htop
+ls
+hx ~/.xmobarrc
+cd xmonad
+ls
+z xmonad
+kak xmonad.hs
+z xmonad
+hx xmonad.hs
+z nord-and
+ls
+cd nord-and-light/
+ls
+hx ~/.xmobarrc
+z xmonad
+hx xmonad.hs
+hx ~/.xmobarrc
+fc-list | find "Sarasa UI"
+hx ~/.xmobarrc
+cp ~/nord-and-light/.config/xmobar/xmobarrc0 ~/.xmobarrc
+ls
+hx ~/.xmobarrc
+cd ~/nord-and-light/
+ls
+cd .xmonad/
+ls
+hx xmonad.hs
+xmobar
+hx ~/.xmobarrc
+z xmonad
+hx xmonad.hs
+hx ~/.xmobarrc
+hx xmonad.hs
+hx ~/.xmobarrc
+hx xmonad.hs
+ls
+switch n xmonad
+hx ~/.xmobarrc
+fc-list | find "FontAwesome6"
+fc-list | find "FontAwesome"
+fc-list | find "Font Awesome"
+hx ~/.xmobarrc
+fc-list | find "Input Nerd"
+fc-list | find "Input"
+hx ~/.xmobarrc
+paru -S ttf-nerd-fonts-input
+sudo pacman -Ss ttf-nerd
+hx ~/.xmobarrc
+ec -n ~/.xmobarrc
+qutebrowser
+pacupdate
+picom &
+sudo pacman -S pacman-contrib
+checkupdates
+checkupdates | wc -l
+which checkupdates
+cd ~/.local/bin
+ls
+hx searchmenu
+./searchmenu
+hx searchmenu
+chmod +x ./pacupdates
+cd ~/Pictures
+mkdir icons && cd 
+ls
+cd icons
+z nord-and
+rg "xpm<\n>"
+rg "xpm"
+lsa
+ls -a
+cd .config/
+ls
+cd xmobar
+ls
+cd ~/Projects/
+ls
+cd ~/Pictures/icons
+ls
+curl -o xmonad.png https://user-images.githubusercontent.com/50166980/142983341-63f08f09-e196-48b3-81dd-56771d082834.png
+ls
+view xmonad.png
+cd ..
+ls
+rm &&
+rm cd
+ls
+cd icon
+cd icons
+ls
+hx xmonad.xpm
+curl -o xmonad.png https://user-images.githubusercontent.com/8964525/141036414-e525d324-4fc4-4d7c-b45e-e23fa9936b8b.pngxmonad
+ls
+curl -o xmonad.png https://user-images.githubusercontent.com/8964525/141036414-e525d324-4fc4-4d7c-b45e-e23fa9936b8b.png
+cd ~/.local/share/xmonad/
+ls
+/xpm
+systemd-inhibit
+sudo helix /etc/systemd/logind.conf
+bat /proc/acpi/button/lid/LID0/state
+sudo journalctl --unit=systemd-logind --followsudo journalctl --unit=systemd-logind --follow
+sudo journalctl --unit=systemd-logind --follow
+sudo libinput debug-events
+sudo systemctl poweroff
+cd ~/Projects/bpv/
+cd ..
+git clone git@gitlab.com:dwt1/dotfiles.git
+git clone https://gitlab.com/dwt1/dotfiles.githttps://gitlab.com/dwt1/dotfiles.git
+git clone https://gitlab.com/dwt1/dotfiles.git
+cd dotfiles/
+mv ~/.config/xmonad/ ~/.config/xmonad.bak
+ls
+la
+cd .config/
+ls
+cp xmonad ~/.config/
+cp -r xmonad ~/.config/
+cd ~/.config/xmonad
+ls
+cp -r ../xmonad.bak/xmonad ./
+cp -r ../xmonad.bak/xmonad-contrib ./
+ls
+cp -r ../xmonad.bak/xpm/ ./
+cp -r ../xmonad.bak/stack.yaml ./
+ls
+hx xmonad.hs
+ls
+sudo pacman -S trayer
+cd ..
+ls
+cd ~/Projects/dotfiles/.config
+cp -r conky ~/.config
+ls ~/.config | find "conky"
+cd ~/Projects/dotfiles/.config
+cd xmobar
+mv ~/.xmobarrc ~/.xmobarrc.bak
+ls
+cd ..
+cp xmobar ~/.config/
+cp -r xmobar ~/.config/
+z xmobar
+ls
+sudo pacman -S calculator
+calculator
+z xmobar
+ls
+z xmobar
+ls
+hx nord-xmobarrc
+z xmonad
+ls
+cd .screenlayout/
+ls
+hx xmonad.hs
+z xmonad
+hx xmonad.hs
+nitrogen --restore
+z xmonad
+hx xmonad.hs
+conky --help
+sudo pacman -S conky
+hx xmonad.hs
+cd ~/Projects/
+ls
+ls ~/.local/bin/
+ls .local/bin/
+cd dotfiles/
+ls .local/bin
+cp .local/bin/* ~/.local/bin/
+z xmonad
+kitty --help
+sudo pacman -S qalculate
+Yucklys687.
+sudo pacman -S qalculate-gtk
+paru -S dtos-sounds
+z xmobar
+hx xmonad.hs
+ls
+hx xmonad.hs
+ls xpm
+cd xpm
+ls
+bat haskell_20.xpm
+hx nord-xmobarrc
+cd /tmp
+git clone https://gitlab.com/dtos/dtos-sounds.git
+cd dtos-sounds/
+ls
+mkdir opt/dtos-sounds
+ls
+rm -r opt
+mkdir /opt/dtos-sounds
+sudo mkdir /opt/dtos-sounds
+cp *.mp3 /opt/dtos-sounds/
+cd /opt/dtos-sounds
+ls
+cd /tmp/dtos
+cd /tmp/dtos-sounds/
+sudo cp *.mp3 /opt/dtos-sounds/
+ls /opt/dtos-sounds/
+trayer
+cat /sys/class/power_supply/BAT0/capacity
+cat /sys/class/power_supply/wacom_battery_0/capacity
+cat /sys/class/power_supply/BAT0/capacity
+cat /sys/class/power_supply/BAT0/voltage_now
+z xmonad
+hx xmonad.hs
+cd ~/.screenlayout/
+ls
+hx monitor.sh
+./monitor.sh
+z xmobar
+ls
+hx doom-one-xmobarrc
+hx nord-xmobarrc
+bat ~/Pictures/icons/xmonad.xpm
+hx nord-xmobarrc
+z xmonad
+hx xmonad.hs
+nitrogen --restore
+pkill
+kill
+xkill
+z xmonad
+hx xmonad.hs
+z xmonad
+ls
+hx xmonad.hs
+z xmonad
+hx xmonad.hs
+z xmobar
+hx nord-xmobarrc
+z xmonad
+hx xmonad.hs
+z xmobar
+ls
+cp nord-xmobarrc nord-xmobarrc2
+mv nord-xmobarrc nord-xmobarrc1
+z xmonad
+hx xmonad.hs
+z xmobar
+hx nord-xmobarrc1
+z xmonad
+hx xmonad.hs
+hx ~/.config/xmobar/nord-xmobarrc1
+hx xmonad.hs
+fcitx --help
+fcitx5 --help
+hx xmonad.hs
+cd xpm
+ls
+curl -o https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg
+curl -o haskell.svg https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg
+ls
+hx xmonad.hs
+cd ..
+hx xmonad.hs
+hx ~/.config/xmobar/nord-xmobarrc1
+ls xpm
+hx ~/.config/xmobar/nord-xmobarrc1
+pacupdate
+hx ~/.config/xmobar/nord-xmobarrc1
+hx ~/.config/xmobar/nord-xmobarrc2
+hx ~/.config/xmobar/nord-xmobarrc1
+hx ~/.config/xmobar/nord-xmobarrc2
+hx ~/.config/xmobar/nord-xmobarrc1
+hx ~/.config/xmobar/nord-xmobarrc2
+hx xmonad.hs
+cd Projects/dotfiles/
+ls
+cd .config/picom/
+ls
+cd ~/.config/picom
+cd ~/.config/
+ls
+cd picom
+mkdir picom
+cd picom
+cp ~/Projects/dotfiles/.config/picom/picom.conf ./
+ls
+hx picom.conf
+pkill picom
+sudo fdisk -l
+df
+sudo pacman -Sc
+paru -Sc
+df
+z xmonad
+hx xmonad.hs
+ec -h
+ec nc xmonad.hs
+ec -c xmonad.hs
+cd ~/.local/bin
+ls
+./pacupdate
+./pacupdates
+rm pacupdates
+ls
+hx kitty_reload_w
+hx kitty_reload_x
+rm kitty*
+ls
+./searchmenu
+./clipmenu
+./clipmenud
+./clipmenu
+clipmenud &
+rofi -show power-menu
+rofi -show power-menu:run
+rofi -show power-menu -modi run
+rofi -show powermenu
+z polybar
+hx nord-down
+rofi -show power-menu -modi power-menu:rofi-power-menu
+hx nord-down
+z ~/.local/bin
+ls
+hx powermenu
+chmod +x powermenu
+z sxh
+hx sxhkdrc
+powermenu
+hx sxhkdrc
+ec -c xmonad.hs &
+optimus-manager-qt 
+optimus-manager
+systemctl status clash
+systemctl status --user clash
+systemctl disable --user clash
+systemctl stop --user clash
+paru -S tencent-meeting
+sudo pacman -Ss picom
+sudo pacman -S picom
+nitrogen --restore
+./.screenlayout/monitor.sh
+sh ~/.screenlayout/monitor.sh
+polybar -M
+hx ~/.screenlayout/monitor.sh
+sudo pacman -Syu
+cd ~/.screenlayout/
+hx monitor.sh
+z logseq
+git pull
+git pull --force
+git pull -ff
+git pull --ff
+git remove journals/2022_08_29.org
+rm journals/2022_08_29.org
+git pull --ff
+rm journals/2022_08_29.org
+git pull --ff
+git status
+git add journals/2022_08_29.org
+git status
+git pull --ff
+git add .
+git commit -m "fix merge"
+git pull --ff
+git status
+git log
+cd ~/.screenlayout/
+ls
+rm 1.sh
+hx monitor.sh
+./monitor.sh
+hx monitor.sh
+./monitor.sh
+hx monitor.sh
+./monitor.sh
+nitrogen --restore
+rm journals/2022_08_24.org
+rm journals/2022_08_27.org
+rm journals/2022_08_28.org
+z logseq
+git status
+git push
+z logseq
+git status
+git push
+git push --force
+git log
+z xmon
+ls
+hx xmonad.hs
+z xmon
+nnn
+sudo pacman -S nnn
+sudo pacman -R ranger
+sudo pacman -R xplr
+hx xmonad.hs
+~/.screenlayout/monitor.sh
+cd ~/.screenlayout
+ls
+hx monitor.sh
+monitor.sh
+./monitor.sh
+sudo pacman -S syncthing
+sudo pacman -S syncthing-gtk
+sudo pacman -Ss syncthing
+paru -Ss syncthing
+z xrandr
+z screen
+ls
+hx monitor.sh
+z xmonad
+sudo pacman -S volumeicon
+volumeicon
+sudo pacman -R volumeicon
+amixer
+hx xmonad.hs
+cd xmonad
+z xmonad
+hx xmonad.hs
+ec xmonad.hs
+ec -c xmonad.hs
+doom --help
+z xmonad
+hx xmonad.hs
+amixer
+amixer set Master 2-
+amixer
+amixer set Capture 2-
+amixer set Capture 2%-
+amixer set Capture 10%-
+amixer set Capture 100%
+amixer set Master 5%-
+amixer set Master 2%-
+amixer set Master 2%+
+amixer
+alsamixer
+pavucontrol
+aplay -l
+pactl list
+sudo pacman -S ruby
+irb
+ls
+rm `Unknown command: cache-dir/`
+rm -r `Unknown command: cache-dir/`
+ls
+cd /tmp
+hx test.rb
+ruby test.rb
+xprop
+z xmonad
+z screen
+ls
+hx monitor.sh
+./monitor.sh
+sudo pacman -Syu
+z scr
+ls
+hx monitor.sh
+./monitor.sh
+z xmonad
+hx xmonad.hs
+cd Projects/rprojects/
+ls
+mkdir 2022-08-30
+mv tt* 2022-08-30/
+ls
+cd 2022-08-30/
+ls
+bat tt_pell_2022-08-30.log
+sudo pacman -S texlive
+paru -S texlive
+sudo pacman -Ss texlive
+paru -Ss texlive
+paru -Ss texlive-frame
+paru -S texlive-framed
+sudo tlmgr update --self
+sudo pacman -Ss texlive
+sudo pacman -S texlive-bin
+sudo tlmgr update --self
+sudo pacman -S texlive-formatsextra
+sudo tlmgr update --self
+sudo pacman -Ss texlive
+sudo paru -S texlive
+sudo paru -Ss texlive
+sudo pacman -S texlive-latexextra
+z xmonad
+s
+hx xmonad.hs
+steam
+z xmonad
+xrandr
+xrandr --output DP1
+xrandr --output DP1 --mode 1920x1080
+xrandr --output DP1 --mode 1920x1080i
+xrandr --output DP1 --mode 1920x1080
+hx xmonad.hs
+cd ..
+cd ~/Projects/
+ls
+rm -r wgpu winit tui-realm-stdlib/
+ls
+git clone https://github.com/umd-cmsc330/fall2022
+doom doctor
+sudo pacman -S sqlite3 ocaml
+sudo gem install --no-document minitest sqlite3 sinatra
+sh <(curl -sL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)
+(curl -sL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh) | sh
+opam init
+ls
+cd project0
+opam --version
+opam config env
+eval 'opam config env'
+nu -c 'opam config env'
+hx ~/.profile
+source ~/.profile
+hx ~/.profile
+source ~/.profile
+bash ~/.profile
+nu -c `opam config env`
+ocaml -version
+opam switch 4.12.0
+opam switch create 4.12.0
+ocaml -version
+eval 'opam config env'
+bash ~/.profile
+ocaml -version
+opam config env
+opam config env | clip
+nu ~/.profile
+builtin
+bash -c builtin --help
+bash -c "builtin --help"
+bash -c "builtin -n"
+nu ~/.profile
+/bin/sh -c "grep -q '\'^argparse$\'' 1>/dev/null 2>/dev/null"
+nu ~/.profile
+ocaml -version
+source $nu.env-path
+ocaml -version
+opam install ocamlfind ounit utop dune qcheck
+cargo install gradescope-submit
+cd ~/Projects/fall2022/
+cd project0/
+ls
+ruby test/public/public.rb
+sudo pacman -S ruby-dev
+gem --help
+sudo gem install --no-document minitest sqlite3 sinatra
+ruby test/public/public.rb
+gem install --no-document minitest sqlite3 sinatra
+source $nu.env-path
+source ($nu.env-path)
+nu --help
+config --help
+env --help
+env 
+env | where name == PATH
+z fall2020
+z fall
+ls
+cd project0/
+ls
+ruby test/public/public.rb
+bat p0.report
+gradescope-submit
+cd ..
+ls
+lsa
+la
+cd project1
+ls
+cd project1a/
+ls
+la
+z project1a
+ls
+ls test/
+ls test/public/
+ruby test/public/public.rb
+irb
+cd rsc
+cd src
+irb
+cd ..
+irb
+ruby test/public/public.rb
+z xmonad
+hx xmonad.hs
+ls
+hx ~/.config/xmobar/nord-xmobarrc1
+hx xmonad.hs
+hx ~/.config/xmobar/nord-xmobarrc2
+hx xmonad.hs
+ls
+hx lib/Colors/Nord.hs
+ 
+hx xmonad.hs
+xmobar -x 0 ../xmobar/nord-xmobarrc1
+hx xmonad.hs
+pkill xmobar
+xmobar -x 0 ../xmobar/nord-xmobarrc1
+hx xmonad.hs
+hx ~/.config/xmobar/nord-xmobarrc1
+xmobar --version
+hx ~/.config/xmobar/nord-xmobarrc2
+xmobar -x 0 ../xmobar/nord-xmobarrc1
+xmobar --help
+xmobar -x 0 ../xmobar/nord-xmobarrc1 -v
+xmobar -x 0 ../xmobar/nord-xmobarrc1 -vv
+hx xmonad.hs
+xmobar -x 0 ../xmobar/nord-xmobarrc1 -vv
+hx ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+nitrogen --restore
+z xmonad
+hx ~/.screenlayout/monitor.sh
+hx xmonad.hs
+xmobar -x 0 ../xmobar/nord-xmobarrc1 -vv
+hx ../xmobar/nord-xmobarrc1
+xdotool --help
+hx ../xmobar/nord-xmobarrc1
+~/.screenlayout/monitor.sh
+nitrogen --restore
+z xmonad
+hx xmonad.hs
+z xmonad
+hx xmonad.hs
+ls
+rm `Unknown command: cache-dir/`
+rm -r `Unknown command: cache-dir/`
+ls
+z xmonad
+ls
+hx xmonad.hs
+nitrogen --restore
+hx xmonad.hs
+z xmonad
+xrandr --listmonitors
+hx ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+nitrogen --restore
+irb
+gem install solargraph
+solargraph 
+solargraph stdio
+ls ~/.local/share/gem/ruby/3.0.0/bin/
+which solargraph
+irb
+z fall
+cd project1a/
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+ls
+gradescope-submit
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+gradescope-submit
+calendar
+cal
+z xmonad
+bat xmonad.hs
+sudo pacman -S thunderbird
+ls
+hx custom.css
+ls
+paru -S nheko
+curl -s 'https://download.opensuse.org/repositories/home:/digital_mystik:/AUR/Arch/x86_64/home_digital_mystik_AUR_Arch.key' | sudo pacman-key -a - && sudo pacman-key --lsign-key 4D41B287F3ABC4B8
+curl -s 'https://download.opensuse.org/repositories/home:/digital_mystik:/AUR/Arch/x86_64/home_digital_mystik_AUR_Arch.key' | sudo pacman-key -a -
+sudo pacman-key --lsign-key 4D41B287F3ABC4B8
+echo '[home_digital_mystik_AUR_Arch]Server = https://download.opensuse.org/repositories/home:/digital_mystik:/AUR/Arch/x86_64/' | sudo tee --append /etc/pacman.conf
+sudo pacman -Syu nheko
+sudo hx /etc/pacman.conf
+sudo helix /etc/pacman.conf
+sudo hx /etc/pacman.conf
+sudo pacman -Syu nheko
+thunderbird
+xprop
+z xmonad
+hx xmonad.hs
+z xmonad
+hx xmonad.hs
+systemctl start --user thunderbird
+bw --help
+bw login
+config env
+source ($nu.env-path)
+source ~/.config/nushell/env.nu 
+ls
+which bitwarden
+cd ~/.local/bin/
+ls
+z xmonad
+hx xmonad.hs
+which bwmenu
+bwmenu --help
+bwmenu
+bw --help
+bw sync
+hx ~/.xprofile
+source ~/.xprofile
+reboot
+hx ~/.xprofile
+reboot
+shutdown
+shutdown --c
+shutdown -c
+shutdown -now
+shutdown --help
+shutdown -p
+shutdown -P
+shutdown -c
+poweroff
+systemctl status logind
+sudo systemctl status logind
+logind --help
+login --help
+reboot
+sudo systemctl cancel
+sudo systemctl list-jobs
+env | where name == BW_SESSION
+bw --help
+bwmenu
+bw login
+bw lock
+bw login
+bw logout
+bw login
+hx ~/.xprofile
+config env
+bw login
+bw --help
+bw list
+bw list items --search google
+bw list items --search umd
+bw sync
+irb
+z wux
+cargo run
+sudo pacman -S xrdp
+sudo pacman -Ss xrdp
+sudo pacman -S remmina
+sudo pacman -S freerdp
+ip
+ip show
+ip address -4
+ip address
+ip -4
+ip -4 address
+flameshot --help
+flameshot gui
+flameshot config
+flameshot --help
+flameshot screen --help
+z xmonad
+hx xmonad.hs
+z xmonad
+hx xmonad.hs
+shutter --help
+hx xmonad.hs
+sudo pacman -Syu
+vim 
+nvim
+hx .screenlayout/monitor.
+hx .screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+hx .screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+cd ~/.config/xmobar
+ls
+hx nord-xmobarrc2
+nitrogen --restore
+z xmonad
+hx xmonad.hs
+z ~/.screenlayout/
+ls
+hx monitor.sh
+z xmonad
+hx xmonad.hs
+cd ~/.local/share/qutebrowser/userscripts/
+ls
+hx qute-bitwarden
+z /tmp
+hx test.rb
+ruby test.rb
+hx test.rb
+ruby test.rb
+sudo helix /etc/pulse/daemon.conf
+sudo cd /etc/pulse/client.conf
+sudo cd /etc/pulse/
+ls
+cd /etc/pulse
+ls
+pacmd
+sudo pacman -S pacmd
+pactl list
+pactl --help
+pactl list --help
+pactl list modules
+pactl list modules | find "module-echo-cancel"
+pactl list modules | find "module"
+pactl list modules | find "echo"
+sudo mkdir default.pa.d
+sudo helix default.pa.d/noise-cancellation.pa
+pulseaudio -k
+sudo pulseaudio -k
+amixer
+jackd 
+pactl info
+systemctl --user restart pipewire pipewire-pulse
+pactl list modules | find "echo"
+pactl list modules
+sudo pacman -S easyeffects
+cd ~/Downloads/
+ls
+rm *
+trash *
+ls
+curl https://gist.githubusercontent.com/MateusRodCosta/a10225eb132cdcb97d7c458526f93085/raw/5219f20faeaab9ac069cfe93b1d6fbdd82301dfe/Improved%2520Microphone%2520(Male%2520voices,%2520with%2520Noise%2520Reduction).json | save "preset.json"
+ls
+bat preset.json
+open preset.json
+systemctl --user restart pipewire pipewire-pulse
+cd /etc/pulse
+ls
+sudo rm -r default.pa.d/
+irb
+~/.screenlayout/monitor.sh
+xrandr
+z xmonad
+hx xmonad.hs
+xrandr --listmonitors
+hx ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+xrandr --listmonitors
+hx ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+xrandr --listmonitors
+xrandr --list
+xrandr --help
+xrandr
+hx ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+hx ~/.screenlayout/monitor.sh
+hx xmonad.hs
+z xmonad
+hx xmonad.hs
+amixer
+pactl 
+pactl --help
+pactl info
+pipewire 
+easyeffects --help
+easyeffects --help-gapplication
+z xmonad
+hx xmonad.hs
+killall easyeffects
+hx xmonad.hs
+~/.screenlayout/monitor.sh
+z xmonad
+hx xmonad.hs
+spotify-tui
+paru -S spotify-tui
+spotify-tui
+spt
+systemctl --user status spotifyd
+sudo pacman -S spotifyd
+systemctl --user enable --now spotifyd
+systemctl --user status spotifyd
+spt
+aplay -L
+pactl info
+amixer
+spotifyd --help
+cd .config
+ls
+mkdir spotifyd
+ls
+cd spotifyd/
+ls
+git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+nvim +PackerSync
+ls
+nvim
+hx ~/.xprofile
+config env
+config nu
+nu --version
+which nu
+nu --version
+config nu
+cargo install nu
+nu --version
+config nu
+cd ~/.config/spotifyd/
+ls
+vim spotifyd.conf
+bw --help
+bw sync
+bw get password spotify.com
+vim spotifyd.conf
+spotifyd --help
+vim spotifyd.conf
+aplay -L
+vim spotifyd.conf
+systemctl --user restart spotifyd
+systemctl --user status spotifyd
+spotifyd --help
+vim spotifyd.conf
+clipmenu 
+clipmenud
+z xmonad
+hx ~/.xprofile
+clipmenu 
+hx ~/.xprofile
+vim xmonad.hs
+vim spotifyd.conf
+systemctl --user restart spotifyd
+systemctl --user status spotifyd
+vim spotifyd.conf
+systemctl --user restart spotifyd
+systemctl --user status spotifyd
+spt
+playerctl --help
+spotifyd --help
+sudo pacman -S playerctl
+playerctl metadata
+playerctl metadata title
+z xmonad
+ls
+vim xmonad.hs
+clipmenu
+clipmenud &
+clipmenud --help
+ls ~/
+rm `~/Unknown command: cache-dir/`
+rm -r `~/Unknown command: cache-dir/`
+clipmenud --help
+vim ~/.local/bin/clipmenud
+clipctl cache
+vim ~/.local/bin/clipmenud
+clipctl cache-dir
+vim ~/.local/bin/clipmenud
+clipctl cache-dir
+vim ~/.local/bin/clipmenud
+clipctl --help
+clipctl disable
+clipctl enable
+clipctl --help
+vim ~/.local/bin/clipmenud
+clipctl cache-dir
+paru -Syu
+sudo pacman -S electron
+paru -R electron16
+paru -Syu
+z xmonad
+vim xmonad.hs
+clipmenud --help
+clipctl --help
+clipctl enable
+clipctl --help
+ls ~/
+clipctl help
+clipctl cache-dir
+paru -S clipmenud
+paru -S clipmenu
+clipctl cache-dir
+which clipctl
+sudo vim /usr/bin/clipctl
+sudo nvim /usr/bin/clipctl
+systemctl --user import-environment DISPLAY
+clipmenud 
+ls ~/
+clipmenu
+htop
+clipctl cache-dir
+clipctl enable
+clipmenu
+clipctl -h
+clipmenud &
+systemctl --user start clipmenud
+systemctl --user status clipmenud
+ls
+ls ~/
+clipmenu
+systemctl --user enable clipmenud
+vim xmonad.hs
+clipmenu
+clipmenu --help
+xev
+z xmonad
+vim xmonad.hs
+nvim
+vim xmonad.hs
+cd ~/.config/nvim
+ls
+cd lua
+ls
+git clone https://github.com/Yucklys/AstroNvim-Config.git ./user/
+mkdir user
+cd user
+ls
+pwd
+cp -r ../user_example/ ./
+ls
+rm -r user_example/
+cp -r ../user_example/* ./
+ls
+git log
+ls
+la
+rm .git
+git status
+git log
+nvim  --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+vim init.lua
+ls
+ls ../
+cd ..
+cd default_theme/
+ls
+cd ..
+cp -r default_theme/ nord_theme
+ls
+cd nord_theme/
+ls
+cd ..
+mv nord_theme/ user
+cd user
+ls
+vim init.lua
+ls nord_theme/
+vim nord_theme/base.lua
+cd ..
+ls
+cd user
+vim init.lua
+nvim  --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+vim init.lua
+nvim  --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+vim init.lua
+ls ~/
+ls ../
+ls ../configs/
+ls ../configs/bufferline.lua
+vim ../configs/bufferline.lua
+ls
+vim nord_bufferline.lua
+vim init.lua
+nvim  --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+vim init.lua
+ls
+mkdir plugins
+mv nord_bufferline.lua plugins/init.lua
+nvim  --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+vim
+vim init.lua
+ls
+rm -r nord_theme/
+ls
+vim plugins/init.lua
+bat ../core/plugins.lua
+bat ../configs/bufferline.lua
+ls
+vim plugins/init.lua
+vim plugins/bufferlines.lua
+nvim  --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+vim plugins/bufferlines.lua
+nvim  --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+vim plugins/bufferlines.lua
+mv plugins/bufferlines.lua bufferline.lua
+vim plugins/bufferlines.lua
+vim plugins/bufferline.lua
+mv bufferline.lua plugins/
+vim plugins/bufferline.lua
+bg
+fg
+killall vim
+killall nvim
+vim plugins/bufferline.lua
+vim init.lua
+z xmonad
+vim xmonad.hs
+z user
+ls
+git push 
+vim
+gitui
+vim
+vim init.lua
+cd ~/Projects/
+ls
+cargo init rsummary
+cd rsummary/
+z user
+git log
+git push
+cd ~/Projects/rsummary/
+ls
+cd ..
+rm -r rsummary/
+cargo init rummary
+cd rummary/
+ls
+cd ..
+ls
+cd fall2022
+ls
+git pull
+ls
+cd project1b
+ls
+bat README.md
+ls
+cat README.md
+cd src/
+ls
+cd ..
+vim src/main.rb
+vim src/controllers/input_controller.rb
+ruby src/main.rb test/public/inputs/correct_ships_p1.txt test/public/inputs/correct_ships_p2.txt
+bat README.md
+open README.md
+vim ~/.config/nvim/lua/user/init.lua
+vim src/controllers/input_controller.rb
+vim ~/.config/nvim/lua/user/init.lua
+vim ~/.config/nvim/lua/user/plugins/init.lua
+vim ~/.config/nvim/lua/user/init.lua
+vim ~/.config/nvim/lua/user/plugins/init.lua
+vim ~/.config/nvim/lua/user/plugins/bufferline.lua
+vim ~/.config/nvim/lua/user/plugins/mason-lspconfig.lua
+vim src/controllers/input_controller.rb
+irb
+vim src/models/game_board.rb
+paru -S kooha
+z xmonad
+vim xmonad.hs
+xprop
+z xmonad
+vim xmonad.hs
+xprop
+z xmonad
+vim xmonad.hs
+sudo pacman -S xdg-desktop-portal
+sudo pacman -S xdg-desktop-portal-wlr
+sudo pacman -R kooha
+sudo pacman -S obs
+sudo pacman -Ss obs
+sudo pacman -S obs-studio
+sudo pacman -S yelp
+sudo pacman -Syg
+sudo pacman -Syu
+xmobar --version
+pacman -Qc xmobar
+cd ~/.config/
+ls
+vim /usr/share/pipewire/media-session.d/with-pulseaudio
+sudo pacman -S- pipewire
+sudo pacman -Ss pipewire
+sudo pacman -Ss easyeffects
+paru -Ss easyeffects
+paru -S easyeffects-presets
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+sudo pacman -S alexa
+paru -S alexa
+paru -Ss alexa
+snap install alexa
+sudo snap install alexa
+sudo snap install alexa --beta
+htop
+z xmonad
+vim xmonad.hs
+xev
+paru -S mons
+mons -e right
+mons
+mons --dpi 192
+mons
+mons --primary eDP1
+mons -n right
+mons
+mons --primary eDP1
+mons --primary eDP1 -e right
+~/.screenlayout/monitor.sh
+vim ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+vim ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+xrandr
+vim ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+vim ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+xrandr
+man xrandr
+~/.screenlayout/monitor.sh
+vim ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+vim ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+vim ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+vim ~/.screenlayout/monitor.sh
+~/.screenlayout/monitor.sh
+vim ~/.screenlayout/monitor.sh
+udo pacman -S ocrdesktop
+sudo pacman -S ocrdesktop
+sudo pacman -S tesseract-data-chi_sim
+ocrdesktop
+amixer
+ocrdesktop
+xprop
+z xmonad
+vim xmonad.hs
+z fall2022
+ls
+cd project1b
+ls
+sudo pacman -R mons
+cd src/
+ls
+cd models/
+ls
+irb
+cd ../../
+ls
+ls test/
+ruby test/public/public.rb
+ls test/public/inputs/bad_ships.txt
+bat test/public/inputs/bad_ships.txt
+ruby test/public/public.rb
+vim src/models/game_board.rb
+touch test/student.rs
+mv test/student.rs test/student.rb
+ruby test/student.rb
+ruby test/public/public.rb
+ruby test/student.rb
+irb
+ls src/models/
+irb
+ruby test/public/public.rb
+ruby test/student.rb
+ruby test/public/public.rb
+ruby test/student.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+irb
+ruby test/public/public.rb
+ruby test/student.rb
+ruby test/public/public.rb
+ruby test/student.rb
+ruby test/public/public.rb
+ruby test/student.rb
+sudo pacman -S via
+sudo pacman -Ss vio
+sudo pacman -Ss via
+paru -S via
+paru -S via-bin
+via --version
+which via
+paru -S via-bin
+which via
+paru -S via
+paru -R via
+cd Downloads/
+ls
+unzip v1_ansi_rev1.05.json.zip
+ls
+rm -r __MACOSX/
+ls
+sudo pacman -S qmk
+sudo pacman -R qmk
+curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
+nnn
+ranger
+sudo pacman -S ranger
+cd ..
+ls ~/OneDrive/文档/Resume/
+sudo pacman -S ranger
+z xmonad
+vim xmonad.hs
+cd ../ranger/
+ls
+git clone https://github.com/cdump/ranger-devicons2 ~/.config/ranger/plugins/devicons2
+cd ~/.config/ranger
+ls
+ranger --copy-config
+ranger --copy-config --help
+ranger --copy-config all
+ls
+vim rc.conf
+ranger
+git clone git@github.com:jchook/ranger-zoxide.git ~/.config/ranger/plugins/zoxide
+git clone https://github.com/jchook/ranger-zoxide.git ~/.config/ranger/plugins/zoxide
+vim rc.conf
+ranger
+sudo pacman -S w3m
+ranger
+vim rc.conf
+ranger
+vim rc.conf
+ranger
+sudo pacman -S ffmpegthumbnailer
+vim scope.sh
+htop
+vim src/models/game_board.rb
+z kitty
+ls
+vim kitty.conf
+vim kitty
+vim kitty.conf
+z xmobar
+bat README.md
+irb
+z xmobar
+ls
+vim nord-xmobarrc1
+xev
+xev
+paru -S birdtray
+birdtray --help
+z xmonad
+ls
+vim xmonad.hs
+z qutebrow
+ls
+vim cnofig.py
+vim open_download
+z qutebrowser
+vim open_download
+ocaml
+bw sync
+bw login
+vim ~/.profile
+vim ~/.xprofile
+echo $env.BW_SESSION
+bw sync
+z xmonad
+xprop
+dunst
+dustify hello
+dunstify hello
+ls
+vim xmonad.hs
+xprop
+paru -S crossover
+paru -R crossover
+paru -S bottles
+wine --help
+cd ~/Applications/
+ls
+cd `Release 6.5/`
+ls
+cd Release/
+wine `MINI KeyBoard.exe`
+sudo pacman -S kdeconnect
+paru -Ss kdeconnect
+xev
+xev --help
+xev -event keyboard
+z Downloads/
+ls
+z xmonad
+xev
+x.v
+xev
+zathura
+vim xmonad.hs
+paru -S sioyek
+vim xmonad.hs
+sioyek
+paru -S freetube-bin
+vim xmonad.hs
+xprop | grep WM_CLass
+xprop | grep WM_CLASS
+vim xmonad.hs
+vim ~/.config/xmobar/nord-xmobarrc1
+vim xmonad.hs
+ls
+rm `Unknown command: cache-dir/`
+rm -r `Unknown command: cache-dir/`
+vim xmonad.hs
+ls
+cd ..
+ls
+rm -r xmonad.bak
+mv xmonad xmonad.bak
+ls
+cd /tmp
+git clone https://github.com/Axarva/dotfiles-2.0.git
+cd dotfiles-2.0/
+git checkout modified
+chmod +x ./install-on-arch.sh
+./install-on-arch.sh
+ls
+ls bin
+cd xmonad/
+ls
+vim xmonad.hs
+cd ~/.config/
+mv xmonad.bak/ xmonad
+ls
+cd xmonad/
+vim xmonad.hs
+cd ..
+mv xmonad xmonad.bak
+mv xmonad.bak/ xmonad
+cd xmonad/
+ls
+vim xmonadctl.hs
+cd ..
+cd xmobar
+ls
+mv nord-xmobarrc1 xmobarrc1
+mv nord-xmobarrc2 xmobarrc2
+ls
+ranger
+ls
+cd ..
+cd xmonad
+vim xmonad.hs
+cd ~/.config/xmobar
+/s
+ls
+vim xmobarrc1
+cd ..
+vim xmonad.hs
+cd xmonad/
+vim xmonad.hs
+systemctl --user restart lightdm
+sudo systemctl restart lightdm
+z xmobar
+ls
+vim xmobarrc1
+z xmo
+ls
+vim xmonad.hs
+restart
+z xmobar
+ls
+vim xmobarrc1
+chmod +x trayer-padding-icon.sh
+vim xmobarrc1
+vim xmobarrc2
+vim xmobarrc1
+doom sync
+ls
+cd project1b
+ls
+ruby test/student.rb
+ruby test/public/public.rb
+ruby test/student.rb
+ruby test/public/public.rb
+ruby test/student.rb
+ruby test/public/public.rb
+ruby test/student.rb
+ruby test/public/public.rb
+ruby test/student.rb
+ruby test/public/public.rb
+ls
+gradescope-submit
+paru -S dragon-drop
+z ranger
+ls
+vim rifle.conf
+dragon --help
+drop --help
+paru -S dragon-drop
+dragon
+dragon-drop --help
+vim rifle.conf
+vim rc.conf
+dragon -a -x rc.conf
+dragon-drop -a -x rc.conf
+dragon -a -x rc.conf
+vim rc.conf
+z Downloads/
+sioyek
+ls
+z ranger
+ls
+vim rifle.conf
+paru -S trilium
+ls
+paru -Ss trilium
+paru -Ss trilium-bin
+paru -S trilium
+paru -Ss trilium-bin
+cd ~/Downloads/
+ls
+tar -zxvf trilium-linux-x64-0.54.3.tar.xz
+ls
+tar --help
+ssh-keygen
+ls ~/.ssh/id_rsa
+abt ~/.ssh/id_rsa
+bat ~/.ssh/id_rsa
+bat ~/.ssh/id_rsa.pub
+open ~/.ssh/id_rsa.pub | clip
+ssh root@45.33.86.91
+ls
+ssh yucklys@45.33.86.91
+ssh root@45.33.86.91
+ssh ssh yucklys@45.33.86.91
+ssh yucklys@45.33.86.91
+ls
+ls nord-and-light/
+ls nord-and-light/README.md
+bat nord-and-light/README.md
+rm -r nord-and-light/
+ls
+git init --bare ~/.dotfiles
+rm -r ~/.dotfiles/
+git config --global init.defaultBranch main
+rm -r ~/.dotfiles/
+git init --bare ~/.dotfiles
+config nu
+dot --help
+config --help
+myconfig --help
+which config
+c --help
+config nu
+dotfile --help
+config nu
+dotfile --help
+dotfile config status.showUntrackedFiles no
+config nu
+cd .dotfiles/
+ls
+dotfile config status.showUntrackedFiles no
+pwd
+config nu
+$env.HOME
+git --git-dir=$env.HOME/.dotfiles
+git --git-dir=$env.HOME/.dotfiles config
+git --git-dir=$env.HOME/.dotfiles config status.showUntrackedFiles no
+git --git-dir=($env.HOME)/.dotfiles config status.showUntrackedFiles no
+git --git-dir='$env.HOME/.dotfiles' config status.showUntrackedFiles no
+git --git-dir=~/.dotfiles config status.showUntrackedFiles no
+git --git-dir=~/.dotfiles/ config status.showUntrackedFiles no
+git --help
+pwd
+git status
+git --git-dir=~/.dotfiles/ config status.showUntrackedFiles no
+git --git-dir='~/.dotfiles/' config status.showUntrackedFiles no
+git --git-dir="~/.dotfiles/" config status.showUntrackedFiles no
+git --git-dir="$HOME/.dotfiles/" config status.showUntrackedFiles no
+git --git-dir="$env.HOME/.dotfiles/" config status.showUntrackedFiles no
+$env.HOME
+echo ~
+ech $env.HOME
+ech ($env.HOME)
+echo $env.HOME
+which git
+git --git-dir=./
+git --git-dir=./ show
+git --git-dir="$env.HOME/.dotfiles/" show
+git --git-dir="~/.dotfiles/" show
+PATH
+$env.PATH
+git --git-dir=$env.HOME/.dotfiles/ show
+config nu
+chsh -s /usr/bin/fish
+ls
+cargo run
+cargo test
+cargo run
+ls
+mkdir articles
+cd articles/
+ls
+cd ..
+cargo run
+mv articles/ src/
+cd src
+mv articles/ test
+cd ..
+cargo run
+cargo add --help
+cargo add clap --features derive
+cargo run --help
+cargo run 
+cargo run -- help
+cargo run -- --help
+cargo run -- I. will. Kill you
+cargo run -- I. will. Kill you.
+cargo run -- "I. will. Kill you."
+cargo run -- "I. I will. Kill you."
+cargo run -- "I. Will. Kill you."
+cargo add clipboard
+cargo run -- "I. I will. Kill you."
+sudo pacman -S xorg-dev
+sudo pacman -Ss xorg-dev
+sudo pacman -Ss xorg
+cargo run -- "I. I will. Kill you."
+rustc --explain E0554
+cargo run
+cargo clean
+cargo run
+cargo run -- "I. I will. Kill you."
+cargo build --release
+ls ./target/release/
+./target/release/rumoc --help
+cargo install \
+cargo install 
+cargo build --release
+ls ./target/release/
+./target/release/rumoc --help
+cargo run -- "I. I will. Kill you."
+cargo run -- "I. I will. Kill you." -n 1
+cargo run -- help
+cargo run -- --help
+cargo run -- -n 1 "I. I will. Kill you."
+cargo run -- --help
+cargo run -- -n 1 "I. I will. Kill you."
+git --help
+git add .
+git commit -m "Basic implement of summarization"
+git push
+git remote add origin https://github.com/Yucklys/rumoc.git
+git push origin
+git push --set-upstream origin main
+git pull
+git pull origin main
+git pull --help
+git git pull -r origin main
+git pull -r origin main
+git status
+ls
+git push --set-upstream origin main
+cargo run -- --help
+cargo test
+cd project2a/
+dune runtest -f
+$nu.env-path
+ew --help
+vim $nu.env-path
+nvim $nu.env-path
+nvim $nu.config-path
+cd ~/.config/nushell/
+ls
+vim config.nu
+vim $nu.env-path
+config nu
+which emacs
+emacs --nw
+emacs -nw
+vim ~/.config/nu
+vim ~/.xprofile
+config nu
+vim ~/.config/nushell/config.nu
+config nu
+ew --help
+em --help
+xkill
+paru -Syu
+sudo pacman -S qutebrowser
+sudo pacman -S python-adblock
+z xmonad
+ls
+vim xmonad.hs
+z qutebrowser
+ls
+vim open_download
+ls
+cd Mails/
+ls
+mu --help
+cd ~/.config
+find offline
+ls
+mbsync --help
+cd ..
+vim ~/.mbsyncrc
+mbsync --all
+vim ~/.mbsyncrc
+mbsync --all
+vim ~/.mbsyncrc
+mbsync --all
+mu index
+ls ~/Mails/
+ls ~/.mail/
+mu index --maildir ~/.mail
+mu init --maildir ~/.mail
+mu index
+rm Mails/
+ls
+ls ~/.mail/
+doom sync
+fcitx5-diagnose 
+vim ~/.xprofile
+bat /sys/power/mem_sleep
+echo "s2idle" > /sys/power/mem_sleep
+echo "s2idle" | save --raw /sys/power/mem_sleep
+sudo echo "s2idle" | save --raw /sys/power/mem_sleep
+sudo echo "s2idle" | save --raw -f /sys/power/mem_sleep
+bat /sys/power/mem_sleep
+echo "s2idle" | sudo save --raw -f /sys/power/mem_sleep
+sudo (echo "s2idle" | save --raw -f /sys/power/mem_sleep)
+su sudo
+svim /sys/power/mem_sleep
+sudo -E vim /sys/power/mem_sleep
+sudo -E nvim /sys/power/mem_sleep
+fish
+bat /proc/cmdline
+sudo -E nvim /boot/grub/grub.cfg
+sudo -E nvim /etc/modprobe.d/
+sudo -E nvim /etc/systemd/sleep.conf
+fish
+bash
+fish
+bat /sys/power/mem_sleep
+bat /sys/power/state
+sudo pacman -Syu
+ls
+cd ..
+cd yucklys/
+bat /sys/power/state
+bat /sys/power/mem_sleep
+paru -Syu
+nvidia-smi 
+prime-run nvidia-smi
+nvidia-inst --help
+nvidia-inst
+nvidia-inst -p
+reboot
+nvidia-smi
+prime-run nvidia-smi
+prime-run nvidia-setting
+prime-run nvidia-settings
+optimus-manager
+paru -S optimus-manager
+fish
+ls
+systemctl status sddm
+sudo systemctl status sddm
+systemctl start sddm
+sudo systemctl status sddm
+systemctl start sddm
+sudo pacman -S sddm
+ls /etc
+optimus-manager --status
+systemctl status lightdm
+xrandr --listmonitors
+xrandr --help
+fish
+ls
+bat /var/log/lightdm/
+ls /var/log/lightdm/
+sodu ls /var/log/lightdm/
+sudo ls /var/log/lightdm/
+systemctl status lightdm
+journalctl lightdm
+cd /etc/modprobe.d/
+ls
+vim /etc/lightdm/lightdm.conf
+ls
+vim nvidia.conf
+svim mynvidia.conf
+sudo -E mynvidia.conf
+sudo vim mynvidia.conf
+vim mynvidia.conf
+ls
+sudo hx nvidia.conf
+sudo vim nvidia.conf
+sudo -E vim nvidia.conf
+vim /etc/lightdm/lightdm.conf
+ls /var/log
+bat /var/log/lightdm/
+bat /var/log/Xorg.0.log
+bat /var/log/Xorg.1.log
+nvidia-smi
+prime-run nvidia-smi
+nvidia-inst --help
+nvidia-inst -p
+nvidia-inst
+systemctl restart lightdm
+ls
+systemctl status lightdm
+fish
+systemctl restart lightdm
+systemctl status optimus-manager
+optimus-manager --status
+prime-offload 
+nvidia-inst -p
+prime-switch 
+sudo prime-switch 
+systemctl restart lightdm
+lsmod
+lsmod 
+lsmod | nvidia
+lsmod | find nvidia
+sudo prime-switch 
+lsmod | find nvidia
+journalctl lightdm
+journalctl lightdm.service
+journalctl --help
+journalctl --system lightdm.service
+journalctl -N lightdm.service
+systemctl status lightdm
+vim ~/.screenlayout/monitor.sh
+systemctl restart lightdm
+systemctl status lightdm
+vim ~/.screenlayout/monitor.sh
+systemctl status lightdm
+xrandr
+sudo update-initramfs -u
+vim /lib/modprobe.d/optimus-manager.conf
+vim /etc/optimus-manager/optimus-manager.conf
+sudo nvim /etc/optimus-manager/optimus-manager.conf
+reboot
+optimus-manager --status
+prime-switch 
+optimus-manager --status
+prime-offload 
+optimus-manager --status
+optimus-manager --switch hybrid
+nvidia-smi
+prime-run nvidia-smi
+fish
+bat /sys/class/power_supply/wacom_battery_0/
+bat /sys/class/power_supply/wacom_battery_0/status
+reboot
+z xmobar
+ls
+vim xmobarrc2
+vim ~/.config/xmonad/xmonad.hs
+mpc --help
+ncmpcc
+ncmpcpp 
+pactl info
+pactl --help
+ncmpcpp 
+cd ~/Music/
+ls
+ncmpcpp 
+you-get --help
+you-get https://www.bilibili.com/video/BV1xa41147Q4/?spm_id_from=333.337.search-card.all.click&vd_source=059d718cda15d3568c8f6e7c9599fc03
+ls
+rm 独角.cmt.xml
+tldr ffmpeg
+ffmpeg -i 独角.mp4 -vn 独角.mp3
+ls
+rm 独角.mp4
+ncmpcpp 
+z xmobar
+vim xmobarrc2
+xmobar --help
+xmobar -v
+xmobar -v xmobarrc2
+vim xmobarrc2
+xmobar -v xmobarrc2
+vim xmobarrc2
+ncmpcpp 
+vim xmobarrc2
+paru -S libmpd
+$env.MPD_HOST
+$env
+ls
+vim xmobarrc2
+bat ~/.config/mpd/mpd.conf
+systemctl status mpd
+systemctl status --user mpd
+vim xmobarrc2
+ncmpcpp
+vim xmobarrc2
+ncmpcpp
+vim xmobarrc2
+ncmpcpp
+vim xmobarrc2
+ncmpcpp
+vim ~/.config/xmonad/xmonad.hs
+mocp --help
+vim ~/.config/xmonad/xmonad.hs
+ncmpcpp
+vim ~/.config/xmonad/xmonad.hs
+spotifyd --help
+vim ~/.config/spotifyd/spotifyd.conf
+aplay -L
+vim ~/.config/spotifyd/spotifyd.conf
+aplay -L
+vim ~/.config/spotifyd/spotifyd.conf
+systemctl status --user spotifyd
+systemctl restart --user spotifyd
+systemctl status --user spotifyd
+vim ~/.config/spotifyd/spotifyd.conf
+spotifyd --help
+vim ~/.config/spotifyd/spotifyd.conf
+aplay -L
+pactl list short sinks
+vim ~/.config/spotifyd/spotifyd.conf
+systemctl restart --user spotifyd
+systemctl status --user spotifyd
+z xmonad
+ls
+vim xmonad.hs
+spotifyd --help
+mpris-proxy --help
+playerctl metadata title
+playerctl -h
+playerctl volume 1.0
+playerctl volume +
+playerctl volume 1+
+mpris-proxy
+vim ~/.config/systemd/user/mpris-proxy.service
+systemctl daemon-reload
+systemctl enable --now --user mpris-proxy
+systemctl status --user mpris-proxy
+playerctl volume 1.0
+playerctl status
+playerctl -l
+playerctl volume 1+
+paru -S mpris-player-control
+cd ~/.local/bin/
+ls
+rm `Unknown command: cache-dir/`
+rm -rf `Unknown command: cache-dir/`
+ls
+curl https://gitlab.com/axdsop/nix-dotfiles/-/raw/master/Configs/polybar/scripts/mpris_player/mpris_player_control | save mpris_player_control
+ls
+vim mpris_player_control
+chmod +x mpris_player_control
+cd ~/
+mpris_player_control --help
+mpris_player_control -h
+mpris_player_control -l
+mpris_player_control -V +5
+mpris_player_control -V +10
+vim ~/.config/xmonad/xmonad.hs
+mpris_player_control -a
+mpris_player_control -a Pause
+mpris_player_control -a Play
+mpris_player_control -a PlayPause
+vim ~/.config/xmonad/xmonad.hs
+z xmobar
+vim xmobarrc2
+mpris_player_control -t
+playerctl --help
+playerctl status
+playerctl metadata --help
+playerctl metadata title
+playerctl metadata author
+playerctl metadata list
+playerctl metadata -l
+playerctl metadata track
+playerctl metadata title
+playerctl metadata artist
+vim xmobarrc2
+which playerctl
+vim xmobarrc2
+spotifyd --help
+vim xmobarrc2playerctl metadata --format '{{playerName}}: {{lc(status)}} '\'{{duration(position)}}|{{duration(mpris:length)}}'
+playerctl metadata --format '{{playerName}}: {{lc(status)}} '\'{{duration(position)}}|{{duration(mpris:length)}}'
+playerctl metadata artist
+playerctl metadata --format '{{playerName}}: {{lc(status)}} '\'{{duration(position)}}|{{duration(mpris:length)}}'
+playerctl --help
+playerctl status
+mpris_player_control -h
+mpris_player_control 
+vim ./xmobarrc2
+playerctl status
+systemctl status --user spotifyd
+vim ~/.config/spotifyd/spotifyd.conf
+systemctl restart --user spotifyd
+clear
+playerctl metadata title
+z xmobar
+vim xmobarrc2
+mpris_player_control 
+mpris_player_control -h
+mpris_player_control -l
+mpris_player_control -r
+mpris_player_control
+mpris_player_control -p spotify
+mpris_player_control -p spotifyd
+mpris_player_control -r
+vim ~/.config/spotifyd/spotifyd.conf
+mpris_player_control
+playerctl metadata --format '{{playerName}}: {{lc(status)}} '\'{{duration(position)}}|{{duration(mpris:length)}}'
+playerctl metadata --format '{{artist}} - {{title}}'
+vim xmobarrc2
+ssh zli12330@login.zaratan.umd.edu
+playerctl metadata --format '{{artist}} - {{title}}'
+vim xmobarrc2
+which playerctl
+vim xmobarrc2
+ssh zli12330@login.zaratan.umd.edu
+cd Downloads/
+tldr
+tldr scp
+cd ~/Downloads/
+ls
+scp zli12330@login.zaratan.umd.edu:/home/zli12330/scratch/assign2/Li-Zekun-assign2 Li-Zekun-assign2
+scp zli12330@login.zaratan.umd.edu:/home/zli12330/scratch/assign2/Li-Zekun-assign2.tar.gz ./
+ls
+man tar
+tldr tar
+tar xvf Li-Zekun-assign2.tar.gz
+ls
+mv project2.pdf Li-Zekun-assign2/
+ls Li-Zekun-assign2/
+cd Li-Zekun-assign2/
+mv project2.pdf report.pdf
+ls
+ranger report.pdf
+zathura report.pdf
+cd ..
+ls
+tldr tar
+tar czf Li-Zekun-assign2.tar.gz Li-Zekun-assign2/
+tar czfv Li-Zekun-assign2.tar.gz Li-Zekun-assign2/
+rm Li-Zekun-assign2/
+rm -r Li-Zekun-assign2/
+tar xvf Li-Zekun-assign2.tar.gz
+ls Li-Zekun-assign2/
+rm -r Li-Zekun-assign2/
+ls
+ssh zli12330@login.zaratan.umd.edu
+paru -Syu
+ls
+cd /tmp
+cd ~/githings/
+ls
+git clone https://github.com/typst/typst.git
+cd typst/
+cargo build -p typst-cli --release
+cd target/release/
+ls
+cp ./typst ~/.local/bin/
+ls
+rm sudo
+ls
+vim answers.txt
+rm answers.txt
+ls
+ typst --help
+ls
+ls Documents/
+paru -Syu
+sudo fdisk -l
+ls -l
+sudo fdisk
+sudo fdisk --help
+sudo fdisk -x
+sudo fdisk --help
+df
+sudo pacman -h
+paru -h
+tldr paru
+paru -c
+df
+paru -l
+paru -h
+tldr pacman
+pacman -Q
+tldr pacman
+pacman -c
+pacman -h
+pacman -Qe
+LC_ALL=C pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
+LC_ALL=C pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort
+LC_ALL=C pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort | head
+pacgraph
+paru -S pacgraph
+rm ~/.cache/paru/devel.json
+paru -S pacgraph
+pacgraph -c
+pacgraph -c | head
+pacgraph -c | head 10
+pacgraph -c | head -n 10
+pacgraph -c | head -n 20
+pacgraph -c | head -n 50
+pacgraph -c
+paru -R freetube
+sudo pacman -R freetube
+paru -R freetube-bin
+paru -S dua-cli
+dua-cli
+dua
+ls ~/.cache
+dua .cache
+dua -h
+dua i
+vim ~/.stack/config.yaml
+dua i
+paru -Sc
+dua i
+paru -Scc
+dua i
+rm -rf ~/Projects/bevy/
+df 
+paru -Syu
+pip install requests
+python -m pip install --upgrade pip
+cd ~/.doom.d/
+ls
+cd modules/
+ln
+ls
+ls editor/
+ls editor/meow/
+mkdir lang
+cd lang/
+ls
+mkdir typst
+ls
+touch config.el
+mv config.el autoload.el
+jupyter
+conda --help
+conda
+activate
+ls ~/.conda/
+paru -S anaconda
+conda --help
+paru -S anaconda
+conda --help
+ls ~/.condarc
+ls ~/.conda
+vim ~/.conda/environments.txt
+ls ~/.cache/paru/clone/anaconda/
+vim ~/.conda/environments.txt
+ls ~/anaconda3/
+ls ~/anaconda3/bin/
+$env.PATH
+config nu
+config env
+reload-env 
+conda --help
+jupyter --help
+which jupyter
+ls ~/.opam/
+ls ~/.opam/default/
+l
+ls
+cd hw4
+ls
+cp ~/Downloads/Dataset3.csv ./
+ls
+jupyter notebook list
+l
+ls
+ls hw4
+cd hw4
+cp ~/Downloads/Dataset1.csv ./
+ls
+cp ~/Downloads/Dataset2.csv ./
+ls
+cp ~/Downloads/Dataset4.csv ./
+cp ~/Downloads/crime.pdf ./
+cp ~/Downloads/demographic.pdf ./
+cp ~/Downloads/serum.pdf ./
+ls
+cp ~/Downloads/job.pdf ./
+ls
+z range
+ls
+vim rifle.conf
+rg drag
+cd Projects/
+ls
+ls -l
+ls | sort
+ cd ..
+ls
+yarn create vite
+sudo pacman -S yarn
+yarn create vite
+cd typsto/
+yarn
+vite --help
+ls
+vim vite.config.ts
+yarn add -D @tauri-apps/cli
+yarn tauri init
+yarn run dev
+yarn tauri init
+yarn tauri init --force
+ls
+cd src-tauri/
+ls
+yarn tauri dev
+yarn add --help
+tldr yarn
+yarn global add typescript-language-server typescript
+doom sync
+xkill
+yarn global add @volar/vue-language-server
+/usr/bin/npm -g --prefix /home/yucklys/.emacs.d/.local/etc/lsp/npm/\@volar/vue-language-server install \@volar/vue-language-serve
+/usr/bin/npm -g --prefix /home/yucklys/.emacs.d/.local/etc/lsp/npm/ @volar/vue-language-server install \@volar/vue-language-serve
+/usr/bin/npm -g --prefix /home/yucklys/.emacs.d/.local/etc/lsp/npm/\@volar/vue-language-server install @volar/vue-language-serve
+/usr/bin/npm -g --prefix /home/yucklys/.emacs.d/.local/etc/lsp/npm/\@volar/vue-language-server install @volar/vue-language-server
+yarn global add @volar/vue-language-server
+cd ~/.doom.d/
+volar-language-server
+volar
+yarn global add @volar/vue-language-server
+rg lsp-volar
+ls ~/.emacs.d/.local/etc/
+ls ~/.emacs.d/.local/etc/lsp/
+ls ~/.emacs.d/.local/etc/lsp/npm/
+ls ~/.emacs.d/.local/etc/lsp/npm/@volar/
+ls ~/.emacs.d/.local/etc/lsp/npm/@volar/vue-language-server/lib/
+ls ~/.emacs.d/.local/etc/lsp/npm/@volar/vue-language-server/
+ls ~/.emacs.d/.local/etc/lsp/npm/@volar/vue-language-server/lib/
+ls ~/.emacs.d/.local/etc/lsp/npm/\@volar/
+ls ~/.emacs.d/.local/etc/lsp/npm/\@volar/vue-language-server/bin/vue-language-server
+/usr/bin/npm -g --prefix /home/yucklys/.emacs.d/.local/etc/lsp/npm/@volar/vue-language-server install @volar/vue-language-server
+yarn tauri dev
+yarn add @tauri-apps/api
+yarn tauri dev
+yarn add -D @vue/devtools
+vue --help
+yarn add @tiptap/vue-3 @tiptap/pm @tiptap/starter-kit
+yarn tauri dev
+rm src/components/Tiptap.vue
+cd Projects/
+ls
+rm -rf typsto
+cargo init typsto
+cd typsto/
+ls
+vim Cargo.toml
+cargo add dioxus
+cargo add dioxus-desktop
+cargo run
+rustup --help
+rustup update
+cargo run
+cargo add dioxus-desktop
+cargo run
+mkdir src/editor
+cargo run
+cd Downloads/
+jupyter notebook
+z spring2023
+ls
+cd hw4
+ls
+bw sync
+bw login
+config env
+$env.BW_SESSION
+jupyter notebook
+cd ~/Downloads/
+ls
+jupyter notebook
+z hw4
+cp `~/Downloads/Notebook 1.ipynb` ./
+jupyter notebook
+cargo run
+cargo add xi-rope
+cargo run
+cargo add crop
+cargo install rust-analyzer
+rust-analyzer --version
+which rust-analyzer
+pacman -S rust-analyzer
+sudo pacman -S rust-analyzer
+which rust-analyzer
+rust-analyzer --version
+rm ~/.cargo/bin/rust-analyzer
+ls
+which rust-analyzer
+rust-analyzer --version
+cargo run
+cd ~/Projects/
+ls
+rm -rf typsto
+yarn create vite
+cd typsto/
+ls
+ls -a
+pacman -S pnpm
+sudo pacman -S pnpm
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+ls ~/.local/share/pnpm/pnpm
+paru -S pnpm
+~/.local/share/pnpm/pnpm --version
+rm ~/.local/share/pnpm/
+rm -r ~/.local/share/pnpm/
+npm install -g pnpm
+tldr npm
+fish
+vim ~/.bashrc
+config env
+$env.PNPM_HOME
+pnpm --help
+config env
+pnpm --help
+config env
+pnpm --help
+z Projects/
+ls
+cd typsto/
+ls
+pnpm add -D @tauri-apps/cli
+pnpm tauri init
+pnpm tauri dev
+pnpm add @tauri-apps/api
+cd ..
+rm -rf typsto/
+pnpm create tauri-app
+cd typsto/
+pnpm install
+pnpm run dev
+ls
+cd ..
+ls
+cd typsto/
+pnpm tauri dev
+ls
+cd src/
+ls
+pnpm install @tiptap/core @tiptap/pm @tiptap/starter-kit
+pnpm tauri dev
+z typsto
+ls
+cd ..
+rm -rf typsto
+tldr cargo
+cargo new typsto
+cd typsto/
+ls
+cargo add dioxus-desktop dioxus
+cargo add crop
+cargo run
+ls
+mv components/ src/components
+cd src/
+ls
+mv components/Editor.rs components/editor.rs
+cd ..
+cd src/
+ls
+cd components/
+ls
+cd ../..
+cargo run
+doom sync
+cargo run
+cargo install tree-sitter
+cargo add tree-sitter
+cargo run
+cargo add --help
+cargo add tree-sitter-html tree-sitter-highlight
+which rust-desk
+which rustdesk
+rustdesk --version
+cargo add syntect
+cargo run
+sudo pacman -S sublime-text
+sudo pacman -Ss sublime-text
+sudo pacman -Ss sublime
+paru -Ss sublime
+paru -S sublime-text
+cd Downloads/
+curl https://raw.githubusercontent.com/typst/typst/main/tools/support/typst.tmLanguage.json | save typst.tmLanguage.json
+sudo pacman -R sublime-text-4
+cd Projects/
+rm typsto/
+rm -rf typsto/
+rm -r src/ui/
+ls src
+ls src/components/
+cargo run
+ls /usr/share | find pdf.js
+sudo pacman -S pdfjs
+qutebrowser --version
+paru -S pdfjs
+paru -Ss pdfjs
+paru -Ss pdfjs-legacy
+paru -S pdfjs-legacy
+ls /usr/share | find pdf.js
+cargo run
+paru -Syu
+z qutebrowser
+ls
+vim config.py
+ls
+vim open_download
+cd ~/org/
+ls
+ls -a
+ls rroam
+ls roam/
+bat roam/todo.org
+ls
+cd roam/
+ls
+ls `00 Cards/`
+ls `00 Cards/` | find "#+title"
+ls `00 Cards/` | find "file"
+ls `00 Cards/` | find "file descriptor"
+cd `00 Cards/`
+ls -a
+cd ..
+ls
+vim todo.org
+cd project
+cd Projects/
+ls
+pnpm create tauri-app
+cd typsto/
+ls
+pnpm install
+pnpm tauri dev
+z typst
+tauri --help
+pnpm tauri --help
+pnpm tauri help
+pnpm tauri -V
+tldr pnpm
+pnpm add -g tauri-cli
+pnpm add -g tauri
+pnpm tauri -V
+tauri --help
+pnpm remove -g tauri
+tldr pnpm
+pnpm list -g --depth=0
+pnpm list
+vim package.json
+pnpm install monaco-editor@0.36.1
+pnpm tauri dev
+xkill
+pnpm tauri dev
+cd src/lib/
+ls
+mv syntax.ts syntax.json
+cd ..
+cd src/lib/
+ls
+mv syntax.json syntax.ts
+cd ..
+pnpm tauri dev
+pnpm install monaco-editor-textmate
+pnpm install monaco-textmate onigasm
+ls
+ls src
+ls
+ls node_modules/onigasm/lib/
+ls node_modules/onigasm/lib/onigasm.wasm
+ls
+mkdir grammers
+cd grammers/
+ls
+curl https://raw.githubusercontent.com/typst/typst/main/tools/support/typst.tmLanguage.json | save typst.tmLanguage.json
+ls
+sudo pacman -S vscode
+sudo pacman -S sublime-text
+paru -S sublime-text
+cd Projects/
+mv typsto/ typsto_bak/
+cargo new typsto
+cargo add dioxus-desktop dioxus
+cargo add syntect
+cargo run
+ls
+mkdir src/syntax.rs
+mkdir grammers
+cp ~/Downloads/typst.sublime-syntax grammers/
+rm src/syntax.rs/
+cargo run
+cargo new --help
+cargo add serde
+cargo add bincode
+cargo remove -h
+cargo remove bincode
+cargo run
+cargo add bincode
+cargo run
+let-env RUST_BACKTRACE=1
+let-env RUST_BACKTRACE = 1
+cargo run
+let-env RUST_BACKTRACE = full
+let-env RUST_BACKTRACE = 'full'
+cargo run
+let-env RUST_BACKTRACE = 1
+cargo run
+cd ~/.config/sublime-text/
+ls
+cd Packages/
+ls
+cd User/
+ls
+cp ~/Downloads/typst.sublime-syntax .l
+ls
+ls -a
+rm .l
+cp ~/Downloads/typst.sublime-syntax ./
+ls
+cd ~/Downloads/
+curl https://raw.githubusercontent.com/typst/typst/main/tests/typ/coma.typ | coma.typ
+ls
+curl https://raw.githubusercontent.com/typst/typst/main/tests/typ/coma.typ | coma.typ
+curl https://raw.githubusercontent.com/typst/typst/main/tests/typ/coma.typ | save coma.typ
+ls
+cd ~/.config/sublime-text/Packages/
+ls
+cd User/
+ls
+cp ~/Downloads/typst.sublime-syntax grammers/
+cargo run
+ls
+mv TypstGrammer grammers/
+cargo run
+ls 
+cargo run
+ls grammers/
+cargo run
+xkill
+rgo run
+cargo run
+ls
+ls src
+mkdir src/components
+cargo add crop
+xkill
+doom upgrade
+mu init --maildir ~/.mail
+cargo add serde-toml
+cargo add toml
+cargo add dirs
+cargo run
+ls ~/.config/typsto/
+rm -r ~/.config/typsto/
+cargo run
+ls ~/.config/typsto/
+ls ~/.config/typsto/config.toml/
+rm -r ~/.config/typsto/
+ls ~/.config/typsto/
+ls ~/.config/typsto/config.toml/
+cargo run
+ls ~/.config/typsto/
+cargo run
+ls ~/.config/typsto/
+bat ~/.config/typsto/config.toml
+cargo run
+cargo add ropey
+cargo remove crop
+plum --help
+curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bash
+ls ~/.config/ibus/
+ibus --help
+rm ~/.config/ibus/rime/
+rm -r ~/.config/ibus/rime/
+ls
+cd githings/
+git clone --depth=1 https://github.com/rime/plum.git
+ls
+cd plum/
+ls
+let-env rime_dir="$HOME/.config/fcitx5/rime"
+let-env rime_dir = "$HOME/.config/fcitx5/rime"
+ls ~/.local/share/fcitx5/rime/
+let-env rime_dir = "$HOME/.local/share/fcitx5/rime"
+ls
+bash rime-install double-pinyin
+ls ~/.local/share/fcitx5/rime/
+ls ~/.local/share/fcitx5/rime/ | find "double"
+ls ~/.local/share/fcitx5/rime/ | rg "double"
+ls ~/.local/share/fcitx5/rime/
+ls ~/.local/share/fcitx5/rime/build/
+ls
+rm -rf ./$HOME
+ls
+let-env rime_dir = "$env.HOME/.local/share/fcitx5/rime"
+$env.rime_dir
+$env.HOME
+cd $env.rime_dir
+let-env rime_dir = "($env.HOME)/.local/share/fcitx5/rime"
+$env.HOME
+$env.rime_dir
+let-env rime_dir = $env.HOME/.local/share/fcitx5/rime
+let-env rime_dir = "($env.HOME)/.local/share/fcitx5/rime"
+ls
+let-env rime_dir = $"($env.HOME)/.local/share/fcitx5/rime"
+$env.rime_dir
+bash rime-install double-pinyin
+ls ~/.local/share/fcitx5/rime/
+ls ~/.local/share/fcitx5/rime/ | rg "double"
+z rime
+vim default.custom.yaml
+rm double_pinyin_abc.schema.yaml double_pinyin_mspy.schema.yaml double_pinyin_pyjj.schema.yaml
+ls
+feh --help
+cd Pictures/
+start ./xhyx.png
+feh xhyx.png
+tldr feh
+vim ~/.local/bin/show-keymap
+z xmonad
+ls
+vim xmonad.hs
+feh --help | rg "class"
+feh --help
+chmod +x ~/.local/bin/show-keymap
+show-keymap
+xprop | grep WM_CLASS
+vim xmonad.hs
+xprop | grep WM_TITLE
+xprop | grep WM
+show-keymap
+vim xmonad.hs
+show-keymap
+vim xmonad.hs
+xprop
+vim xmonad.hs
+show-keymap
+mv ~/Pictures/xhyx.png ~/Pictures/xhsp.png
+vim ~/.local/bin/show-keymap
+show-keymap
+vim xmonad.hs
+xprop
+xprop | rg "WM_NAME"
+xprop | grep "WM_NAME"
+xprop | rg "WM_NAME"
+show-keymap 
+vim xmonad.hs
+show-keymap 
+vim xmonad.hs
+cd githings/plum/
+ls
+let-env rime_dir = $"($env.HOME)/.emacs.d/.local/cache/rime"
+bash rime-install double-pinyin
+fcitx5-diagnose 
+xkill
+which emacs
+z xmonad
+vim xmonad.hs
+which emacsclient
+vim /usr/bin/emacsclient
+config env
+fcitx5-diagnose 
+vim /usr/share/applications/emacs.desktop
+emacs
+vim /usr/share/applications/emacsclient.desktop
+z xmonad
+vim xmonad.hs
+vim ~/.xinitrc
+vim ~/.xprofile
+vim ~/.xinitrc
+cd Downloads/
+ls
+ls ~/
+cd ~/Sync/
+ls
+mv ~/Pictures/Selection_001.png ./running_time.png
+captree --help
+scrot --help
+tldr scrot
+flameshot --help
+flameshot -v
+paru -Ss flameshot
+paru -S flameshot-git
+flameshot -v
+killall flameshot
+let-env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_SCREEN_SCALE_FACTORS=""
+let-env QT_AUTO_SCREEN_SCALE_FACTOR = 0 QT_SCREEN_SCALE_FACTORS = ""
+let-env QT_AUTO_SCREEN_SCALE_FACTOR = 0
+let-env QT_SCREEN_SCALE_FACTORS = ""
+flameshot
+flameshot --help
+flameshot gui
+z xmonad
+vim xmonad.hs
+flameshot screen
+cd ~/Pictures/
+feh `2023-04-05_16-58.png`
+rm `2023-04-05_16-58.png`
+cd ~/Sync/
+rm running_time.png
+cp ~/Pictures/run* ./
+ls
+feh run_vanilla_8.png
+ssh zli12330@login.zaratan.umd.edu
+rust-analyzer --version
+which rust-analyzer
+curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - | save ~/.local/bin/rust-analyzer
+chmod +x ~/.local/bin/rust-analyzer
+rust-analyzer --version
+curl -L https://github.com/rust-lang/rust-analyzer/releases/download/2023-03/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - | save ~/.local/bin/rust-analyzer
+curl -L https://github.com/rust-lang/rust-analyzer/releases/download/2023-04-04/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - | save ~/.local/bin/rust-analyzer
+rm ~/.local/bin/rust-analyzer
+curl -L https://github.com/rust-lang/rust-analyzer/releases/download/2023-04-04/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - | save ~/.local/bin/rust-analyzer
+chmod +x ~/.local/bin/rust-analyzer
+rust-analyzer --version
+rust-analyzer --help
+z project
+cd ~/Projects/
+ls
+ls typsto_bak/
+mv typsto typ
+mv typsto_bak/ typsto
+mv typ typsto_bak
+ls
+cargo run
+pnpm tauri dev
+cd Projects/
+rm -rf typsto
+pnpm create tauri-app
+cd typsto/
+pnpm install
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+sudo pacman -S pnpm
+paru -S pnpm
+which pnpm
+pnpm --version
+ls
+pnpm add codemirror
+pnpm tauri dev
+pnpm add -D @tauri-apps/cli
+pnpm add vue-codemirror6
+pnpm tauri dev
+cd Projects/
+rm -rf typsto/
+pnpm create tauri-app
+cd typsto/
+ls
+pnpm install
+sudo pacman -S code
+paru -S visual-studio-code-bin
+htop
+pnpm tauri dev
+pnpm add svelte-codemirror-editor
+pnpm tauri dev
+pnpm add @codemirror
+pnpm add codemirror
+pnpm add @codemirror/lang-javascript
+pnpm tauri dev
+pnpm add @codemirror/theme-one-dark
+pnpm tauri dev
+bat ~/.emacs.d/.local/cache/rime/
+bat ~/.emacs.d/.local/cache/rime/double_pinyin_flypy.custom.yaml
+vim ~/.local/share/fcitx5/rime/double_pinyin_flypy.custom.yaml
+bat ~/.emacs.d/.local/cache/rime/double_pinyin_flypy.custom.yaml
+vim ~/.local/share/fcitx5/rime/double_pinyin_flypy.custom.yaml
+bat ~/.emacs.d/.local/cache/rime/double_pinyin_flypy.custom.yaml
+nu --version
+which nu
+cargo --help
+z org
+ls
+cargo install nu
+nu --version
+config env
+config nu
+config --help
+config reset
+z nu
+cd ~/.config/nu
+cd ~/.config/nushell/
+ls
+rm oldconfig-2022-08-17-19-06-52.nu oldenv-2022-08-17-19-06-52.nu
+ls
+cd ~/org/
+ls
+bat TODO.org
+ls roam/
+adb shell
+sudo pacman -Ss android
+sudo pacman -S android-tool
+sudo pacman -S android-tools
+adb shell
+cd ~/.config/nushell/
+ls
+vim oldconfig-2023-04-06-01-35-24.nu
+hx oldconfig-2023-04-06-01-35-24.nu
+nvim oldconfig-2023-04-06-01-35-24.nu
+config nu
+ls ~/.cache/starship/
+starship init nu | save -f ~/.cache/starship/init.nu
+nvim ~/.cache/starship/init.nu
+config env
+config nu
+config env
+z nu
+pnpm remove codemirror svelte-codemirror-editor @codemirror
+pnpm remove codemirror svelte-codemirror-editor @codemirror/lang-javascript @codemirror/theme-one-dark
+pnpm i monaco-editor-textmate monaco-editor onigasm
+pnpm i monaco-textmate
+cp ~/Downloads/typst.tmLanguage.json ~/Projects/typsto/static/grammars/
+pnpm tauri dev
+ssh root@45.33.86.91
+ssh yucklys@45.33.86.91
+ls
+ls ~/.cache/
+ls ~/.local/share/
+ls ~/.local/share/yadm/
+yadm --help
+yadm list
+yadm --help
+yadm status
+cd ~/.config/xmonad
+ls
+ls -a
+touch .gitignore
+hx .gitignore
+yadm status
+hx .gitignore
+yadm status
+yadm add .gitignore
+yadm status
+hx .gitignore
+yadm add .gitignore
+yadm status
+yadm add .gitignore
+hx .gitignore
+yadm add .gitignore
+yadm status
+yadm add 
+yadm add .
+yadm status
+git rm .stack-work/
+yadm rm .stack-work/
+yadm rm -r .stack-work/
+yadm status
+cd ~/
+yadm --help
+yadm add .
+yadm status
+yadm add .doom.d/
+yadm status
+yadm add -r .doom.d/
+yadm add .doom.d/modules/editor/meow/
+yadm status
+yadm add .config/xmobar/
+yadm add .config/xmonad
+yadm status
+yadm add .config/nvim/
+yadm add .config/qutebrowser/
+yadm add .config/rofi/
+yadm add .config/sxhkd/
+yadm status
+yadm add .config/alacritty/
+yadm add .config/bspwm/
+yadm add .config/fish/
+yadm add .config/kitty
+yadm add .config/mpd
+yadm status
+cd .doom.d
+ls
+cd ..
+yadm commit
+yadm commit -m "Commit April 7, 2023"
+yadm push
+yadm status
+cd ~/.doom.d/modules/editor/meow/
+ls
+git pull
+git status
+git diff packages.el
+git commit -a packages.el
+git commit -a
+git commit -a -m "unpin meow"
+cd ~/
+yadm status
+yadm add .doom.d/
+yadm status
+yadm commit -m "Commit April 7, 2023"
+ssh yucklys@45.33.86.91
