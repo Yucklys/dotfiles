@@ -15,17 +15,23 @@ vim.on_key(function(char)
 end, namespace "auto_hlsearch")
 
 local bufferline_group = augroup("bufferline", { clear = true })
-autocmd({ "BufAdd", "BufEnter" }, {
+autocmd({ "BufAdd", "BufEnter", "TabNewEntered" }, {
   desc = "Update buffers when adding new buffers",
   group = bufferline_group,
   callback = function(args)
+    local buf_utils = require "astronvim.utils.buffer"
     if not vim.t.bufs then vim.t.bufs = {} end
+    if not buf_utils.is_valid(args.buf) then return end
+    if args.buf ~= buf_utils.current_buf then
+      buf_utils.last_buf = buf_utils.is_valid(buf_utils.current_buf) and buf_utils.current_buf or nil
+      buf_utils.current_buf = args.buf
+    end
     local bufs = vim.t.bufs
     if not vim.tbl_contains(bufs, args.buf) then
       table.insert(bufs, args.buf)
       vim.t.bufs = bufs
     end
-    vim.t.bufs = vim.tbl_filter(require("astronvim.utils.buffer").is_valid, vim.t.bufs)
+    vim.t.bufs = vim.tbl_filter(buf_utils.is_valid, vim.t.bufs)
     astroevent "BufsUpdated"
   end,
 })
@@ -33,11 +39,13 @@ autocmd("BufDelete", {
   desc = "Update buffers when deleting buffers",
   group = bufferline_group,
   callback = function(args)
+    local removed
     for _, tab in ipairs(vim.api.nvim_list_tabpages()) do
       local bufs = vim.t[tab].bufs
       if bufs then
         for i, bufnr in ipairs(bufs) do
           if bufnr == args.buf then
+            removed = true
             table.remove(bufs, i)
             vim.t[tab].bufs = bufs
             break
@@ -46,7 +54,7 @@ autocmd("BufDelete", {
       end
     end
     vim.t.bufs = vim.tbl_filter(require("astronvim.utils.buffer").is_valid, vim.t.bufs)
-    astroevent "BufsUpdated"
+    if removed then astroevent "BufsUpdated" end
     vim.cmd.redrawtabline()
   end,
 })
@@ -54,16 +62,15 @@ autocmd("BufDelete", {
 autocmd({ "VimEnter", "FileType", "BufEnter", "WinEnter" }, {
   desc = "URL Highlighting",
   group = augroup("highlighturl", { clear = true }),
-  pattern = "*",
   callback = function() utils.set_url_match() end,
 })
 
 local view_group = augroup("auto_view", { clear = true })
-autocmd("BufWinLeave", {
+autocmd({ "BufWinLeave", "BufWritePost", "WinLeave" }, {
   desc = "Save view with mkview for real files",
   group = view_group,
   callback = function(event)
-    if vim.b[event.buf].view_activated then vim.cmd.mkview() end
+    if vim.b[event.buf].view_activated then vim.cmd.mkview { mods = { emsg_silent = true } } end
   end,
 })
 autocmd("BufWinEnter", {
@@ -82,12 +89,20 @@ autocmd("BufWinEnter", {
   end,
 })
 
-autocmd("FileType", {
+autocmd("BufWinEnter", {
   desc = "Make q close help, man, quickfix, dap floats",
   group = augroup("q_close_windows", { clear = true }),
-  pattern = { "qf", "help", "man", "dap-float" },
   callback = function(event)
-    vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true, nowait = true })
+    local filetype = vim.api.nvim_get_option_value("filetype", { buf = event.buf })
+    local buftype = vim.api.nvim_get_option_value("buftype", { buf = event.buf })
+    if buftype == "nofile" or filetype == "help" then
+      vim.keymap.set("n", "q", "<cmd>close<cr>", {
+        desc = "Close window",
+        buffer = event.buf,
+        silent = true,
+        nowait = true,
+      })
+    end
   end,
 })
 
@@ -136,32 +151,34 @@ autocmd("BufEnter", {
 })
 
 if is_available "alpha-nvim" then
-  local group_name = augroup("alpha_settings", { clear = true })
-  autocmd("User", {
+  autocmd({ "User", "BufEnter" }, {
     desc = "Disable status and tablines for alpha",
-    group = group_name,
-    pattern = "AlphaReady",
-    callback = function()
-      local prev_showtabline = vim.opt.showtabline
-      local prev_status = vim.opt.laststatus
-      vim.opt.laststatus = 0
-      vim.opt.showtabline = 0
-      vim.opt_local.winbar = nil
-      autocmd("BufUnload", {
-        pattern = "<buffer>",
-        callback = function()
-          vim.opt.laststatus = prev_status
-          vim.opt.showtabline = prev_showtabline
-        end,
-      })
+    group = augroup("alpha_settings", { clear = true }),
+    callback = function(event)
+      if
+        (
+          (event.event == "User" and event.file == "AlphaReady")
+          or (event.event == "BufEnter" and vim.api.nvim_get_option_value("filetype", { buf = event.buf }) == "alpha")
+        ) and not vim.g.before_alpha
+      then
+        vim.g.before_alpha = { showtabline = vim.opt.showtabline:get(), laststatus = vim.opt.laststatus:get() }
+        vim.opt.showtabline, vim.opt.laststatus = 0, 0
+      elseif
+        vim.g.before_alpha
+        and event.event == "BufEnter"
+        and vim.api.nvim_get_option_value("buftype", { buf = event.buf }) ~= "nofile"
+      then
+        vim.opt.laststatus, vim.opt.showtabline = vim.g.before_alpha.laststatus, vim.g.before_alpha.showtabline
+        vim.g.before_alpha = nil
+      end
     end,
   })
   autocmd("VimEnter", {
     desc = "Start Alpha when vim is opened with no arguments",
-    group = group_name,
+    group = augroup("alpha_autostart", { clear = true }),
     callback = function()
       local should_skip = false
-      if vim.fn.argc() > 0 or vim.fn.line2byte "$" ~= -1 or not vim.o.modifiable then
+      if vim.fn.argc() > 0 or vim.fn.line2byte(vim.fn.line "$") ~= -1 or not vim.o.modifiable then
         should_skip = true
       else
         for _, arg in pairs(vim.v.argv) do
@@ -176,6 +193,22 @@ if is_available "alpha-nvim" then
   })
 end
 
+if is_available "resession.nvim" then
+  autocmd("VimLeavePre", {
+    desc = "Save session on close",
+    group = augroup("resession_auto_save", { clear = true }),
+    callback = function()
+      local buf_utils = require "astronvim.utils.buffer"
+      local autosave = buf_utils.sessions.autosave
+      if autosave and buf_utils.is_valid_session() then
+        local save = require("resession").save
+        if autosave.last then save("Last Session", { notify = false }) end
+        if autosave.cwd then save(vim.fn.getcwd(), { dir = "dirsession", notify = false }) end
+      end
+    end,
+  })
+end
+
 if is_available "neo-tree.nvim" then
   autocmd("BufEnter", {
     desc = "Open Neo-Tree on startup with directory",
@@ -186,11 +219,18 @@ if is_available "neo-tree.nvim" then
       else
         local stats = vim.loop.fs_stat(vim.api.nvim_buf_get_name(0))
         if stats and stats.type == "directory" then
-          require "neo-tree"
           vim.api.nvim_del_augroup_by_name "neotree_start"
-          vim.api.nvim_exec_autocmds("BufEnter", {})
+          require "neo-tree"
         end
       end
+    end,
+  })
+  autocmd("TermClose", {
+    pattern = "*lazygit",
+    desc = "Refresh Neo-Tree git when closing lazygit",
+    group = augroup("neotree_git_refresh", { clear = true }),
+    callback = function()
+      if package.loaded["neo-tree.sources.git_status"] then require("neo-tree.sources.git_status").refresh() end
     end,
   })
 end
@@ -210,12 +250,16 @@ autocmd({ "VimEnter", "ColorScheme" }, {
   end,
 })
 
-autocmd({ "BufReadPost", "BufNewFile" }, {
+autocmd({ "BufReadPost", "BufNewFile", "BufWritePost" }, {
+  desc = "AstroNvim user events for file detection (AstroFile and AstroGitFile)",
   group = augroup("file_user_events", { clear = true }),
   callback = function(args)
     if not (vim.fn.expand "%" == "" or vim.api.nvim_get_option_value("buftype", { buf = args.buf }) == "nofile") then
       utils.event "File"
-      if utils.cmd('git -C "' .. vim.fn.expand "%:p:h" .. '" rev-parse', false) then utils.event "GitFile" end
+      if utils.cmd({ "git", "-C", vim.fn.expand "%:p:h", "rev-parse" }, false) then
+        utils.event "GitFile"
+        vim.api.nvim_del_augroup_by_name "file_user_events"
+      end
     end
   end,
 })
@@ -233,3 +277,4 @@ cmd(
 cmd("AstroRollback", function() require("astronvim.utils.updater").rollback() end, { desc = "Rollback AstroNvim" })
 cmd("AstroUpdate", function() require("astronvim.utils.updater").update() end, { desc = "Update AstroNvim" })
 cmd("AstroVersion", function() require("astronvim.utils.updater").version() end, { desc = "Check AstroNvim Version" })
+cmd("AstroReload", function() require("astronvim.utils").reload() end, { desc = "Reload AstroNvim (Experimental)" })

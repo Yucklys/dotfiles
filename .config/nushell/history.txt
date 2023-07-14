@@ -3700,3 +3700,1266 @@ yadm add .doom.d/
 yadm status
 yadm commit -m "Commit April 7, 2023"
 ssh yucklys@45.33.86.91
+yadm add ~/.config/nushell/
+yadm commit -m "Commit April 7, 2023, add nushell"
+yadm push
+ssh yucklys@45.33.86.91
+starship --version
+ssh yucklys@45.33.86.91
+ssh -N -L 8080:127.0.0.1:8080 yucklys@45.33.86.91
+ssh yucklys@45.33.86.91
+ftp --help
+cd Downloads/
+scp vscode.code-profile yucklys@45.33.86.9:/home/yucklys/
+scp vscode.code-profile yucklys@45.33.86.9::/home/yucklys/
+scp vscode.code-profile yucklys@45.33.86.9:/home/yucklys/
+scp vscode.code-profile yucklys@45.33.86.9
+scp vscode.code-profile yucklys@45.33.86.9:/home/yucklys/
+ssh yucklys@45.33.86.91
+scp vscode.code-profile yucklys@45.33.86.9:/home/yucklys/git-things
+ssh yucklys@45.33.86.91
+cd ..
+mv typsto ty1
+mv typsto_bak/ typsto
+mv ty1/ typsto_bak
+cd typsto/
+cargo run
+doom upgrade
+doom sync
+cargo run
+cargo add druid
+cargo add serd
+cargo add serde
+cargo run
+ls
+cd ~/Projects/
+ls
+mv typsto typ1
+mv typsto_bak/ typsto
+mv typ1 typsto_bak
+svelteserver --help
+pnpm install svelte-codemirror-editor
+pnpm install @codemirror/lang-javascript
+pnpm install @codemirror/one-dark-theme
+pnpm install @codemirror/theme-one-dark
+pnpm tauri dev
+npm install -D lezer-generator
+pnpm install @lezer-parser/generator
+pnpm install @lezer/generator
+pnpm install @lezer/lr
+pnpm install @lezer/highlight
+pnpm install @codemirror/language
+pnpm install @codemirror/autocomplete
+pnpm tauri dev
+ls ~/githings/
+cp -r ~/githings/typst/tests/typ/* ./tests/typ/
+npm install -g https://github.com/lezer-parser/import-tree-sitter
+pnpm install -g https://github.com/lezer-parser/import-tree-sitter
+npm uninstall -g https://github.com/lezer-parser/import-tree-sitter
+pnpm install -g https://github.com/lezer-parser/import-tree-sitter
+npm install -g https://github.com/lezer-parser/import-tree-sitter
+sudo -E pnpm install -g https://github.com/lezer-parser/import-tree-sitter
+sudo pnpm install -g https://github.com/lezer-parser/import-tree-sitter
+pnpm setup
+bash
+fish
+ls /usr/bin/pnpm
+yarn add -g https://github.com/lezer-parser/import-tree-sitter
+sudo pnpm install -g https://github.com/lezer-parser/import-tree-sitter
+sudo -E pnpm install -g https://github.com/lezer-parser/import-tree-sitter
+cd Downloads/
+ls
+tar xvf import-tree-sitter-bb2e87bb7308eef8d28dd435cd84b9f057bbbfe4.tar.gz
+cd import-tree-sitter-bb2e87bb7308eef8d28dd435cd84b9f057bbbfe4/
+ls
+cd src/
+ls
+cd ..
+pnpm install -g ./
+cd import-tree-sitter-bb2e87bb7308eef8d28dd435cd84b9f057bbbfe4/
+sudo -E pnpm install -g https://github.com/lezer-parser/import-tree-sitter
+sudo -E npm install -g https://github.com/lezer-parser/import-tree-sitter
+bat ~/.npm/_logs/2023-04-10T04_45_24_316Z-debug-0.log
+sudo -E pnpm uninstall -g https://github.com/lezer-parser/import-tree-sitter
+sudo -E npm install -g https://github.com/lezer-parser/import-tree-sitter
+npm cache clean --force
+pnpm cache clean --force
+pnpm cache clean
+pnpm --help
+sudo -E npm install -g https://github.com/lezer-parser/import-tree-sitter
+ls /usr/lib/node_modules/
+sudo rm -rf /usr/lib/node_modules/lezer-import-tree-sitter/
+sudo -E npm install -g https://github.com/lezer-parser/import-tree-sitter
+sudo rm -rf /usr/lib/node_modules/lezer-import-tree-sitter/
+sudo npm install -g https://github.com/lezer-parser/import-tree-sitter
+sudo -E npm install -g https://github.com/lezer-parser/import-tree-sitter
+npm install -g https://github.com/lezer-parser/import-tree-sitter
+npm cache clean --force
+sudo pacman -S npm
+sudo pacman -S node
+sudo pacman -S nodejs
+sudo pacman -S npm
+npm install -g https://github.com/lezer-parser/import-tree-sitter
+tldr yarn
+yarn global add https://github.com/lezer-parser/import-tree-sitter
+cd ~/Downloads/
+ls
+cd import-tree-sitter-bb2e87bb7308eef8d28dd435cd84b9f057bbbfe4/
+ls
+cd ..
+yarn global add import-tree-sitter-bb2e87bb7308eef8d28dd435cd84b9f057bbbfe4.tar.gz
+yarn global add file:import-tree-sitter-bb2e87bb7308eef8d28dd435cd84b9f057bbbfe4.tar.gz
+yarn global add https://github.com/lezer-parser/import-tree-sitter
+yarn global add https://github.com/lezer-parser/import-tree-sitter.git
+ls
+cd import-tree-sitter-bb2e87bb7308eef8d28dd435cd84b9f057bbbfe4/
+ls
+npm install
+npm run
+vim package.json
+ls
+ls dist/
+npm run build
+ls
+ls dist
+vim package.json
+ls -a
+ls -l
+ls src/
+ls dist
+ls node_modules/
+vim dist/import.js
+ls
+npm build
+vim package.json
+npm run prepare
+npm run tsc
+npm build ./
+pnpm install -g nexe
+cat src/import-cli.ts | nexe
+cat src/import-cli.ts | nexe --build
+ls ~/.nexe/
+rm -rf ~/.nexe/
+pnpm uninstall -g nexe
+ls
+cd .doom.d/
+ls
+cd modules/lang/typst/
+ls
+cd ..
+ls
+vim editor/
+cd ~/
+ls
+cd OneDrive/
+ls
+cd 文档/
+ls
+cd Resume/
+ls
+paru -Syu
+z rofi
+ls
+vim config
+vim config.rasi
+sudo pacman -R alacritty 
+vim config.rasi
+ssh zli12330@login.zaratan.umd.edu
+cd Downloads/
+scp zli12330@login.zaratan.umd.edu:/home/zli12330/scratch/Li-Zekun-assign3.tar.gz ./
+ls
+tar xvf Li-Zekun-assign3.tar.gz
+mv project3.pdf Li-Zekun-assign3/report.pdf
+zathura Li-Zekun-assign3/report.pdf
+tldr tar
+tar czfv Li-Zekun-assign3.tar.gz Li-Zekun-assign3/
+ls
+sudo pacman -S nextcloud
+sudo pacman -S nextcloud-client
+cp -r ~/OneDrive/org/ ~/Nextcloud/Org
+ls
+rm org/
+ln -s ~/Nextcloud/Org/
+ls
+rm Org/
+ln -s ~/Nextcloud/Org/ org
+ls
+cd org/
+ls
+cd ~/
+cd ~/Downloads/
+`How do you dispose of the used batteries?.svg` dispose.svg
+mv `How do you dispose of the used batteries?.svg` dispose.svg
+paru -Syu
+ssh yucklys@45.33.86.91
+sudo pacman -S nextcloud-client
+xkill
+ls
+ls OneDrive/org/
+cp -r OneDrive/org ~/Nextcloud/org
+rm -r `~/Nextcloud (backup)/`
+mv ~/Nextcloud/org/ ~/Nextcloud/Org
+ls
+cd org
+ls
+ls org-roam.bak/
+rm org-roam.bak/
+rm -r org-roam.bak/
+ls
+cd ..
+cd ~/.logseq/plugins/
+ls
+unzip ~/Downloads/logseq-awesome-styler-3.7.1.zip
+ls
+rm package.json README.md LICENSE icon.png
+rm -r dist/
+unzip ~/Downloads/logseq-awesome-styler-3.7.1.zip logseq-awesome-styler
+ls
+tldr unzip
+unzip ~/Downloads/logseq-awesome-styler-3.7.1.zip -d logseq-awesome-styler
+cd ~/.config/espanso/
+ls
+vim match/_logseq.yml
+ls ~/OneDrive/logseq/
+cd ~/OneDrive/
+ls
+rm `lzk lyc lab5.xlsm`
+rm `Lab4 lzk lyc.xlsm`
+feh `3941.JPEG`
+ls
+cp -r logseq ~/Nextcloud/
+cd ~/Nextcloud/
+ls
+cd logseq/
+ls
+ls journals/
+ls
+ls pages/
+ls logseq/
+rm logseq/*.sync-conflict
+rm logseq/*.sync-conflict*
+ls logseq/
+cd ..
+cp -r ~/Nextcloud/logseq/ ./
+sudo pacman -R nextcloud-client
+sudo pacman -S dropbox
+sudo pacman -Ss dropbox
+paru -S dropbox
+ls
+ls Nextcloud/
+ls ~/OneDrive/org/
+rm Nextcloud/
+rm -r Nextcloud/
+ls
+ln -s ~/OneDrive/org/ org
+rm org
+ln -s ~/OneDrive/org/ org
+cd Dropbox/
+ls
+cp ~/logseq/ Logseq
+mv ~/logseq/ Logseq
+ls
+cd Logseq/
+ls
+ls journals/
+ls .stfolder/
+ls .git-yucklys-xps159570
+ls .git
+ls assets/
+ls pages/
+adb
+adb shell
+cd Dropbox/Logseq/
+cd journals/
+ls
+hx `2023_04_20.org`
+cd Projects/
+ls
+cd Projects/
+ls
+cd spring2023/
+ls
+cd hw4/
+ls
+cd ..
+mkdir hw5
+cd hw5/
+cp ~/Downloads/*.csv ./
+ls
+cd ~/Downloads/
+ls
+vim test.py
+python test.py
+vim test.py
+python test.py
+vim test.py
+python test.py
+vim test.py
+python test.py
+vim test.py
+python test.py
+vim test.py
+python test.py
+vim test.py
+ssh yucklys@45.33.86.91
+paru -Syu
+cd ~/Projects/
+ls
+cd spring2023/
+ls
+cd hw5
+ls
+cd ~/Projects/spring2023/
+ls
+cd hw5
+ls
+jupyter notebook
+z xmonad
+vim xmonad.hs
+ssh zli12330@login.zaratan.umd.edu
+ssh zli12330@login.zaratan.umd.edu
+sudo pacman -S discord
+sudo pacman -Syu discord
+z hw5
+ls
+jupyter notebook
+cd ~/
+ssh zli12330@login.zaratan.umd.edu
+scp zli12330@login.zaratan.umd.edu:/home/zli12330/scratch/Li-Zekun-assign4.tar.gz ~/Downloads/
+cd ~/Downloads/
+tldr tar
+tar xvf Li-Zekun-assign4.tar.gz
+cp project4.pdf Li-Zekun-assign4/
+ls Li-Zekun-assign4.tar.gz
+ls Li-Zekun-assign4
+tar czfv Li-Zekun-assign4.tar.gz Li-Zekun-assign4/
+ssh zli12330@login.zaratan.umd.edu
+bw login
+config env
+bw --help
+bw unlock Yucklys687.for.bitwarden
+bw get password typst.app
+cd Downloads/
+feh `0d6fb6a0-e4a8-49f1-95cb-e31e91498f8c`
+mv `0d6fb6a0-e4a8-49f1-95cb-e31e91498f8c` battery_bin.jpg
+feh battery_bin.jpg
+paru -Syu
+pip install tldextract
+python --help
+python --version
+paru -Syu
+sudo vim
+paru -Syu
+ pip install tldextract
+python -m ensurepip --upgrade
+ pip install tldextract
+python -m pip install --upgrade pip
+cd ~/Downloads/
+ls
+cd ~/Projects/spring2023/
+ls
+mkdir final
+cd final/
+mv ~/Downloads/my_data.csv
+mv ~/Downloads/my_data.csv ./
+ls
+mv ~/Downloads/Final_Project.ipynb ./
+ls
+jupyter notebook
+cd ~/Projects/spring2023/final/
+ls
+xkill
+jupyter notebook
+xkill
+cd ~/Projects/spring2023/final/
+jupyter notebook
+sudo pacman -Syu
+paru -Syu
+sudo pacman -S keyring 
+sudo pacman -S endeavouros-keyring
+paru -Syu
+ls
+z logseq
+ls-
+ls
+ls logseq/
+cargo install nu
+which nu
+nu --version
+cargo install nu
+nu --version
+cd ~/.config/espanso/
+ls
+cd ~/Projects/
+ls
+rm remindme/ quickdrop/
+rm -rf remindme/ quickdrop/
+ls
+cargo --help
+cargo new textflow
+cargo add arboard
+cargo add sha2
+cargo run
+htop
+cargo run
+cd Downloads/
+feh `990_1685237719_hd-removebg-preview.png`
+cd Downloads/
+feh `3520266133504000.zjz.png`
+paru -Syu
+ pip install tldextract
+paru -Syu
+xkill
+cd Downloads/
+ls
+find "Zekun Li"
+find "resume"
+ls | find "Zekun Li"
+paru -Syu
+htop
+z xmonad
+ls
+vim xmonad.hs
+ls
+cd Projects/
+ls
+rm -rf typsto typsto_bak/
+ls
+git clone https://github.com/tui-rs-revival/ratatui.git
+cd ratatui/
+cargo run --example tabs
+cargo run --example sparkline
+cargo run --example table
+cargo run --example gauge
+cargo run --example barchart
+cargo run --example canvas
+cargo run --example chart
+cd Projects/ratatui/
+ls
+cargo run --example chart
+cargo run --example calendar
+cargo run --example calendar --features=crossterm
+cargo run --features=crossterm --example calendar
+cargo run --example calendar --features="crossterm widget-calendar"
+cargo run --example paragraph
+cargo run --example list
+ls examples/
+cargo run --example scrollbar
+cargo run --example popup
+cargo run --example inline
+cargo run --example user_input
+cargo add crossterm
+cargo install cargo-generate
+cd Projects/
+cargo generate --git https://github.com/tui-rs-revival/rust-tui-template --name wudao
+cd wudao/
+ls
+cargo run
+cd src/
+ls
+z wux
+ls
+ls src
+mkdir src/utils
+cargo add rand
+doom sync
+ls -a
+vim .Xresources
+vim .xprofile
+echo $env.BROWSER
+config nu
+config env
+vim .xprofile
+doom upgrade
+xdg-settings 
+xdg-settings --help
+tldr xdg-settings
+xdg-settings get default-web-browser
+ls /usr/share/applications/
+ls /usr/share/applications/ | find vivaldi
+xdg-settings get default-web-browser
+tldr xdg-settings
+xdg-settings set default-web-browser vivaldi-stable.desktop
+espanso --help
+cargo run
+cargo test
+cargo test dice
+ls src
+cat src/main.rs
+ls
+mv src/utils/ src/systems
+cargo add regex
+cargo add dice_forge
+cargo test skill
+cargo test skill -- --show-output
+cargo test
+sudo pacman -S spacedrive
+which nu
+nu --version
+nu --help
+alacritty
+sudo pacman -S alacritty
+cd ~/.config/alacritty/
+ls
+vim alacritty.yml
+rm alacritty.yml
+cd ~/.config/alacritty/
+ls
+alacritty --help
+cp /usr/share/doc/alacritty/example/alacritty.yml ./
+vim alacritty.yml
+which nu
+cd ~/.config/kitty/
+ls
+vim alacritty.yml
+cd ~/.config/alacritty/
+vim alacritty.yml
+z alacritty
+vim ala
+vim alacritty.yml
+vim kitty.conf
+z xmonad
+vim xmonad.hs
+alacritty
+z xmonad
+ls
+vim xmonad.hs
+alacritty -e zellij
+tmux
+alacritty -e tmux
+sudo pacman -R zellij
+z xmonad
+ls
+vim xmonad.hs
+z tmux
+ls
+ls -a
+vim ~/.tmux.conf
+git clone https://github.com/Yucklys/astronvim_config.git ~/.config/nvim/lua/user
+rm -rf ~/.config/nvim/lua/user/
+git clone https://github.com/Yucklys/astronvim_config.git ~/.config/nvim/lua/user
+cd ~/.config/nvim/lua/user
+ls
+nvim  --headless -c 'quitall'
+vim
+vim init.lua
+ls
+ls plugins/
+ls highlights/
+vim init.lua
+vim ~/.tmux.conf
+nvim
+alacritty
+nvim
+vim ~/.tmux.conf
+set-option -ga terminal-overrides ",xterm-256color:Tc"
+vim ~/.tmux.conf
+nvim /home/yucklys/.tmux.conf
+echo $env.TERM
+vim
+nvim /home/yucklys/.tmux.conf
+nvim /home/yucklys/.tmux.confnvim /home/yucklys/.tmux.conf
+nvim /home/yucklys/.tmux.conf
+echo $env.TERM
+alacritty
+nvim /home/yucklys/.tmux.conf
+pnpm install -g neovim
+echo $env.BROWSER
+xdg-settings set default-web-browser vivaldi-stable.desktop
+z alacritty
+vim alacritty.yml
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+fish
+bash
+alacritty --help
+alacritty -e bash
+which pnpm
+sudo pacman -S pnpm
+paru -Syu
+mkdir src/ui
+cargo run
+z wudao
+cargo run
+let-env RUST_BACKTRACE = 1
+cargo run
+cd org/
+ls
+ls -a
+rm .sync-conflict-20230401-221651-UYZAHLX.orgids
+ls
+rm org-roam.bak/
+rm -rf org-roam.bak/
+cd journals/
+ls
+cd ..
+rm -rf journals/
+ls
+ls roam
+ls -a roam
+cd roam
+ls
+ls `50 Journal/`
+ls `50 Journals/`
+rm -rf `50 Journals/`
+ls
+ls `40 Contacts/`
+ls `40 Assets/`
+rm `40 Contacts/`
+ls
+ls `00 Cards/`
+cd org
+ls
+cd roam
+ls
+ls `50 Journal/`
+mv `50 Journal/` `50 Journals/`
+ls
+cargo run
+rustc --explain E0038
+cargo run
+cargo add dirs
+cargo add directorys
+cargo add directories
+cargo add serde
+cargo add toml
+cargo run
+ls ~/.local/share/
+cargo run
+ls ~/.local/share/
+cargo run
+ls ~/.local/share/
+ls ~/.local/share/wudao/
+vim ~/.local/share/wudao/
+cd ~/.local/share/wudao/
+ls
+vim changelog.txt
+z wudao
+cargo run
+vim changelog.txt
+cargo run
+git add .
+git remote add origin https://github.com/Yucklys/wudao.git
+git branch -m main
+git branch
+git branch -M main
+git branch
+git push -u origin main
+cp changelog.txt ~/Projects/wudao/
+ls
+ls
+git add changelog.txt
+git commit -m "Add changelog.txt"
+man wget
+tldr wget
+wget --help
+cargo add reqwest
+rm changelog.txt
+cargo run
+bat changelog.txt
+rm changelog.txt
+ls
+git commit -a -m "Download data files from GitHub repo"
+git log
+git push
+git push --force
+cargo run
+cd ~/
+mv .emacs.d .emacs.d.bak
+ls
+curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+Via Wget
+If you're using wget type:<\n><\n>$ wget --no-check-certificate https://github.com/bbatsov/prelude/raw/master/utils/installer.sh -O - | sh<\n>Manual<\n>Make sure you do not have any ~/.emacs file or ~/.emacs.d folder present.<\n><\n>$ git clone https://github.com/bbatsov/prelude.git path/to/local/repo<\n>$ ln -s path/to/local/repo ~/.emacs.d<\n>$ cd ~/.emacs.d<\n>Note<\n><\n>If you are using Windows, you should check what Emacs thinks the ~ directory is by running Emacs and typing C-x d ~/<RET>, and then adjust the command appropriately.<\n><\n>System-wide (site-wide)<\n>For a multi-user environment, as an admin, the customizations intended for all users go in the site-start file represented by the variable site-run-file, while single users will use their own init file represented by the variable user-init-file.<\n><\n>If you have placed your Prelude directory in /opt/prelude then, append the following line to the site-start.el:<\n><\n>(load "/opt/prelude/init.el")<\n>If you are using Emacs as a daemon process, with other users or daemon processes interacting with the Emacs daemon (e.g. Emacs is your window manager) then the site-lisp directory could be the right place to place your configuration files.<\n><\n>Pinning packages<\n>By default, Prelude will install packages from the MELPA and GNU ELPA package repositories. Occasionally package integration can break when upgrading packages, as the packages in the MELPA repository are all snapshot builds. This can be avoided by pinning packages to stable versions in other repositories (e.g. MELPA Stable). To do so, copy prelude-pinned-packages.el from the sample directory to Prelude's root directory and adjust the variables inside accordingly.
+Enabling additional modules
+By default most of the modules that ship with Prelude are not loaded. For more information on the functionality provided by these modules visit the docs.
+;;; Uncomment the modules you'd like to use and restart Prelude afterwards<\n><\n>;;; General productivity tools<\n><\n>;; (require 'prelude-ido) ;; Supercharges Emacs completion for C-x C-f and more
+;; (require 'prelude-ivy) ;; A mighty modern alternative to ido<\n>(require 'prelude-vertico) ;; A powerful, yet simple, alternative to ivy
+;; (require 'prelude-helm) ;; Interface for narrowing and search<\n>;; (require 'prelude-helm-everywhere) ;; Enable Helm everywhere
+(require 'prelude-company)<\n>;; (require 'prelude-key-chord) ;; Binds useful features to key combinations
+;;; Vim emulation
+;;
+;; Enable this module if you're fond of vim's keybindings.
+;; (require 'prelude-evil)<\n><\n>;;; Org-mode (a legendary productivity tool that deserves its own category)<\n>;;<\n>;; Org-mode helps you keep TODO lists, notes and more.<\n>(require 'prelude-org)
+;;; Programming languages support
+;;
+;; Modules for a few very common programming languages
+;; are enabled by default.
+(require 'prelude-c)<\n>;; (require 'prelude-clojure)
+;; (require 'prelude-coffee)<\n>;; (require 'prelude-common-lisp)
+(require 'prelude-css)<\n>;; (require 'prelude-dart)
+(require 'prelude-emacs-lisp)<\n>;; (require 'prelude-erlang)
+;; (require 'prelude-elixir)<\n>;; (require 'prelude-go)
+;; (require 'prelude-haskell)<\n>(require 'prelude-js)
+;; (require 'prelude-latex)<\n>(require 'prelude-lisp) ;; Common setup for Lisp-like languages
+(require 'prelude-lsp) ;; Base setup for the Language Server Protocol<\n>;; (require 'prelude-lua)
+;; (require 'prelude-ocaml)<\n>(require 'prelude-perl)
+;; (require 'prelude-python)<\n>;; (require 'prelude-racket)
+;; (require 'prelude-ruby)<\n>;; (require 'prelude-rust)
+;; (require 'prelude-scala)<\n>;; (require 'prelude-scheme)
+(require 'prelude-shell)<\n>;; (require 'prelude-scss)
+;; (require 'prelude-ts)<\n>(require 'prelude-web) ;; Emacs mode for web templates
+(require 'prelude-xml)<\n>(require 'prelude-yaml)
+;;; Misc
+(require 'prelude-erc) ;; A popular Emacs IRC client (useful if you're still into Freenode)
+You'll need to adjust your prelude-modules.el file once the installation is done.<\n><\n>In case of an automated installation, you'll find this file in the personal directory of your Emacs installation.
+curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+Via Wget
+If you're using wget type:<\n><\n>$ wget --no-check-certificate https://github.com/bbatsov/prelude/raw/master/utils/installer.sh -O - | sh<\n>Manual<\n>Make sure you do not have any ~/.emacs file or ~/.emacs.d folder present.<\n><\n>$ git clone https://github.com/bbatsov/prelude.git path/to/local/repo<\n>$ ln -s path/to/local/repo ~/.emacs.d<\n>$ cd ~/.emacs.d<\n>Note<\n><\n>If you are using Windows, you should check what Emacs thinks the ~ directory is by running Emacs and typing C-x d ~/<RET>, and then adjust the command appropriately.<\n><\n>System-wide (site-wide)<\n>For a multi-user environment, as an admin, the customizations intended for all users go in the site-start file represented by the variable site-run-file, while single users will use their own init file represented by the variable user-init-file.<\n><\n>If you have placed your Prelude directory in /opt/prelude then, append the following line to the site-start.el:<\n><\n>(load "/opt/prelude/init.el")<\n>If you are using Emacs as a daemon process, with other users or daemon processes interacting with the Emacs daemon (e.g. Emacs is your window manager) then the site-lisp directory could be the right place to place your configuration files.<\n><\n>Pinning packages<\n>By default, Prelude will install packages from the MELPA and GNU ELPA package repositories. Occasionally package integration can break when upgrading packages, as the packages in the MELPA repository are all snapshot builds. This can be avoided by pinning packages to stable versions in other repositories (e.g. MELPA Stable). To do so, copy prelude-pinned-packages.el from the sample directory to Prelude's root directory and adjust the variables inside accordingly.
+Enabling additional modules
+By default most of the modules that ship with Prelude are not loaded. For more information on the functionality provided by these modules visit the docs.
+;;; Uncomment the modules you'd like to use and restart Prelude afterwards<\n><\n>;;; General productivity tools<\n><\n>;; (require 'prelude-ido) ;; Supercharges Emacs completion for C-x C-f and more
+;; (require 'prelude-ivy) ;; A mighty modern alternative to ido<\n>(require 'prelude-vertico) ;; A powerful, yet simple, alternative to ivy
+;; (require 'prelude-helm) ;; Interface for narrowing and search<\n>;; (require 'prelude-helm-everywhere) ;; Enable Helm everywhere
+(require 'prelude-company)<\n>;; (require 'prelude-key-chord) ;; Binds useful features to key combinations
+;;; Vim emulation
+;;
+;; Enable this module if you're fond of vim's keybindings.
+;; (require 'prelude-evil)<\n><\n>;;; Org-mode (a legendary productivity tool that deserves its own category)<\n>;;<\n>;; Org-mode helps you keep TODO lists, notes and more.<\n>(require 'prelude-org)
+;;; Programming languages support
+;;
+;; Modules for a few very common programming languages
+;; are enabled by default.
+(require 'prelude-c)<\n>;; (require 'prelude-clojure)
+;; (require 'prelude-coffee)<\n>;; (require 'prelude-common-lisp)
+(require 'prelude-css)<\n>;; (require 'prelude-dart)
+(require 'prelude-emacs-lisp)<\n>;; (require 'prelude-erlang)
+;; (require 'prelude-elixir)<\n>;; (require 'prelude-go)
+;; (require 'prelude-haskell)<\n>(require 'prelude-js)
+;; (require 'prelude-latex)<\n>(require 'prelude-lisp) ;; Common setup for Lisp-like languages
+(require 'prelude-lsp) ;; Base setup for the Language Server Protocol<\n>;; (require 'prelude-lua)
+;; (require 'prelude-ocaml)<\n>(require 'prelude-perl)
+;; (require 'prelude-python)<\n>;; (require 'prelude-racket)
+;; (require 'prelude-ruby)<\n>;; (require 'prelude-rust)
+;; (require 'prelude-scala)<\n>;; (require 'prelude-scheme)
+(require 'prelude-shell)<\n>;; (require 'prelude-scss)
+;; (require 'prelude-ts)<\n>(require 'prelude-web) ;; Emacs mode for web templates
+(require 'prelude-xml)<\n>(require 'prelude-yaml)
+;;; Misc
+(require 'prelude-erc) ;; A popular Emacs IRC client (useful if you're still into Freenode)
+You'll need to adjust your prelude-modules.el file once the installation is done.<\n><\n>In case of an automated installation, you'll find this file in the personal directory of your Emacs installation.
+curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh -
+rm -rf ~/.emacs.d/
+curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh -
+emacs
+emacs --debug-init
+nu --help
+config nu
+/bin/zsh -l -c "/usr/bin/printf '__RESULT\\000%s\\000%s' \"${PATH-}\" \"${MANPATH-}\""
+nu -c "/usr/bin/printf '__RESULT\\000%s\\000%s' \"${PATH-}\" \"${MANPATH-}\""
+nu -c "sh -c /usr/bin/printf '__RESULT\\000%s\\000%s' \"${PATH-}\" \"${MANPATH-}\""
+nu -c "sh -c '/usr/bin/printf \'__RESULT\\000%s\\000%s\' \"${PATH-}\" \"${MANPATH-}\"'"
+nu --help
+emacs --debug-init
+ls .emacs.d
+vim .emacs.d/init.el
+cd .emacs.d
+ls
+vim sample/prelude-modules.el
+ls core
+vim core/prelude-linux.el
+ls
+ls modules/
+ls
+/home/yucklys/.cargo/bin/nu invoked with args ("-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\"\\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\"")
+/home/yucklys/.cargo/bin/nu "-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\"\\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\""
+/home/yucklys/.cargo/bin/nu --stdin "-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\"\\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\""
+/home/yucklys/.cargo/bin/nu "-l" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\"\\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\""
+/home/yucklys/.cargo/bin/nu "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\"\\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\""
+/home/yucklys/.cargo/bin/nu "-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\"\\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\""
+/home/yucklys/.cargo/bin/nu "-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\""
+/home/yucklys/.cargo/bin/nu "-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'"
+/home/yucklys/.cargo/bin/nu "-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\"
+/home/yucklys/.cargo/bin/nu "-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\""
+/home/yucklys/.cargo/bin/nu "-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\""
+/home/yucklys/.cargo/bin/nu "-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ $\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\""
+/home/yucklys/.cargo/bin/nu "-l" "-i" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\""
+/home/yucklys/.cargo/bin/nu "-l" "-c" "sh -c /usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\"\\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\""
+/home/yucklys/.cargo/bin/nu "-l" "-c" "sh -c '/usr/bin/printf\\ \\'__RESULT\\\\000\\%s\\\\000\\%s\\\\000__RESULT\\'\\ \\\"\\$\\{PATH-665d1898ef523552abe22710f21fdea0\\}\\\"\\ \\\"\\$\\{MANPATH-665d1898ef523552abe22710f21fdea0\\}\\\"'"
+emacs
+emacs --debug-init
+cd ..
+rm -rf .emacs.d
+fish
+chsh -s /usr/bin/fish
+sudo pacman -Syu
+echo $env.BROWSER
+config nu
+ls
+cd ~/.config
+vim starship.toml
+ls
+cd .config
+rm starship.toml~
+vim starship.toml
+qutebrowser --version
+cp ~/.local/share/qutebrowser/ ~/.local/share/qutebrowser.bak
+cp -r ~/.local/share/qutebrowser/ ~/.local/share/qutebrowser.bak
+paru -Ss qutebrowser
+paru -S qutebrowser-qt6-git
+qutebrowser --version
+z xmonad
+vim xmonad.hs
+ec xmonad.hs
+cd ~/.config/qutebrowser/
+ls
+vim config.py
+ec config.py
+z qutebrowser
+ec config.py
+ls
+rm config.py~
+systemctl restart --user emacs
+ec config.py
+ec --debug-init
+ec config.py
+systemctl --user restart emacs
+ec config.py
+ls
+ec config.py
+emacs --help
+emacs -nw --debug-init config.py
+systemctl --user restart emacs
+ec config.py
+cd ~/.config/qutebrowser/
+ec config.py
+systemctl --user restart emacs
+systemctl --user status emacs
+systemctl --user start emacs
+emacs -nw
+systemctl --user start emacs
+emacs -nw
+systemctl --user restart emacs
+systemctl --user status emacs
+systemctl --user stop emacs
+systemctl --user start emacs
+emacs
+systemctl --user restart emacs
+ls ~/.config/systemd/user/emacs.service
+vim ~/.config/systemd/user/emacs.service
+systemctl --user enable --now emacs
+systemctl --user status emacs
+emacs -nw
+cd ~/.config/qutebrowser/
+ec config.py
+systemctl --user restart emacs
+ec config.py
+systemctl --user restart emacs
+ec config.py
+emacs -nw
+systemctl --user restart emacs
+ec config.py
+systemctl --user restart emacs
+systemctl --user start emacs
+systemctl --user stop emacs
+systemctl --user start emacs
+htop
+systemctl --user status emacs
+systemctl --user stop emacs
+systemctl --user status emacs
+systemctl --user start emacs
+systemctl --user restart emacs
+htop
+systemctl --user restart emacs
+emacs --version
+systemctl --user stop emacs
+cd ~/githings/
+ls
+git clone https://github.com/emacs-mirror/emacs.git --depth 1
+cd emacs/
+ls
+cd ..
+cd emacs/
+./configure --help
+ls
+autoconf
+autoheader
+autoconf
+ls
+./configure --help
+rm configure
+git checkout emacs-29
+git branck
+cd ..
+rm emacs/
+rm -r emacs/
+git clone --help
+git clone https://github.com/emacs-mirror/emacs.git --depth 1 -b emacs-29
+cd emacs/
+ls
+autoheader
+autoconf
+autoheader
+autoconf
+ls
+rm ./configure
+autoconf
+./configure --without-xim --with-native-compilation=aot
+make
+pacman -Sp --print-format %n emacs
+htop
+make --help
+sudo make -j
+./configure --help
+./configure --without-xim --with-native-compilation=aot --with-x-toolkit=gtk3
+ls
+ls etc/
+./configure --without-xim --with-native-compilation=aot --with-x-toolkit=gtk3
+ls
+sudo pacman -S giflab
+./configure --without-xim --with-native-compilation=aot --with-x-toolkit=gtk3
+autoheader
+autoconf
+./configure --without-xim --with-native-compilation=aot --with-x-toolkit=gtk3
+rm configure
+mkdir build
+cd build/
+ls
+../autoconf
+cd ..
+autoconf
+sudo pacman -Ss build
+sudo pacman -Sy base-devel
+autoconf
+rm configure
+autoheader
+autoconf
+make bootstrap
+bat autogen.sh
+bat INSTALL.REPO
+rm configure
+sh autogen.sh
+./configure --without-xim --with-native-compilation=aot --with-x-toolkit=gtk3
+bat etc/PROBLEMS
+./configure --help
+./configure --without-xim --with-native-compilation=aot --with-x-toolkit=gtk3 \ 
+./configure --without-xim --with-native-compilation=aot --with-x-toolkit=gtk3 --with-xwidgets --with-imagemagick --with-tree-sitter --with-x
+make
+bat INSTALL.REPO
+emacs -nw --debug-init config.py
+cd githings/emacs/
+ls
+make
+make -j8
+bat INSTALL.REPO
+sudo make install
+ls
+ls build
+emacs --version
+ls
+ls -a
+cd build-aux/
+ls
+cd ..
+bat INSTALL
+src/emacs -Q
+src/emacs --version
+bat INSTALL
+make check
+make install
+sudo make install
+emacs --version
+cd .emacs.d
+ls
+rm eln-cache/
+mv eln-cache/ var
+mv eln-cache/ var/
+mv eln-cache/ var/eln-cache
+ls
+cd .emacs.d
+ls
+ls var
+ls eln-cache/
+ls var/eln-cache/
+rm var/eln-cache/eln-cache/
+rm -r var/eln-cache/eln-cache/
+ls
+rm -r eln-cache
+cd .emacs.d
+ls
+ls eln-cache/
+systemctl --user stop emacs
+htop
+ls
+ls eln-cache/
+rm -r eln-cache/
+ls
+paru -R emacs
+paru -Rs emacs
+sudo pacman -R emacs-28.2 
+sudo pacman -R emacs
+ls
+rm config.org~
+ls auto-save-list/
+rm auto-save-list/
+ls
+cd .emacs.d
+ls
+cd straight/build/tree-sitter-module/
+ls
+tree-sitter --help
+cd ~/.emacs.d
+ls
+cd .emacs.d.
+cd .emacs.d
+ls straight/repos/ | find org
+rm -r straight/repos/org
+cd .emacs.d
+ls
+cd .emacs.d
+ls
+rm var/saveplace
+rm var/save-place.el
+cd .emacs.d
+ls
+vim tabsession.el
+cd .emacs.d
+ls
+bat tabsession.el
+cd .emacs.d.
+cd .emacs.d
+ls-
+ls
+rm tabsession.el
+cd .emacs.d
+rm tabsession.el
+cd ~/.emacs.d
+ls
+vim tabsession.el
+systemctl --user start emacs
+htop
+systemctl --user start emacs
+xkill
+cd .emacs.d
+ls
+ls eln-cache/
+rm eln-cache/
+rm -r eln-cache/
+ls
+cd ~/.local/share/systemd/
+ls
+cd ..
+z systemd
+ls
+cd ~/.config/systemd
+ls
+cd user/
+ls
+vim emacs.service
+/usr/bin/emacs --version
+which emacs
+vim emacs.service
+which emacsclient
+which emacs
+vim emacs.service
+htop
+systemctl --user start emacs
+systemctl --user daemon-reload
+systemctl --user enable --now emacs
+vim emacs.service
+systemctl --user status emacs
+systemctl --user stop emacs
+htop
+sudo rm /usr/bin/emacs-28.2
+sudo rm /usr/bin/emacsclient
+sudo rm /usr/bin/emacs
+ls
+emacs --help
+emacs 
+emacs --version
+cd ~/.emacs
+cd ~/.emacs.d
+ls
+rm -r eln-cache/
+ls
+ec config.org
+systemctl --user status emacs
+systemctl --user disable emacs
+systemctl --user enable --now emacs
+cd ~/.emacs.d
+ec config.org
+which rust-analyzer
+echo $env.PATH
+echo $env.PATH --help
+print $env.PATH 
+print $env.PATH -n
+$env.PATH
+tutor
+tutor list
+tutor echo
+config nu
+echo --raw
+echo $env.PATH 
+echo $env.PATH | format '{col2}'
+echo $env.PATH | to text
+systemctl --user status emacs
+cd ~/.emacs.d
+ls
+config nu
+cd ~/.emacs.d
+ls straight/build/tree-sitter-module/
+cd ~/.emacs.d/
+rm straight/repos/eglot
+rm -r straight/repos/eglot
+which rust-analyzer
+paru -Q rust-analyzer
+paru -S rust-analyzer
+rustup update
+paru -S rust-analyzer
+which rust-analyzer
+rm ~/.local/bin/rust-analyzer
+which rust-analyzer
+rust-analyzer --version
+systemctl --user status emacs
+systemctl --user start emacs
+cd ~/githings/emacs/
+ls
+./configure --without-xim --with-native-compilation=aot --with-x-toolkit=gtk3 --with-xwidgets --with-imagemagick --with-tree-sitter --with-x
+./configure --help
+git pull
+git pull --depth 1
+git status
+ls
+rm build
+git pull --depth 1
+git pull --depth 1 --force
+git pull --depth 1 -ff
+git pull --help
+git pull --depth 1 --ff
+ls
+autoheader 
+./autogen.sh
+./configure --without-xim --with-native-compilation=aot --with-x-toolkit=gtk3 --with-xwidgets --with-imagemagick --with-tree-sitter --with-x --with-wide-int
+make -j8
+make check
+sudo make install
+emacs --version
+ls /usr/local/bin | find emacs
+systemctl --user restart emacs
+libgccjt --help
+svim /usr/share/xsessions/emacs.desktop
+sudo -E ec /usr/share/xsessions/emacs.desktop
+sudo -E emacsclient -c /usr/share/xsessions/emacs.desktop
+sudo -E neovim /usr/share/xsessions/emacs.desktop
+sudo -E nvim /usr/share/xsessions/emacs.desktop
+bat /usr/share/xsessions/emacs.desktop
+cd ~/githings/emacs/
+ls
+./configure --with-native-compilation=aot --with-x-toolkit=gtk3 --with-xwidgets --with-imagemagick --with-tree-sitter --with-x --with-wide-int
+make -j8
+sudo make install
+make check
+systemctl --user restart emacs
+xrandr --listmonitors
+vim ~/.xinitrc
+vim ~/.xprofile
+vim .screenlayout/monitor.sh
+rofi
+rofi -show
+cd ~/githings/emacs/
+git pull --depth 1 --ff
+./autogen.sh
+./configure --with-native-compilation=aot --with-x-toolkit=gtk3 --with-xwidgets --with-imagemagick --with-tree-sitter --with-x --with-wide-int --without-xim
+make -j8
+sudo make install
+systemctl --user enable --now emacs
+systemctl --user restart emacs
+fc-list | find "Nerd Font"
+systemctl --user restart emacs
+rust-analyzer --version
+rust-analyzer --help
+paru -S rust-analyzer
+systemctl --user restart emacs
+htop
+systemctl --user restart emacs
+rust-analyzer --help
+paru -Ss rust-analyzer
+paru -R rust-analyzer
+rust-analyzer --help
+rustup --help
+rustup component --help
+rustup component add rust-analyzer
+rust-analyzer --help
+rust-analyzer --version
+which rust-analyzer
+rust-analyzer --help
+cd ~/githings/emacs/
+./configure --help
+./configure --with-native-compilation=aot --with-x-toolkit=gtk3 --with-xwidgets --with-imagemagick --with-tree-sitter --with-x --with-wide-int --without-xim --with-json
+sudo make install
+make -j8
+sudo make install
+vim .xprofile
+config env
+emacs
+$env.LSP_USE_PLISTS
+fc-list | find "All the icon"
+fc-list | find "All"
+systemctl --user restart emacs
+rustup run stable rust-analyzer
+rustup component add rust-src
+rustup update
+fc-cache -r
+ls ~/.local/share/fonts/
+rm ~/.local/share/fonts/all-the-icons.ttf
+ls ~/.local/share/fonts/
+systemctl --user restart emacs
+htop
+systemctl --user status emacs
+systemctl --user quit emacs
+systemctl --user exit emacs
+systemctl --user stop emacs
+systemctl --user status emacs
+systemctl --user start emacs
+systemctl --user status emacs
+cargo add tui-input
+ls ~/.emacs.d
+z wudao
+rm `src/#event.rs#`
+cargo add futures
+z wudao
+cargo run
+z wudao
+ls
+rm `src/ui/#character_create.rs#`
+rm src/ui/character_create.rs~
+ls src
+rm src/action.rs~
+ls
+ls ~/.emacs.d
+rm ~/.emacs.d.bak/
+rm -r ~/.emacs.d.bak/
+ls
+rm *message*-20230710-103058
+ls
+ls .emacs.d/
+rm .emacs.d/config.org~
+rm .emacs.d/auto-save-list/
+rm .emacs.d/tabsession.el
+rm .emacs.d/projectile-bookmarks.eld
+cd .emacs.d/
+ls eln-cache/
+ls
+ls elpa/
+rm -r eln-cache/ elpa/
+ls
+ls var
+systemctl --user restart emacs
+emacsclient -c
+emacsclient -c -n
+emacsclient --help
+systemctl --user restart emacs
+systemctl --user stop emacs
+systemctl --user status emacs
+systemctl --user start emacs
+htop
+systemctl --user start emacs
+fish
+yadm --help
+yadm list
+yadm status
+yadm add ~/.doom.d/
+yadm add ~/.config/qutebrowser/
+yadm add ~/.config/xmonad/
+yadm status
+yadm add .config/nvim
+yadm add .config/rofi/
+yadm status

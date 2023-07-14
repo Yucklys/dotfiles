@@ -1,7 +1,7 @@
 return function(_, opts)
   local heirline = require "heirline"
-  local status = require "astronvim.utils.status"
-  local C = status.env.fallback_colors
+  local hl = require "astronvim.utils.status.hl"
+  local C = require("astronvim.utils.status.env").fallback_colors
   local get_hlgroup = require("astronvim.utils").get_hlgroup
 
   local function setup_colors()
@@ -10,6 +10,7 @@ return function(_, opts)
     local Error = get_hlgroup("Error", { fg = C.red, bg = C.bg })
     local StatusLine = get_hlgroup("StatusLine", { fg = C.fg, bg = C.dark_bg })
     local TabLine = get_hlgroup("TabLine", { fg = C.grey, bg = C.none })
+    local TabLineFill = get_hlgroup("TabLineFill", { fg = C.fg, bg = C.dark_bg })
     local TabLineSel = get_hlgroup("TabLineSel", { fg = C.fg, bg = C.none })
     local WinBar = get_hlgroup("WinBar", { fg = C.bright_grey, bg = C.bg })
     local WinBarNC = get_hlgroup("WinBarNC", { fg = C.grey, bg = C.bg })
@@ -24,16 +25,15 @@ return function(_, opts)
     local DiagnosticInfo = get_hlgroup("DiagnosticInfo", { fg = C.white, bg = C.dark_bg })
     local DiagnosticHint = get_hlgroup("DiagnosticHint", { fg = C.bright_yellow, bg = C.dark_bg })
     local HeirlineInactive = get_hlgroup("HeirlineInactive", { bg = nil }).bg
-      or status.hl.lualine_mode("inactive", C.dark_grey)
-    local HeirlineNormal = get_hlgroup("HeirlineNormal", { bg = nil }).bg or status.hl.lualine_mode("normal", C.blue)
-    local HeirlineInsert = get_hlgroup("HeirlineInsert", { bg = nil }).bg or status.hl.lualine_mode("insert", C.green)
-    local HeirlineVisual = get_hlgroup("HeirlineVisual", { bg = nil }).bg or status.hl.lualine_mode("visual", C.purple)
-    local HeirlineReplace = get_hlgroup("HeirlineReplace", { bg = nil }).bg
-      or status.hl.lualine_mode("replace", C.bright_red)
+      or hl.lualine_mode("inactive", C.dark_grey)
+    local HeirlineNormal = get_hlgroup("HeirlineNormal", { bg = nil }).bg or hl.lualine_mode("normal", C.blue)
+    local HeirlineInsert = get_hlgroup("HeirlineInsert", { bg = nil }).bg or hl.lualine_mode("insert", C.green)
+    local HeirlineVisual = get_hlgroup("HeirlineVisual", { bg = nil }).bg or hl.lualine_mode("visual", C.purple)
+    local HeirlineReplace = get_hlgroup("HeirlineReplace", { bg = nil }).bg or hl.lualine_mode("replace", C.bright_red)
     local HeirlineCommand = get_hlgroup("HeirlineCommand", { bg = nil }).bg
-      or status.hl.lualine_mode("command", C.bright_yellow)
+      or hl.lualine_mode("command", C.bright_yellow)
     local HeirlineTerminal = get_hlgroup("HeirlineTerminal", { bg = nil }).bg
-      or status.hl.lualine_mode("insert", HeirlineInsert)
+      or hl.lualine_mode("insert", HeirlineInsert)
 
     local colors = astronvim.user_opts("heirline.colors", {
       close_fg = Error.fg,
@@ -56,12 +56,12 @@ return function(_, opts)
       winbar_bg = WinBar.bg,
       winbarnc_fg = WinBarNC.fg,
       winbarnc_bg = WinBarNC.bg,
-      tabline_bg = StatusLine.bg,
-      tabline_fg = StatusLine.bg,
+      tabline_bg = TabLineFill.bg,
+      tabline_fg = TabLineFill.bg,
       buffer_fg = Comment.fg,
       buffer_path_fg = WinBarNC.fg,
       buffer_close_fg = Comment.fg,
-      buffer_bg = StatusLine.bg,
+      buffer_bg = TabLineFill.bg,
       buffer_active_fg = Normal.fg,
       buffer_active_path_fg = WinBarNC.fg,
       buffer_active_close_fg = Error.fg,
@@ -71,10 +71,10 @@ return function(_, opts)
       buffer_visible_close_fg = Error.fg,
       buffer_visible_bg = Normal.bg,
       buffer_overflow_fg = Comment.fg,
-      buffer_overflow_bg = StatusLine.bg,
+      buffer_overflow_bg = TabLineFill.bg,
       buffer_picker_fg = Error.fg,
       tab_close_fg = Error.fg,
-      tab_close_bg = StatusLine.bg,
+      tab_close_bg = TabLineFill.bg,
       tab_fg = TabLine.fg,
       tab_bg = TabLine.bg,
       tab_active_fg = TabLineSel.fg,
@@ -115,15 +115,5 @@ return function(_, opts)
     group = augroup,
     desc = "Refresh heirline colors",
     callback = function() require("heirline.utils").on_colorscheme(setup_colors()) end,
-  })
-  vim.api.nvim_create_autocmd("User", {
-    pattern = "HeirlineInitWinbar",
-    group = augroup,
-    desc = "Disable winbar for some filetypes",
-    callback = function()
-      if vim.opt.diff:get() or status.condition.buffer_matches(require("heirline").winbar.disabled or {}) then
-        vim.opt_local.winbar = nil
-      end
-    end,
   })
 end

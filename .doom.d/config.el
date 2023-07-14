@@ -230,7 +230,7 @@
 
 (setq org-agenda-files (list "~/OneDrive/org/i.org"
                              "~/OneDrive/org/todo.org"
-                             "~/OneDrive/org/roam/50 Journal/"))
+                             "~/OneDrive/org/roam/50 Journals/"))
 
 ;; Auto refile
 (add-hook 'org-after-todo-state-change-hook 'dk/refile-todo 'append)
@@ -423,12 +423,13 @@ See `org-capture-templates' for more information."
   :config
   (setq company-show-numbers t)
   (setq company-tooltip-align-annotations t)
-  (setq company-idle-delay 0.2)
+  (setq company-idle-delay 0)
+  (add-to-list 'company-backends #'company-tabnine)
   )
 
 (after! lsp-mode
   (setq +lsp-company-backends '(company-capf company-yasnippet
-                                              ;; :separate company-tabnine
+                                              :separate company-tabnine
                                               )))
 
 ;; (use-package! eglot-x
@@ -455,11 +456,11 @@ See `org-capture-templates' for more information."
   (setq rustic-lsp-server 'rust-analyzer)
   (setq lsp-rust-analyzer-server-display-inlay-hints t))
 
-(use-package! lsp-mode
-  :config
-  (setq lsp-rust-analyzer-proc-macro-enable t))
+;; (use-package! lsp-mode
+;;   :config
+;;   (setq lsp-rust-analyzer-proc-macro-enable t))
 
-(add-to-list 'load-path "/home/yucklys/.opam/4.12.0/share/emacs/site-lisp")
+(add-to-list 'load-path "/home/yucklys/.opam/default/share/emacs/site-lisp")
 (require 'ocp-indent)
 
 ;; (defhydra hydra-elfeed ()

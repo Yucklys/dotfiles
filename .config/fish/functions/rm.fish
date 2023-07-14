@@ -1,3 +1,4 @@
-function rm --wraps=trash --description 'alias rm=trash'
-  trash $argv; 
+function rm --wraps=trash --description 'alias rm trash'
+  trash $argv
+        
 end

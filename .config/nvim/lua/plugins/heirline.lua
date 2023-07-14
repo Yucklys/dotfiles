@@ -4,6 +4,15 @@ return {
   opts = function()
     local status = require "astronvim.utils.status"
     return {
+      opts = {
+        disable_winbar_cb = function(args)
+          return not require("astronvim.utils.buffer").is_valid(args.buf)
+            or status.condition.buffer_matches({
+              buftype = { "terminal", "prompt", "nofile", "help", "quickfix" },
+              filetype = { "NvimTree", "neo%-tree", "dashboard", "Outline", "aerial" },
+            }, args.buf)
+        end,
+      },
       statusline = { -- statusline
         hl = { fg = "fg", bg = "bg" },
         status.component.mode(),
@@ -20,18 +29,8 @@ return {
         status.component.mode { surround = { separator = "right" } },
       },
       winbar = { -- winbar
-        static = {
-          disabled = {
-            buftype = { "terminal", "prompt", "nofile", "help", "quickfix" },
-            filetype = { "NvimTree", "neo%-tree", "dashboard", "Outline", "aerial" },
-          },
-        },
         init = function(self) self.bufnr = vim.api.nvim_get_current_buf() end,
         fallthrough = false,
-        {
-          condition = function(self) return vim.opt.diff:get() or status.condition.buffer_matches(self.disabled or {}) end,
-          init = function() vim.opt_local.winbar = nil end,
-        },
         {
           condition = function() return not status.condition.is_active() end,
           status.component.separated_path(),
@@ -51,7 +50,7 @@ return {
           condition = function(self)
             self.winid = vim.api.nvim_tabpage_list_wins(0)[1]
             return status.condition.buffer_matches(
-              { filetype = { "aerial", "dapui_.", "neo%-tree", "NvimTree" } },
+              { filetype = { "aerial", "dapui_.", "neo%-tree", "NvimTree", "edgy" } },
               vim.api.nvim_win_get_buf(self.winid)
             )
           end,

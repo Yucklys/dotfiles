@@ -92,7 +92,7 @@ myModMask :: KeyMask
 myModMask = mod4Mask        -- Sets modkey to super/windows key
 
 myTerminal :: String
-myTerminal = "kitty"    -- Sets default terminal
+myTerminal = "alacritty"    -- Sets default terminal
 
 myBrowser :: String
 myBrowser = "qutebrowser"  -- Sets qutebrowser as browser
@@ -276,7 +276,7 @@ gsSettings =
   ]
 
 gsSystem =
-  [ ("Kitty", "kitty")
+  [ ("Alacritty", "alacritty")
   , ("Bash", (myTerminal ++ " -e bash"))
   , ("Htop", (myTerminal ++ " -e htop"))
   , ("Fish", (myTerminal ++ " -e fish"))
@@ -514,7 +514,7 @@ myKeys c =
   , ("M-p p", addName "Power menu"                       $ spawn "powermenu")]
 
   ^++^ subKeys "Favorite programs"
-  [ ("M-<Return>", addName "Launch terminal"             $ spawn (myTerminal ++ " -e zellij"))
+  [ ("M-<Return>", addName "Launch terminal"             $ spawn (myTerminal ++ " -e tmux"))
   , ("M-S-<Return>", addName "Attach terminal to zellij" $ spawn (myTerminal ++ " -e zellij attach"))
   , ("M-b", addName "Launch web browser"                 $ spawn (myBrowser))
   , ("M-o d", addName "Launch dictionary"                $ spawn "goldendict")
@@ -684,7 +684,7 @@ xmobarSub  = statusBarPropTo "_XMONAD_LOG_2" ("xmobar -x 1 $HOME/.config/xmobar/
 main :: IO ()
 main = xmonad . withSB (xmobarMain <> xmobarSub). addDescrKeys' ((mod4Mask, xK_F1), showKeybindings) myKeys $ ewmhFullscreen $ ewmh $ docks $ def
     { manageHook         = myManageHook <+> manageDocks
-    , handleEventHook    = swallowEventHook (className =? "Kitty"  <||> className =? "st-256color" <||> className =? "XTerm") (return True)
+    , handleEventHook    = swallowEventHook (className =? "Alacritty"  <||> className =? "st-256color" <||> className =? "XTerm") (return True)
     , modMask            = myModMask
     , terminal           = myTerminal
     , startupHook        = myStartupHook

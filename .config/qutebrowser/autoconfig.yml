@@ -18,6 +18,8 @@ settings:
     global: lightness-cielab
   colors.webpage.darkmode.enabled:
     global: false
+  colors.webpage.preferred_color_scheme:
+    global: dark
   content.autoplay:
     global: true
   content.blocking.enabled:
@@ -58,13 +60,21 @@ settings:
     global: none
   qt.highdpi:
     global: true
+  scrolling.smooth:
+    global: true
   spellcheck.languages:
     global:
     - en-US
+  tabs.position:
+    global: top
+  tabs.tabs_are_windows:
+    global: false
   url.searchengines:
     global:
       DEFAULT: https://duckduckgo.com/?q={}
       g: https://www.google.com/search?q={}
       gh: https://github.com/search?q={}
+  window.title_format:
+    global: '{current_title}{title_sep}qutebrowser'
   zoom.default:
     global: '125'

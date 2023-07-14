@@ -77,6 +77,9 @@ let-env NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
+# Browser
+let-env BROWSER = 'qutebrowser'
+
 # pnpm
 let-env PNPM_HOME = "/home/yucklys/.local/share/pnpm"
 
@@ -100,4 +103,7 @@ let-env MANPATH = ':/home/yucklys/.opam/4.12.0/man'
 let-env PATH = ($env.PATH | split row (char esep) | prepend ['/home/yucklys/.opam/4.12.0/bin', '/home/yucklys/.local/bin', '/home/yucklys/.cargo/bin', '/home/yucklys/.emacs.d/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/local/sbin', '/usr/lib/jvm/default/bin', '/usr/bin/site_perl', '/usr/bin/vendor_perl', '/usr/bin/core_perl', '/var/lib/snapd/snap/bin'])
 
 # bitwarden
-let-env BW_SESSION = "Mn/ZgN3brE1JBSFFa4ort3fkgaEgmkA8Ov+2Kp1NB6Qul4EwHsgqx+H3xO/vGPq8wkEA4i21rc0Tohg0LK36Ag=="
+let-env BW_SESSION = "LpIPPMGWlb45FwEud0yjuIebEcvlMQ8ODK5okFnjjXLeYS9LcS9Dgryqzm+Wg16hOuKXpG/4D4Oze0FWkMst/w=="
+
+# LSP-mode
+let-env LSP_USE_PLISTS = true

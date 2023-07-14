@@ -1,3 +1,4 @@
+vim.opt.viewoptions:remove "curdir" -- disable saving current directory with views
 vim.opt.shortmess:append { s = true, I = true } -- disable startup message
 vim.opt.backspace:append { "nostop" } -- Don't stop backspace at insert
 if vim.fn.has "nvim-0.9" == 1 then
@@ -8,7 +9,7 @@ local options = astronvim.user_opts("options", {
     breakindent = true, -- Wrap indent to match  line start
     clipboard = "unnamedplus", -- Connection to the system clipboard
     cmdheight = 0, -- hide command line unless needed
-    completeopt = { "menuone", "noselect" }, -- Options for insert mode completion
+    completeopt = { "menu", "menuone", "noselect" }, -- Options for insert mode completion
     copyindent = true, -- Copy the previous indentation on autoindenting
     cursorline = true, -- Highlight the text line of the cursor
     expandtab = true, -- Enable the use of space in tab
@@ -37,7 +38,6 @@ local options = astronvim.user_opts("options", {
     smartcase = true, -- Case sensitivie searching
     smartindent = true, -- Smarter autoindentation
     splitbelow = true, -- Splitting a new window below the current one
-    splitkeep = vim.fn.has "nvim-0.9" == 1 and "screen" or nil, -- Maintain code view when splitting
     splitright = true, -- Splitting a new window at the right of the current one
     tabstop = 2, -- Number of space in a tab
     termguicolors = true, -- Enable 24-bit RGB color in the TUI
@@ -49,18 +49,22 @@ local options = astronvim.user_opts("options", {
     writebackup = false, -- Disable making a backup before overwriting a file
   },
   g = {
-    highlighturl_enabled = true, -- highlight URLs by default
     mapleader = " ", -- set leader key
+    maplocalleader = ",", -- set default local leader key
+    -- AstroNvim specific global options
     autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
-    codelens_enabled = true, -- enable or disable automatic codelens refreshing for lsp that support it
-    lsp_handlers_enabled = true, -- enable or disable default vim.lsp.handlers (hover and signatureHelp)
-    cmp_enabled = true, -- enable completion at start
     autopairs_enabled = true, -- enable autopairs at start
+    cmp_enabled = true, -- enable completion at start
+    codelens_enabled = true, -- enable or disable automatic codelens refreshing for lsp that support it
     diagnostics_mode = 3, -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
+    highlighturl_enabled = true, -- highlight URLs by default
     icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available)
-    ui_notifications_enabled = true, -- disable notifications when toggling UI elements
+    inlay_hints_enabled = false, -- enable or disable LSP inlay hints on startup (Neovim v0.10 only)
+    lsp_handlers_enabled = true, -- enable or disable default vim.lsp.handlers (hover and signatureHelp)
+    semantic_tokens_enabled = true, -- enable or disable LSP semantic tokens on startup
+    ui_notifications_enabled = true, -- disable notifications (TODO: rename to  notifications_enabled in AstroNvim v4)
   },
-  t = { bufs = vim.api.nvim_list_bufs() }, -- initialize buffers for the current tab
+  t = vim.t.bufs and vim.t.bufs or { bufs = vim.api.nvim_list_bufs() }, -- initialize buffers for the current tab
 })
 
 for scope, table in pairs(options) do
